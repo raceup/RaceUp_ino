@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_race_up__ino__core_8cpp" kind="file" language="C++">
+    <compoundname>RaceUp_ino_core.cpp</compoundname>
+    <includes refid="_race_up__ino__core_8h" local="yes">RaceUp_ino_core.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="0">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.cpp</label>
+        <link refid="RaceUp_ino_core.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="17"><highlight class="preprocessor">#include<sp/>&quot;RaceUp_ino_core.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.cpp"/>
+  </compounddef>
+</doxygen>

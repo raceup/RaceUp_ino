@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_race_up___u_n_o_8h" kind="file" language="C++">
+    <compoundname>RaceUp_UNO.h</compoundname>
+    <includedby refid="_race_up___u_n_o_8cpp" local="yes">src/RaceUp_UNO.cpp</includedby>
+    <invincdepgraph>
+      <node id="10">
+        <label>src/RaceUp_UNO.h</label>
+        <link refid="RaceUp_UNO.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/RaceUp_UNO.cpp</label>
+        <link refid="_race_up___u_n_o_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_race_up___u_n_o" prot="public">RaceUp_UNO</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_UNO_RACEUP_UNO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_UNO_RACEUP_UNO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_race_up___u_n_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_race_up___u_n_o" kindref="compound">RaceUp_UNO</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_UNO_RACEUP_UNO_H</highlight></codeline>
+    </programlisting>
+    <location file="src/RaceUp_UNO.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="class_race_up__ino__core" kind="class"><name>RaceUp_ino_core</name>
+  </compound>
+  <compound refid="_race_up__ino__core_8cpp" kind="file"><name>RaceUp_ino_core.cpp</name>
+  </compound>
+  <compound refid="_race_up__ino__core_8h" kind="file"><name>RaceUp_ino_core.h</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src</name>
+  </compound>
+</doxygenindex>
