@@ -3,18 +3,72 @@
   <compounddef id="_bms_device_8h" kind="file" language="C++">
     <compoundname>BmsDevice.h</compoundname>
     <includes local="no">Arduino.h</includes>
-    <includedby refid="_bms_device_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDevice.cpp</includedby>
+    <includes refid="_bms_device_reader_8h" local="yes">BmsDeviceReader.h</includes>
+    <includes refid="_bms_device_writer_8h" local="yes">BmsDeviceWriter.h</includes>
+    <includedby refid="_bms_device_8cpp" local="yes">src/Bms/BmsDevice.cpp</includedby>
+    <includedby refid="_race_up__ino__core_8h" local="yes">src/RaceUp_ino_core.h</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDevice.h</label>
-        <link refid="BmsDevice.h"/>
-        <childnode refid="5" relation="include">
+      <node id="19">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="21">
+        <label>BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="17">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="BmsDevice.h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
         <label>Arduino.h</label>
       </node>
+      <node id="20">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="25">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="24">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="BmsDevice.h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_bms_device" prot="public">BmsDevice</innerclass>
     <briefdescription>
     </briefdescription>
@@ -27,18 +81,21 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="class_bms_device" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device" kindref="compound">BmsDevice</ref><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a020d1204443bd099a6e145505c0b548b" kindref="member">clearAlertsOnBmsDevice</ref>(byte<sp/>device_address);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a6f46ac55f2da38311b9235fcb962fa26" kindref="member">clearFaultsOnBmsDevice</ref>(byte<sp/>device_address);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICE_H</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceReader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_bms_device" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device" kindref="compound">BmsDevice</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" kindref="member">clearAlertsOnBmsDevice</ref>(byte<sp/>device_address);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" kindref="member">clearFaultsOnBmsDevice</ref>(byte<sp/>device_address);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICE_H</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDevice.h"/>
+    <location file="src/Bms/BmsDevice.h"/>
   </compounddef>
 </doxygen>

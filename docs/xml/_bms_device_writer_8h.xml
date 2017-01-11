@@ -4,23 +4,60 @@
     <compoundname>BmsDeviceWriter.h</compoundname>
     <includes local="no">Arduino.h</includes>
     <includes local="no">avr/pgmspace.h</includes>
-    <includedby refid="_bms_device_writer_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp</includedby>
+    <includes refid="_bms__data_8h" local="yes">Bms_data.h</includes>
+    <includes refid="data_8h" local="yes">../data.h</includes>
+    <includedby refid="_bms_device_8h" local="yes">src/Bms/BmsDevice.h</includedby>
+    <includedby refid="_bms_device_writer_8cpp" local="yes">src/Bms/BmsDeviceWriter.cpp</includedby>
     <incdepgraph>
-      <node id="36">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h</label>
+      <node id="60">
+        <label>src/Bms/BmsDeviceWriter.h</label>
         <link refid="BmsDeviceWriter.h"/>
-        <childnode refid="37" relation="include">
+        <childnode refid="61" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="64">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
         <label>avr/pgmspace.h</label>
       </node>
-      <node id="37">
+      <node id="61">
         <label>Arduino.h</label>
       </node>
+      <node id="63">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="67">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="65">
+        <label>src/Bms/BmsDeviceWriter.h</label>
+        <link refid="BmsDeviceWriter.h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_bms_device_writer" prot="public">BmsDeviceWriter</innerclass>
     <briefdescription>
     </briefdescription>
@@ -34,20 +71,23 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/pgmspace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="class_bms_device_writer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device_writer" kindref="compound">BmsDeviceWriter</ref><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" kindref="member">pec</ref>(byte<sp/>crcBuffer[]);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">bmsDeviceWrite</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>regData);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">writeStatusOfBmsDevice</ref>(byte<sp/>device_address,<sp/>byte<sp/>value);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEWRITER_H</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bms_data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_bms_device_writer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device_writer" kindref="compound">BmsDeviceWriter</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" kindref="member">pec</ref>(byte<sp/>crcBuffer[]);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">bmsDeviceWrite</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>regData);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">writeStatusOfBmsDevice</ref>(byte<sp/>device_address,<sp/>byte<sp/>value);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEWRITER_H</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h"/>
+    <location file="src/Bms/BmsDeviceWriter.h"/>
   </compounddef>
 </doxygen>

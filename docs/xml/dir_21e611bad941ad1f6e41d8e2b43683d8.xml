@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_21e611bad941ad1f6e41d8e2b43683d8" kind="dir">
-    <compoundname>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms</compoundname>
+    <compoundname>src/Bms</compoundname>
+    <innerfile refid="_bms__data_8h">Bms_data.h</innerfile>
     <innerfile refid="_bms_device_8cpp">BmsDevice.cpp</innerfile>
     <innerfile refid="_bms_device_8h">BmsDevice.h</innerfile>
     <innerfile refid="_bms_device_reader_8cpp">BmsDeviceReader.cpp</innerfile>
@@ -14,6 +15,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/"/>
+    <location file="src/Bms/"/>
   </compounddef>
 </doxygen>

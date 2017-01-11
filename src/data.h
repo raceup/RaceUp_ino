@@ -29,11 +29,6 @@
 #define ONE_SECOND 10 * ONE_TENTSECOND
 
 /**
- * arduino board pre-defined byte status
- */
-const byte DEVICE_STATUS = 0x00;
-
-/**
  * Error check/correction. Using PROGMEM keyword to store data in flash (instead of SRAM)
  */
 const PROGMEM byte

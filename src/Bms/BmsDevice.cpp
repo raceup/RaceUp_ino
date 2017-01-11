@@ -17,7 +17,8 @@
 
 #include "BmsDevice.h"
 
-static void BmsDevice::clearAlertsOnBmsDevice(byte device_address) {
+void BmsDevice::clearAlertsOnBmsDevice(byte
+device_address) {
     byte *value = BmsDeviceReader::getBmsDeviceStatus(device_address);  // clear alert bit in device status register
     value[0] |= 0b00100000;
 
@@ -29,9 +30,10 @@ static void BmsDevice::clearAlertsOnBmsDevice(byte device_address) {
     BmsDeviceWriter::bmsDeviceWrite(device_address, ALERT_STATUS, 0x00);  // Write 0's ALERT_STATUS_REG register
 }
 
-static void BmsDevice::clearFaultsOnBmsDevice(byte device_address) {
-    byte *value = BmsDeviceReader::bmsDeviceRead(device_address, DEVICE_STATUS,
-                                                 1);  // clear alert bit in device status register
+void BmsDevice::clearFaultsOnBmsDevice(byte
+device_address) {
+byte *value = BmsDeviceReader::bmsDeviceRead(device_address, DEVICE_STATUS,
+                                             1);  // clear alert bit in device status register
     value[0] |= 0b01000000;
 
     BmsDeviceWriter::writeStatusOfBmsDevice(device_address, value[0]);  // set alert bit as 1

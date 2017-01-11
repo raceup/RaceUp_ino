@@ -29,7 +29,7 @@
 Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="33" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="20" bodyend="28"/>
+        <location file="src/Bms/BmsDeviceWriter.h" line="36" column="1" bodyfile="src/Bms/BmsDeviceWriter.cpp" bodystart="20" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -76,7 +76,7 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="41" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="30" bodyend="80"/>
+        <location file="src/Bms/BmsDeviceWriter.h" line="44" column="1" bodyfile="src/Bms/BmsDeviceWriter.cpp" bodystart="30" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -112,14 +112,14 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="48" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="82" bodyend="84"/>
+        <location file="src/Bms/BmsDeviceWriter.h" line="51" column="1" bodyfile="src/Bms/BmsDeviceWriter.cpp" bodystart="82" bodyend="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="24" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" bodystart="24" bodyend="49"/>
+    <location file="src/Bms/BmsDeviceWriter.h" line="27" column="1" bodyfile="src/Bms/BmsDeviceWriter.h" bodystart="27" bodyend="52"/>
     <listofallmembers>
       <member refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" prot="public" virt="non-virtual"><scope>BmsDeviceWriter</scope><name>bmsDeviceWrite</name></member>
       <member refid="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" prot="public" virt="non-virtual"><scope>BmsDeviceWriter</scope><name>pec</name></member>

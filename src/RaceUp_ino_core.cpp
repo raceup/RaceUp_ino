@@ -15,15 +15,3 @@
  */
 
 
-#include "Utils.h"
-
-const double Utils::CELSIUS_TO_KELVIN_FACTOR = -273.15;
-const double Utils::BMS_VOLTAGE_RATIO_FACTOR = 6250.0 / 16383.0;
-
-double Utils::convertCellVoltage(double cellVoltageInt) {
-    return cellVoltageInt * BMS_VOLTAGE_RATIO_FACTOR;
-}
-
-double Utils::fromKelvinToCelsius(double kelvinValue) {
-    return kelvinValue + CELSIUS_TO_KELVIN_FACTOR;
-}

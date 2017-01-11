@@ -71,7 +71,7 @@ public:
      */
     template<class T>
     static void sendUpdate(byte typeValue, T value) {
-        sendSegmentStatus(Utils::commandToString(typeValue), (byte) - 1, (byte) - 1, value);
+        sendSegmentStatus(commandToString(typeValue), (byte) - 1, (byte) - 1, value);
     }
 
     /**
@@ -121,6 +121,13 @@ public:
  * @return Raw String read from serial
  */
     static String getSerialUpdate();
+
+    /**
+     * Translate enum command to a string
+     * @param command command number (as from the previously defined enum)
+     * @return string representing name of command
+     */
+    static String commandToString(int command);
 
 private:
     static const byte TEMPERATURE1 = 0x0F;

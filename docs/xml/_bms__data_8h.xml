@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_bms__data_8h" kind="file" language="C++">
+    <compoundname>Bms_data.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="_bms_device_reader_8h" local="yes">src/Bms/BmsDeviceReader.h</includedby>
+    <includedby refid="_bms_device_writer_8h" local="yes">src/Bms/BmsDeviceWriter.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Arduino.h</label>
+      </node>
+      <node id="0">
+        <label>src/Bms/Bms_data.h</label>
+        <link refid="Bms_data.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="3">
+        <label>src/Bms/BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/Bms/BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/Bms/BmsDeviceUpdater.h</label>
+        <link refid="_bms_device_updater_8h_source"/>
+      </node>
+      <node id="2">
+        <label>src/Bms/Bms_data.h</label>
+        <link refid="Bms_data.h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_bms__data_8h_1abcd396367233a5ebc58b6bcfed102be7" prot="public" static="no">
+        <name>SLAVE_SELECT_PIN</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="24" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bms__data_8h_1a9fea424f5555dcbb0ba5c1e4871e855f" prot="public" static="no">
+        <name>ENABLE_CHARGER</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="28" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bms__data_8h_1a200ddac7c384333093ec3654cab5fe01" prot="public" static="no">
+        <name>CHARGER_PIN</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="32" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bms__data_8h_1aa4e56cf6eb32e77dab7ca3ef9a382369" prot="public" static="no">
+        <name>SERIAL_COMMUNICATION_FREQUENCY</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="36" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bms__data_8h_1a1787bde3a008e50d966e1a2fe82051b0" prot="public" static="no">
+        <name>NUMBER_OF_BMS_DEVICES</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="40" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bms__data_8h_1aa52aebd98f15e09cd15368848edf6671" prot="public" static="no">
+        <name>BATTERY_PACK_NUMBER</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="44" column="9" bodyfile="src/Bms/Bms_data.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba30a4e8503ad87a4bcf14eedaf5612a6e" prot="public">
+          <name>kAcknowledge</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55baacb2c04376333850bff6fb1065c0c171" prot="public">
+          <name>kError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba935a9cb3dbc0464e2d543bad65cc4a83" prot="public">
+          <name>kStartLogging</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba860da660aa976dd4da6969d9cfa970fe" prot="public">
+          <name>kPlotDataPoint</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba0515ede3f341f1666cddd75b708fe346" prot="public">
+          <name>kAlert</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba17586673585e43ca084718a6a193c61d" prot="public">
+          <name>kFault</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba34ac05a34229cd773942c9d75f5e2980" prot="public">
+          <name>kStatus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba10afb618bd02d9f3cd9a829fdff80556" prot="public">
+          <name>kCellVoltage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba705005801b091be9a063496bfb20e727" prot="public">
+          <name>kCellTemperature</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba420622f6f28fea9a7404c3ce4903029c" prot="public">
+          <name>kSleep</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the list of recognized commands. These can be commands that can either be sent or received. In order to receive, attach a callback function to these events </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="51" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="51" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_bms__data_8h_1a81c33ce8fb9ec2eee5b2ae064edc3c8d" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte DEVICE_STATUS</definition>
+        <argsstring></argsstring>
+        <name>DEVICE_STATUS</name>
+        <initializer>= 0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="64" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a5e26792ffe915839493f00bfed8a5dbf" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte GPAI</definition>
+        <argsstring></argsstring>
+        <name>GPAI</name>
+        <initializer>= 0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="65" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a38e485f13fcc02e1b9af41501b0b8697" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte TEMPERATURE1</definition>
+        <argsstring></argsstring>
+        <name>TEMPERATURE1</name>
+        <initializer>= 0x0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="66" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a6b1a672ff83094b3fa0bc1a0dd6d481f" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte ALERT_STATUS</definition>
+        <argsstring></argsstring>
+        <name>ALERT_STATUS</name>
+        <initializer>= 0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="67" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a974a86f18aa0f31eea26cd2ed0edfe72" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte FAULT_STATUS</definition>
+        <argsstring></argsstring>
+        <name>FAULT_STATUS</name>
+        <initializer>= 0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="68" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a8a08db7cf792587db3519b2a1aacfa9f" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte ADC_CONTROL</definition>
+        <argsstring></argsstring>
+        <name>ADC_CONTROL</name>
+        <initializer>= 0x30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="69" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1aee97697d76b988aff2ffc818dc558c37" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte IO_CONTROL</definition>
+        <argsstring></argsstring>
+        <name>IO_CONTROL</name>
+        <initializer>= 0x31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="70" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1adff4d3443a6a4ee8036d1681a8badda2" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CB_CTRL</definition>
+        <argsstring></argsstring>
+        <name>CB_CTRL</name>
+        <initializer>= 0x32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="71" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a4e4dbb47fe4990d7eddc16019c73d4b3" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CB_TIME</definition>
+        <argsstring></argsstring>
+        <name>CB_TIME</name>
+        <initializer>= 0x33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="72" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1ade2c777b8ab6595ab4277086bc0c1911" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte ADC_CONVERT</definition>
+        <argsstring></argsstring>
+        <name>ADC_CONVERT</name>
+        <initializer>= 0x34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="73" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a4a8bd3a2332e17a49198a64322baf619" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte SHDW_CTRL</definition>
+        <argsstring></argsstring>
+        <name>SHDW_CTRL</name>
+        <initializer>= 0x3A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="74" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1aa292f36cdd1c87f0cd277983238ae7ca" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte ADDRESS_CONTROL</definition>
+        <argsstring></argsstring>
+        <name>ADDRESS_CONTROL</name>
+        <initializer>= 0x3B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="75" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a802da4bdd8e165d19d8b7dce4ffb0eb2" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte RESET</definition>
+        <argsstring></argsstring>
+        <name>RESET</name>
+        <initializer>= 0x3C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="76" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1abb5c05898939e507c0ccc9c72dd82178" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte FUNCTION_CONFIG</definition>
+        <argsstring></argsstring>
+        <name>FUNCTION_CONFIG</name>
+        <initializer>= 0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="77" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1accd2d07542062815760f34231e4f4681" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CONFIG_COV</definition>
+        <argsstring></argsstring>
+        <name>CONFIG_COV</name>
+        <initializer>= 0x42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="78" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a17876455fb41d6e90eb5bc172f936096" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CONFIG_COVT</definition>
+        <argsstring></argsstring>
+        <name>CONFIG_COVT</name>
+        <initializer>= 0x43</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="79" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1af5849ffc31b5e3ef805678925cf9a2d8" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CONFIG_CUV</definition>
+        <argsstring></argsstring>
+        <name>CONFIG_CUV</name>
+        <initializer>= 0x44</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="80" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a3f7d1c6937d1e0fc2423e89288f9215e" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte CONFIG_CUVT</definition>
+        <argsstring></argsstring>
+        <name>CONFIG_CUVT</name>
+        <initializer>= 0x45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="81" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1acf18b121e0e9ad88a0cd2b9aa6656e07" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double MAX_CELL_VOLTAGE</definition>
+        <argsstring></argsstring>
+        <name>MAX_CELL_VOLTAGE</name>
+        <initializer>= 4200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="82" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a712357da97de4ab7cf748aed75e019d6" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte OV_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>OV_THRESHOLD</name>
+        <initializer>= 0x2c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="83" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a811fc720740f12d16a81c79410af4776" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte UV_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>UV_THRESHOLD</name>
+        <initializer>= 0x17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="84" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1a6ec71f2273f04fe29021459bc1081f08" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte OV_TIMER</definition>
+        <argsstring></argsstring>
+        <name>OV_TIMER</name>
+        <initializer>= (const byte) true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="85" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_bms__data_8h_1ac29d610c6e053daed8925da8ff45be5b" prot="public" static="no" mutable="no">
+        <type>const byte</type>
+        <definition>const byte UV_TIMER</definition>
+        <argsstring></argsstring>
+        <name>UV_TIMER</name>
+        <initializer>= (const byte) true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms_data.h" line="86" column="1" bodyfile="src/Bms/Bms_data.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_BMS_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_BMS_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SLAVE_SELECT_PIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SLAVE_SELECT_PIN<sp/>10<sp/><sp/>//<sp/>pin<sp/>53<sp/>is<sp/>reserved!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENABLE_CHARGER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENABLE_CHARGER<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CHARGER_PIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHARGER_PIN<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERIAL_COMMUNICATION_FREQUENCY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERIAL_COMMUNICATION_FREQUENCY<sp/>115200<sp/><sp/>//<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NUMBER_OF_BMS_DEVICES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUMBER_OF_BMS_DEVICES<sp/>6<sp/>//<sp/>number<sp/>of<sp/>bms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BATTERY_PACK_NUMBER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERY_PACK_NUMBER<sp/>6<sp/><sp/>//<sp/>number<sp/>of<sp/>cells<sp/>monitored<sp/>by<sp/>a<sp/>single<sp/>bms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>kAcknowledge,<sp/></highlight><highlight class="comment">//<sp/>acknowledge<sp/>that<sp/>cmd<sp/>was<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>kError,<sp/></highlight><highlight class="comment">//<sp/>report<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>kStartLogging,<sp/></highlight><highlight class="comment">//<sp/>request<sp/>logging<sp/>start<sp/>(typically<sp/>PC<sp/>-&gt;<sp/>Arduino)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>kPlotDataPoint,<sp/></highlight><highlight class="comment">//<sp/>request<sp/>datapoint<sp/>plotting<sp/>(typically<sp/>Arduino<sp/>-&gt;<sp/>PC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>kAlert,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>kFault,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>kStatus,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>kCellVoltage,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>kCellTemperature,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>kSleep</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>DEVICE_STATUS<sp/>=<sp/>0x00;<sp/><sp/></highlight><highlight class="comment">//<sp/>arduino<sp/>board<sp/>pre-defined<sp/>byte<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>GPAI<sp/>=<sp/>0x01;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>TEMPERATURE1<sp/>=<sp/>0x0F;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>ALERT_STATUS<sp/>=<sp/>0x20;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>FAULT_STATUS<sp/>=<sp/>0x21;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>ADC_CONTROL<sp/>=<sp/>0x30;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>IO_CONTROL<sp/>=<sp/>0x31;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CB_CTRL<sp/>=<sp/>0x32;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CB_TIME<sp/>=<sp/>0x33;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>ADC_CONVERT<sp/>=<sp/>0x34;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>SHDW_CTRL<sp/>=<sp/>0x3A;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>ADDRESS_CONTROL<sp/>=<sp/>0x3B;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>RESET<sp/>=<sp/>0x3C;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>FUNCTION_CONFIG<sp/>=<sp/>0x40;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CONFIG_COV<sp/>=<sp/>0x42;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CONFIG_COVT<sp/>=<sp/>0x43;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CONFIG_CUV<sp/>=<sp/>0x44;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>CONFIG_CUVT<sp/>=<sp/>0x45;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MAX_CELL_VOLTAGE<sp/>=<sp/>4200;<sp/><sp/></highlight><highlight class="comment">//<sp/>mV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>OV_THRESHOLD<sp/>=<sp/>0x2c;<sp/><sp/></highlight><highlight class="comment">//<sp/>-&gt;<sp/>4.2V<sp/>-&gt;<sp/>(4.2-2)/0.05<sp/>=<sp/>44<sp/>=<sp/>0x2c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>UV_THRESHOLD<sp/>=<sp/>0x17;<sp/><sp/></highlight><highlight class="comment">//<sp/>-&gt;<sp/>3V<sp/>-&gt;<sp/>(3-0.7)/0.1<sp/>=<sp/>23<sp/>=<sp/>0x17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>OV_TIMER<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte)<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>(0x01<sp/>||<sp/>0x80)<sp/>100ms<sp/>+<sp/>MSB<sp/>set<sp/>to<sp/>1<sp/>for<sp/>milliseconds<sp/>-&gt;<sp/>100<sp/>=<sp/>0x01<sp/>;<sp/>MSB<sp/>1<sp/>=<sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>UV_TIMER<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte)<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>(0x01<sp/>||<sp/>0x80)<sp/>100ms<sp/>+<sp/>MSB<sp/>set<sp/>to<sp/>1<sp/>for<sp/>milliseconds<sp/>-&gt;<sp/>100<sp/>=<sp/>0x01<sp/>;<sp/>MSB<sp/>1<sp/>=<sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ARDUINO_DUE<sp/><sp/>//<sp/>arduino<sp/>DUE<sp/>specifics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>CRUISE_EN<sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>CONV_PIN<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>DRDY_PIN<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>ALERT_PIN<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>FAULT_PIN<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>SLAVE_SELECT_PIN<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>ENABLE_CHARGER<sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>CHARGER_PIN<sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>LED_PIN<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>OT_THRESHOLD<sp/>=<sp/>0x55;<sp/></highlight><highlight class="comment">//<sp/>-&gt;<sp/>TS1=60C<sp/>,<sp/>TS2<sp/>=60C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>OT_TIMER<sp/>=<sp/>0x01;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMS_DATA_H</highlight></codeline>
+    </programlisting>
+    <location file="src/Bms/Bms_data.h"/>
+  </compounddef>
+</doxygen>

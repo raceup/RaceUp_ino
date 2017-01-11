@@ -38,8 +38,8 @@ public:
     static double convertCellVoltage(double cellVoltageInt);
 
 private:
-    static const double CELSIUS_TO_KELVIN_FACTOR = -273.15;
-    static const double BMS_VOLTAGE_RATIO_FACTOR = 6250.0 / 16383.0;
+    static const double CELSIUS_TO_KELVIN_FACTOR;
+    static const double BMS_VOLTAGE_RATIO_FACTOR;
 };
 
 

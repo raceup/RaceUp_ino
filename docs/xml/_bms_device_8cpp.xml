@@ -3,21 +3,63 @@
   <compounddef id="_bms_device_8cpp" kind="file" language="C++">
     <compoundname>BmsDevice.cpp</compoundname>
     <includes refid="_bms_device_8h" local="yes">BmsDevice.h</includes>
+    <includes refid="data_8h" local="yes">../data.h</includes>
     <incdepgraph>
-      <node id="0">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDevice.cpp</label>
-        <link refid="BmsDevice.cpp"/>
-        <childnode refid="1" relation="include">
+      <node id="11">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="1">
+      <node id="13">
+        <label>BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="8">
+        <label>src/Bms/BmsDevice.cpp</label>
+        <link refid="BmsDevice.cpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>BmsDevice.h</label>
         <link refid="_bms_device_8h_source"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="2">
+      <node id="10">
         <label>Arduino.h</label>
+      </node>
+      <node id="12">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -27,31 +69,32 @@
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;BmsDevice.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a020d1204443bd099a6e145505c0b548b" kindref="member">BmsDevice::clearAlertsOnBmsDevice</ref>(byte<sp/>device_address)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1a7acf8a5b5bca22c7e968d90deaaebffc" kindref="member">BmsDeviceReader::getBmsDeviceStatus</ref>(device_address);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b00100000;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b11011111;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a6f46ac55f2da38311b9235fcb962fa26" kindref="member">BmsDevice::clearFaultsOnBmsDevice</ref>(byte<sp/>device_address)<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1a1f714eea255931c0f36af3e305412c1e" kindref="member">BmsDeviceReader::bmsDeviceRead</ref>(device_address,<sp/>DEVICE_STATUS,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b01000000;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b10111111;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" kindref="member">BmsDevice::clearAlertsOnBmsDevice</ref>(byte<sp/>device_address)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kindref="member">BmsDeviceReader::getBmsDeviceStatus</ref>(device_address);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b00100000;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b11011111;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" kindref="member">BmsDevice::clearFaultsOnBmsDevice</ref>(byte<sp/>device_address)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">BmsDeviceReader::bmsDeviceRead</ref>(device_address,<sp/>DEVICE_STATUS,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b01000000;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b10111111;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDevice.cpp"/>
+    <location file="src/Bms/BmsDevice.cpp"/>
   </compounddef>
 </doxygen>

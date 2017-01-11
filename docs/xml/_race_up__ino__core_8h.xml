@@ -2,7 +2,67 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="_race_up__ino__core_8h" kind="file" language="C++">
     <compoundname>RaceUp_ino_core.h</compoundname>
-    <includedby refid="_race_up__ino__core_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.cpp</includedby>
+    <includes refid="_bms_device_8h" local="yes">Bms/BmsDevice.h</includes>
+    <includes refid="data_8h" local="yes">data.h</includes>
+    <includedby refid="_race_up__ino__core_8cpp" local="yes">src/RaceUp_ino_core.cpp</includedby>
+    <incdepgraph>
+      <node id="84">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="RaceUp_ino_core.h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="85">
+        <label>Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>Arduino.h</label>
+      </node>
+      <node id="88">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
     <innerclass refid="class_race_up__ino__core" prot="public">RaceUp_ino_core</innerclass>
     <briefdescription>
     </briefdescription>
@@ -10,18 +70,19 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_UNO_RACEUP_UNO_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="class_race_up__ino__core" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_race_up__ino__core" kindref="compound">RaceUp_ino_core</ref><sp/>{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bms/BmsDevice.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_race_up__ino__core" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_race_up__ino__core" kindref="compound">RaceUp_ino_core</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.h"/>
+    <location file="src/RaceUp_ino_core.h"/>
   </compounddef>
 </doxygen>

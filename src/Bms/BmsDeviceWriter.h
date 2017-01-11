@@ -21,6 +21,9 @@
 #include <Arduino.h>
 #include <avr/pgmspace.h>
 
+#include "Bms_data.h"
+#include "../data.h"
+
 class BmsDeviceWriter {
 
 public:

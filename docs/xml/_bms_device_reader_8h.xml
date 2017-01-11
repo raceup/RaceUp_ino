@@ -3,34 +3,50 @@
   <compounddef id="_bms_device_reader_8h" kind="file" language="C++">
     <compoundname>BmsDeviceReader.h</compoundname>
     <includes local="no">Arduino.h</includes>
-    <includes local="yes">#include</includes>
-    <includedby refid="_bms_device_reader_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp</includedby>
-    <includedby refid="_bms_device_updater_8h" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h</includedby>
+    <includes refid="_bms__data_8h" local="yes">Bms_data.h</includes>
+    <includedby refid="_bms_device_8h" local="yes">src/Bms/BmsDevice.h</includedby>
+    <includedby refid="_bms_device_reader_8cpp" local="yes">src/Bms/BmsDeviceReader.cpp</includedby>
+    <includedby refid="_bms_device_updater_8h" local="yes">src/Bms/BmsDeviceUpdater.h</includedby>
     <incdepgraph>
-      <node id="13">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h</label>
+      <node id="33">
+        <label>src/Bms/BmsDeviceReader.h</label>
         <link refid="BmsDeviceReader.h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="34">
         <label>Arduino.h</label>
       </node>
-      <node id="15">
-        <label>#include</label>
+      <node id="35">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="16">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h</label>
+      <node id="38">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="36">
+        <label>src/Bms/BmsDeviceReader.h</label>
         <link refid="BmsDeviceReader.h"/>
-        <childnode refid="17" relation="include">
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h</label>
+      <node id="37">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>src/Bms/BmsDeviceUpdater.h</label>
         <link refid="_bms_device_updater_8h_source"/>
       </node>
     </invincdepgraph>
@@ -46,33 +62,30 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceReader.h</highlight></codeline>
-<codeline lineno="24"><highlight class="preprocessor">#include<sp/>&quot;</highlight><highlight class="normal"><ref refid="class_bms_device_writer" kindref="compound">BmsDeviceWriter</ref>.h</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
-<codeline lineno="25"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="26" refid="class_bms_device_reader" refkind="compound"><highlight class="stringliteral">class<sp/>BmsDeviceReader<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="28"><highlight class="stringliteral">public:</highlight></codeline>
-<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>byte<sp/>*bmsDeviceRead(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>length);</highlight></codeline>
-<codeline lineno="37"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>double<sp/>getTemperature(byte<sp/>device_address,<sp/>byte<sp/>temperature);</highlight></codeline>
-<codeline lineno="44"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>double<sp/>getGpaiVbatt(byte<sp/>device_address,<sp/>bool<sp/>dev);</highlight></codeline>
-<codeline lineno="52"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>int<sp/>getCellVoltage(byte<sp/>deviceAddress,<sp/>byte<sp/>cellNumber);</highlight></codeline>
-<codeline lineno="60"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>byte<sp/>*getBmsDeviceStatus(byte<sp/>device_address);</highlight></codeline>
-<codeline lineno="66"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="67"><highlight class="stringliteral">private:</highlight></codeline>
-<codeline lineno="68"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>BETA_THERMISTOR<sp/>=<sp/>3435.0;</highlight></codeline>
-<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>RB_THERMISTOR<sp/>=<sp/>1800.0;</highlight></codeline>
-<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>RT_THERMISTOR<sp/>=<sp/>1500.0;</highlight></codeline>
-<codeline lineno="75"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>R0_THERMISTOR<sp/>=<sp/>10000.0;</highlight></codeline>
-<codeline lineno="76"><highlight class="stringliteral">};</highlight></codeline>
-<codeline lineno="77"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="78"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="79"><highlight class="stringliteral">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEREADER_H</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bms_data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_bms_device_reader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device_reader" kindref="compound">BmsDeviceReader</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>byte<sp/>*<ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>length);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" kindref="member">getTemperature</ref>(byte<sp/>device_address,<sp/>byte<sp/>temperature);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1a1f0651bfef7b2235825320e1e96993a0" kindref="member">getGpaiVbatt</ref>(byte<sp/>device_address,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dev);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" kindref="member">getCellVoltage</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>cellNumber);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>byte<sp/>*<ref refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kindref="member">getBmsDeviceStatus</ref>(byte<sp/>device_address);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kindref="member">BETA_THERMISTOR</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RB_THERMISTOR;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RT_THERMISTOR;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R0_THERMISTOR;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEREADER_H</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h"/>
+    <location file="src/Bms/BmsDeviceReader.h"/>
   </compounddef>
 </doxygen>

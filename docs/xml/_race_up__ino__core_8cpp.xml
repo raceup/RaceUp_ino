@@ -4,14 +4,66 @@
     <compoundname>RaceUp_ino_core.cpp</compoundname>
     <includes refid="_race_up__ino__core_8h" local="yes">RaceUp_ino_core.h</includes>
     <incdepgraph>
-      <node id="1">
+      <node id="75">
         <label>RaceUp_ino_core.h</label>
         <link refid="_race_up__ino__core_8h_source"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
       </node>
-      <node id="0">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.cpp</label>
+      <node id="74">
+        <label>src/RaceUp_ino_core.cpp</label>
         <link refid="RaceUp_ino_core.cpp"/>
-        <childnode refid="1" relation="include">
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="76">
+        <label>Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>Arduino.h</label>
+      </node>
+      <node id="79">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -21,8 +73,8 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="17"><highlight class="preprocessor">#include<sp/>&quot;RaceUp_ino_core.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;RaceUp_ino_core.h&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/RaceUp_ino_core.cpp"/>
+    <location file="src/RaceUp_ino_core.cpp"/>
   </compounddef>
 </doxygen>

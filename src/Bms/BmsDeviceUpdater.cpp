@@ -17,22 +17,22 @@
 
 #include "BmsDeviceUpdater.h"
 
-static void BmsDeviceUpdater::sendSegmentVoltage(byte cell, byte segment, double value) {
-    sendSegmentStatus("Voltage", cell, segment, value);
+void BmsDeviceUpdater::sendSegmentVoltage(byte cell, byte segment, double value) {
+    sendSegmentStatus(commandToString(kCellVoltage), cell, segment, value);
 }
 
-static void BmsDeviceUpdater::sendPackVoltageOfBmsDevice(byte n) {
+void BmsDeviceUpdater::sendPackVoltageOfBmsDevice(byte n) {
     byte segment = (n - 1) / 3;
     for (byte cell = 0; cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
         sendSegmentVoltage(cell, segment, BmsDeviceReader::getCellVoltage(n, cell));  // send voltage
     }
 }
 
-static void BmsDeviceUpdater::sendSegmentTemperature(byte cell, byte segment, double value) {
-    sendSegmentStatus("Temperature", cell, segment, value);
+void BmsDeviceUpdater::sendSegmentTemperature(byte cell, byte segment, double value) {
+    sendSegmentStatus(commandToString(kCellTemperature), cell, segment, value);
 }
 
-static void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice(byte n) {
+void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice(byte n) {
     byte segment = (n - 1) / 3;
     for (byte cell = 0; cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
         double value = BmsDeviceReader::getTemperature(n, TEMPERATURE1);
@@ -40,7 +40,33 @@ static void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice(byte n) {
     }
 }
 
-static String BmsDeviceUpdater::getSerialUpdate() {
+String BmsDeviceUpdater::getSerialUpdate() {
     return Serial.readString();
 }
 
+String BmsDeviceUpdater::commandToString(int command) {
+    switch (command) {
+        case 0:
+            return (String) "Acknowledge";
+        case 1:
+            return (String) "Error";
+        case 2:
+            return (String) "Log";
+        case 3:
+            return (String) "Plot";
+        case 4:
+            return (String) "Alert";
+        case 5:
+            return (String) "Fault";
+        case 6:
+            return (String) "Status";
+        case 7:
+            return (String) "Voltage";
+        case 8:
+            return (String) "Temperature";
+        case 9:
+            return (String) "Sleep";
+        default:
+            return (String) "Unknown";
+    }
+}

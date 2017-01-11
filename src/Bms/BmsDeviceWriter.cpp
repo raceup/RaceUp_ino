@@ -82,4 +82,3 @@ static void BmsDeviceWriter::bmsDeviceWrite(byte deviceAddress, byte regAddress,
 void BmsDeviceWriter::writeStatusOfBmsDevice(byte device_address, byte value) {
     bmsDeviceWrite(device_address, DEVICE_STATUS, value);
 }
-

@@ -35,6 +35,9 @@ BmsDeviceUpdater \-
 .ti -1c
 .RI "static String \fBgetSerialUpdate\fP ()"
 .br
+.ti -1c
+.RI "static String \fBcommandToString\fP (int command)"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -47,7 +50,21 @@ http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. Sends updates on bms device to serial 
 .SH "Member Function Documentation"
 .PP 
-.SS "static String BmsDeviceUpdater::getSerialUpdate ()\fC [static]\fP"
+.SS "String BmsDeviceUpdater::commandToString (int command)\fC [static]\fP"
+Translate enum command to a string 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommand\fP command number (as from the previously defined enum) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string representing name of command 
+.RE
+.PP
+
+.SS "String BmsDeviceUpdater::getSerialUpdate ()\fC [static]\fP"
 Reads serial data and checks if there is an update coming from the client 
 .PP
 \fBReturns:\fP
@@ -56,7 +73,7 @@ Raw String read from serial
 .RE
 .PP
 
-.SS "static void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice (byte n)\fC [static]\fP"
+.SS "void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice (byte n)\fC [static]\fP"
 Send temperature data on the pack of bmsDevice device 
 .PP
 \fBParameters:\fP
@@ -65,7 +82,7 @@ Send temperature data on the pack of bmsDevice device
 .RE
 .PP
 
-.SS "static void BmsDeviceUpdater::sendPackVoltageOfBmsDevice (byte n)\fC [static]\fP"
+.SS "void BmsDeviceUpdater::sendPackVoltageOfBmsDevice (byte n)\fC [static]\fP"
 Send voltage data on the pack of bmsDevice device 
 .PP
 \fBParameters:\fP
@@ -89,7 +106,7 @@ Send segment data
 .RE
 .PP
 
-.SS "static void BmsDeviceUpdater::sendSegmentTemperature (byte cell, byte segment, double value)\fC [static]\fP"
+.SS "void BmsDeviceUpdater::sendSegmentTemperature (byte cell, byte segment, double value)\fC [static]\fP"
 Send temperature data on the segment 
 .PP
 \fBParameters:\fP
@@ -106,7 +123,7 @@ Send temperature data on the segment
 .RE
 .PP
 
-.SS "static void BmsDeviceUpdater::sendSegmentVoltage (byte cell, byte segment, double value)\fC [static]\fP"
+.SS "void BmsDeviceUpdater::sendSegmentVoltage (byte cell, byte segment, double value)\fC [static]\fP"
 Send segment voltage data 
 .PP
 \fBParameters:\fP

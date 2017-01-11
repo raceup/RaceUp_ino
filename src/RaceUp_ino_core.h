@@ -15,33 +15,15 @@
  */
 
 
-#ifndef RACEUP_INO_CORE_BMSDEVICE_H
-#define RACEUP_INO_CORE_BMSDEVICE_H
+#ifndef RACEUP_INO_CORE_RACEUP_INO_CORE_H
+#define RACEUP_INO_CORE_RACEUP_INO_CORE_H
 
-#include <Arduino.h>
+#include "Bms/BmsDevice.h"
+#include "data.h"
 
-#include "BmsDeviceReader.h"
-#include "BmsDeviceWriter.h"
-
-/**
- * Manages a BMS device
- */
-class BmsDevice {
-
-public:
-
-    /**
-     * Send alert on behalf of this bms
-     * @param device_address address bms of bms to setup
-     */
-    static void clearAlertsOnBmsDevice(byte device_address);
-
-    /**
-     * Send fault on behalf of this device
-     * @param device_address address bms of bms to setup
-     */
-    static void clearFaultsOnBmsDevice(byte device_address);
+class RaceUp_ino_core {
+    //
 };
 
 
-#endif //RACEUP_INO_CORE_BMSDEVICE_H
+#endif //RACEUP_INO_CORE_RACEUP_INO_CORE_H

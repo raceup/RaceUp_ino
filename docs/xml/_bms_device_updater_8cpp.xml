@@ -4,38 +4,41 @@
     <compoundname>BmsDeviceUpdater.cpp</compoundname>
     <includes refid="_bms_device_updater_8h" local="yes">BmsDeviceUpdater.h</includes>
     <incdepgraph>
-      <node id="21">
+      <node id="43">
         <label>WString.h</label>
       </node>
-      <node id="18">
-        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp</label>
+      <node id="40">
+        <label>src/Bms/BmsDeviceUpdater.cpp</label>
         <link refid="BmsDeviceUpdater.cpp"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="44">
         <label>BmsDeviceReader.h</label>
         <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="42">
         <label>Arduino.h</label>
       </node>
-      <node id="19">
+      <node id="41">
         <label>BmsDeviceUpdater.h</label>
         <link refid="_bms_device_updater_8h_source"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
-      <node id="23">
-        <label>#include</label>
+      <node id="45">
+        <label>Bms_data.h</label>
+        <link refid="_bms__data_8h_source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -46,34 +49,60 @@
 <codeline lineno="1"></codeline>
 <codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceUpdater.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1adea56427bf1d465febdf5063fe72f47e" kindref="member">BmsDeviceUpdater::sendSegmentVoltage</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(</highlight><highlight class="stringliteral">&quot;Voltage&quot;</highlight><highlight class="normal">,<sp/>cell,<sp/>segment,<sp/>value);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1ab1873577d7413c453222da23b8f6a1ac" kindref="member">BmsDeviceUpdater::sendSegmentVoltage</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(<ref refid="class_bms_device_updater_1aff1720a11582bd1353c50ced9352eda9" kindref="member">commandToString</ref>(kCellVoltage),<sp/>cell,<sp/>segment,<sp/>value);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a46d75db7fc11f3ab833080a08fea0d8a" kindref="member">BmsDeviceUpdater::sendPackVoltageOfBmsDevice</ref>(byte<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a655ccc4e5f315c383d066c502b73b9e2" kindref="member">BmsDeviceUpdater::sendPackVoltageOfBmsDevice</ref>(byte<sp/>n)<sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>segment<sp/>=<sp/>(n<sp/>-<sp/>1)<sp/>/<sp/>3;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(byte<sp/>cell<sp/>=<sp/>0;<sp/>cell<sp/>&lt;<sp/>18;<sp/>cell++)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>through<sp/>cells<sp/>monitored<sp/>by<sp/>bms<sp/>device<sp/>(6<sp/>of<sp/>them)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1adea56427bf1d465febdf5063fe72f47e" kindref="member">sendSegmentVoltage</ref>(cell,<sp/>segment,<sp/><ref refid="class_bms_device_reader_1a6419c01acb3752a22909248b089ed883" kindref="member">BmsDeviceReader::getCellVoltage</ref>(n,<sp/>cell));<sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>voltage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1ab1873577d7413c453222da23b8f6a1ac" kindref="member">sendSegmentVoltage</ref>(cell,<sp/>segment,<sp/><ref refid="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" kindref="member">BmsDeviceReader::getCellVoltage</ref>(n,<sp/>cell));<sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>voltage</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a8a1496a8b64045bc0a21d253de3dd408" kindref="member">BmsDeviceUpdater::sendSegmentTemperature</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(</highlight><highlight class="stringliteral">&quot;Temperature&quot;</highlight><highlight class="normal">,<sp/>cell,<sp/>segment,<sp/>value);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1aae3a833fa2bd8403d9b55c358a6d2820" kindref="member">BmsDeviceUpdater::sendSegmentTemperature</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(<ref refid="class_bms_device_updater_1aff1720a11582bd1353c50ced9352eda9" kindref="member">commandToString</ref>(kCellTemperature),<sp/>cell,<sp/>segment,<sp/>value);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1adaeff0fa9bc196fbce908b5d741fea3a" kindref="member">BmsDeviceUpdater::sendPackTemperatureOfBmsDevice</ref>(byte<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1ac2bf4bba3100b48c1f8b42d21c8670f1" kindref="member">BmsDeviceUpdater::sendPackTemperatureOfBmsDevice</ref>(byte<sp/>n)<sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>segment<sp/>=<sp/>(n<sp/>-<sp/>1)<sp/>/<sp/>3;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(byte<sp/>cell<sp/>=<sp/>0;<sp/>cell<sp/>&lt;<sp/>18;<sp/>cell++)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>through<sp/>cells<sp/>monitored<sp/>by<sp/>bms<sp/>device<sp/>(6<sp/>of<sp/>them)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="class_bms_device_reader_1adbae5620c7b0fc99a4ca4f858f8e0445" kindref="member">BmsDeviceReader::getTemperature</ref>(n,<sp/>TEMPERATURE1);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a8a1496a8b64045bc0a21d253de3dd408" kindref="member">sendSegmentTemperature</ref>(cell,<sp/>segment,<sp/>value);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" kindref="member">BmsDeviceReader::getTemperature</ref>(n,<sp/>TEMPERATURE1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1aae3a833fa2bd8403d9b55c358a6d2820" kindref="member">sendSegmentTemperature</ref>(cell,<sp/>segment,<sp/>value);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_bms_device_updater_1acbdc84250bda4de22237e81cc1d3736f" kindref="member">BmsDeviceUpdater::getSerialUpdate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">String<sp/><ref refid="class_bms_device_updater_1a9c5b00e6d5f24df9a7adbb2b772cfafd" kindref="member">BmsDeviceUpdater::getSerialUpdate</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Serial.readString();</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">String<sp/><ref refid="class_bms_device_updater_1aff1720a11582bd1353c50ced9352eda9" kindref="member">BmsDeviceUpdater::commandToString</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(command)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Acknowledge&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Error&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Plot&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Alert&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Fault&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Status&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>7:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Voltage&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Temperature&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>9:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Sleep&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(String)<sp/></highlight><highlight class="stringliteral">&quot;Unknown&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp"/>
+    <location file="src/Bms/BmsDeviceUpdater.cpp"/>
   </compounddef>
 </doxygen>

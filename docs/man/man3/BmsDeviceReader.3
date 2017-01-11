@@ -27,6 +27,22 @@ BmsDeviceReader \-
 .RI "static byte * \fBgetBmsDeviceStatus\fP (byte device_address)"
 .br
 .in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const double \fBBETA_THERMISTOR\fP = 3435\&.0"
+.br
+.ti -1c
+.RI "static const double \fBRB_THERMISTOR\fP = 1800\&.0"
+.br
+.ti -1c
+.RI "static const double \fBRT_THERMISTOR\fP = 1500\&.0"
+.br
+.ti -1c
+.RI "static const double \fBR0_THERMISTOR\fP = 10000\&.0"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Copyright 2016 - 2017 RaceUp Team Unipd
@@ -38,7 +54,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "static byte * BmsDeviceReader::bmsDeviceRead (byte deviceAddress, byte regAddress, byte length)\fC [static]\fP"
+.SS "byte * BmsDeviceReader::bmsDeviceRead (byte deviceAddress, byte regAddress, byte length)\fC [static]\fP"
 Read data read from registers 
 .PP
 \fBParameters:\fP
@@ -52,17 +68,11 @@ Read data read from registers
 .PP
 \fBReturns:\fP
 .RS 4
-data read from registers
+data read from registers 
 .RE
 .PP
-Copyright 2016 - 2017 RaceUp Team Unipd
-.PP
-Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
-.PP
-http://www.apache.org/licenses/LICENSE-2.0
-.PP
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
-.SS "static byte * BmsDeviceReader::getBmsDeviceStatus (byte device_address)\fC [static]\fP"
+
+.SS "byte * BmsDeviceReader::getBmsDeviceStatus (byte device_address)\fC [static]\fP"
 Read status 
 .PP
 \fBParameters:\fP
@@ -71,7 +81,7 @@ Read status
 .RE
 .PP
 
-.SS "static int BmsDeviceReader::getCellVoltage (byte deviceAddress, byte cellNumber)\fC [static]\fP"
+.SS "int BmsDeviceReader::getCellVoltage (byte deviceAddress, byte cellNumber)\fC [static]\fP"
 Return cell voltage 
 .PP
 \fBParameters:\fP
@@ -87,7 +97,7 @@ cell voltage of cell in device
 .RE
 .PP
 
-.SS "static double BmsDeviceReader::getGpaiVbatt (byte device_address, bool dev)\fC [static]\fP"
+.SS "double BmsDeviceReader::getGpaiVbatt (byte device_address, bool dev)\fC [static]\fP"
 TODO: WTF?? 
 .PP
 \fBParameters:\fP
@@ -103,7 +113,7 @@ TODO: WTF??
 .RE
 .PP
 
-.SS "static double BmsDeviceReader::getTemperature (byte device_address, byte temperature)\fC [static]\fP"
+.SS "double BmsDeviceReader::getTemperature (byte device_address, byte temperature)\fC [static]\fP"
 
 .PP
 \fBParameters:\fP
@@ -119,6 +129,18 @@ temperature of device
 .RE
 .PP
 
+.SH "Member Data Documentation"
+.PP 
+.SS "const double BmsDeviceReader::BETA_THERMISTOR = 3435\&.0\fC [static]\fP"
+Thermistor data
+.PP
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
 
 .SH "Author"
 .PP 

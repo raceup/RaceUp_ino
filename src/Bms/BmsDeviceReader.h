@@ -20,8 +20,7 @@
 
 #include <Arduino.h>
 
-#include "BmsDeviceReader.h
-#include "BmsDeviceWriter.h"
+#include "Bms_data.h"
 
 class BmsDeviceReader {
 
@@ -64,15 +63,13 @@ public:
      */
     static byte *getBmsDeviceStatus(byte device_address);
 
-private:
-
     /**
      * Thermistor data
      */
-    const double BETA_THERMISTOR = 3435.0;
-    const double RB_THERMISTOR = 1800.0;
-    const double RT_THERMISTOR = 1500.0;
-    const double R0_THERMISTOR = 10000.0;
+    static const double BETA_THERMISTOR;
+    static const double RB_THERMISTOR;
+    static const double RT_THERMISTOR;
+    static const double R0_THERMISTOR;
 };
 
 

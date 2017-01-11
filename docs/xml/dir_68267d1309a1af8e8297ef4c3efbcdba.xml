@@ -1,15 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
-    <compoundname>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src</compoundname>
-    <innerdir refid="dir_21e611bad941ad1f6e41d8e2b43683d8">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms</innerdir>
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_21e611bad941ad1f6e41d8e2b43683d8">src/Bms</innerdir>
     <innerfile refid="data_8h">data.h</innerfile>
+    <innerfile refid="_race_up__ino__core_8cpp">RaceUp_ino_core.cpp</innerfile>
+    <innerfile refid="_race_up__ino__core_8h">RaceUp_ino_core.h</innerfile>
     <innerfile refid="_utils_8cpp">Utils.cpp</innerfile>
     <innerfile refid="_utils_8h">Utils.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/"/>
+    <location file="src/"/>
   </compounddef>
 </doxygen>
