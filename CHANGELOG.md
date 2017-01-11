@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.1.3 - 2016-01-11
+### Added
+- utils frame conversions
+
 ## 0.1.2 - 2016-01-11
 ### Added
 - SdCardStream

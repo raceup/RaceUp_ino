@@ -10,6 +10,18 @@
 static double \hyperlink{class_utils_a393f44e0230724e5cd3b7c125b16b5e1}{from\+Kelvin\+To\+Celsius} (double kelvin\+Value)
 \item 
 static double \hyperlink{class_utils_a70e2b7f69e19a166352387194f83a13c}{convert\+Cell\+Voltage} (double cell\+Voltage\+Int)
+\item 
+static void \hyperlink{class_utils_af819499b6a69f2aed478a2945bedc56b}{frame\+To\+Float} (C\+A\+N\+\_\+\+F\+R\+A\+ME \&frame, float $\ast$x, float $\ast$x1)
+\item 
+static void \hyperlink{class_utils_aa3f908c62401cc150a33ac791e0fa1c1}{frame\+To\+Float} (C\+A\+N\+\_\+\+F\+R\+A\+ME \&frame, float $\ast$x)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{class_utils_af916f41aa01c118944d9dd91fea3584e}{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR} = -\/273.\+15
+\item 
+static const double {\bfseries B\+M\+S\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+A\+T\+I\+O\+\_\+\+F\+A\+C\+T\+OR} = 6250.\+0 / 16383.\+0\hypertarget{class_utils_a1a92d9c2edea3e4b3abd48994a4475fa}{}\label{class_utils_a1a92d9c2edea3e4b3abd48994a4475fa}
+
 \end{DoxyCompactItemize}
 
 
@@ -38,6 +50,39 @@ View datasheet
 \begin{DoxyReturn}{Returns}
 cell voltage according to datasheet 
 \end{DoxyReturn}
+\index{Utils@{Utils}!frame\+To\+Float@{frame\+To\+Float}}
+\index{frame\+To\+Float@{frame\+To\+Float}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{frame\+To\+Float(\+C\+A\+N\+\_\+\+F\+R\+A\+M\+E \&frame, float $\ast$x, float $\ast$x1)}{frameToFloat(CAN_FRAME &frame, float *x, float *x1)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::frame\+To\+Float (
+\begin{DoxyParamCaption}
+\item[{C\+A\+N\+\_\+\+F\+R\+A\+ME \&}]{frame, }
+\item[{float $\ast$}]{x, }
+\item[{float $\ast$}]{x1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_utils_af819499b6a69f2aed478a2945bedc56b}{}\label{class_utils_af819499b6a69f2aed478a2945bedc56b}
+Stores frame value in 2 buffers of 4 chars each 
+\begin{DoxyParams}{Parameters}
+{\em frame} & frame frame to convert \\
+\hline
+{\em x} & first array of 4 char containing buffer value \\
+\hline
+{\em x1} & second array of 4 char containing buffer value \\
+\hline
+\end{DoxyParams}
+\index{Utils@{Utils}!frame\+To\+Float@{frame\+To\+Float}}
+\index{frame\+To\+Float@{frame\+To\+Float}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{frame\+To\+Float(\+C\+A\+N\+\_\+\+F\+R\+A\+M\+E \&frame, float $\ast$x)}{frameToFloat(CAN_FRAME &frame, float *x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::frame\+To\+Float (
+\begin{DoxyParamCaption}
+\item[{C\+A\+N\+\_\+\+F\+R\+A\+ME \&}]{frame, }
+\item[{float $\ast$}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_utils_aa3f908c62401cc150a33ac791e0fa1c1}{}\label{class_utils_aa3f908c62401cc150a33ac791e0fa1c1}
+Stores frame value in a buffer with 4 char 
+\begin{DoxyParams}{Parameters}
+{\em frame} & frame to convert \\
+\hline
+{\em x} & array of 4 char containing buffer value \\
+\hline
+\end{DoxyParams}
 \index{Utils@{Utils}!from\+Kelvin\+To\+Celsius@{from\+Kelvin\+To\+Celsius}}
 \index{from\+Kelvin\+To\+Celsius@{from\+Kelvin\+To\+Celsius}!Utils@{Utils}}
 \subsubsection[{\texorpdfstring{from\+Kelvin\+To\+Celsius(double kelvin\+Value)}{fromKelvinToCelsius(double kelvinValue)}}]{\setlength{\rightskip}{0pt plus 5cm}double Utils\+::from\+Kelvin\+To\+Celsius (
@@ -54,6 +99,18 @@ Convert kelving temperature degree to celsius ones
 equivalent celsius temperature 
 \end{DoxyReturn}
 
+
+\subsection{Member Data Documentation}
+\index{Utils@{Utils}!C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR@{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR@{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}{CELSIUS_TO_KELVIN_FACTOR}}]{\setlength{\rightskip}{0pt plus 5cm}const double Utils\+::\+C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR = -\/273.\+15\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_utils_af916f41aa01c118944d9dd91fea3584e}{}\label{class_utils_af916f41aa01c118944d9dd91fea3584e}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -8,47 +8,47 @@
     <includedby refid="_bms_device_updater_8h" local="yes">src/Bms/BmsDeviceUpdater.h</includedby>
     <includedby refid="_bms_device_reader_8cpp" local="yes">src/Bms/BmsDeviceReader.cpp</includedby>
     <incdepgraph>
-      <node id="37">
+      <node id="38">
         <label>src/Bms/BmsDeviceReader.h</label>
         <link refid="BmsDeviceReader.h"/>
-        <childnode refid="38" relation="include">
-        </childnode>
         <childnode refid="39" relation="include">
         </childnode>
-      </node>
-      <node id="38">
-        <label>Arduino.h</label>
+        <childnode refid="40" relation="include">
+        </childnode>
       </node>
       <node id="39">
+        <label>Arduino.h</label>
+      </node>
+      <node id="40">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="38" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="42">
+      <node id="43">
         <label>src/RaceUp_ino_core.h</label>
         <link refid="_race_up__ino__core_8h_source"/>
       </node>
-      <node id="40">
+      <node id="41">
         <label>src/Bms/BmsDeviceReader.h</label>
         <link refid="BmsDeviceReader.h"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="41">
-        <label>src/Bms/BmsDevice.h</label>
-        <link refid="_bms_device_8h_source"/>
-        <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="43">
+      <node id="44">
         <label>src/Bms/BmsDeviceUpdater.h</label>
         <link refid="_bms_device_updater_8h_source"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

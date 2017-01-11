@@ -4,24 +4,24 @@
     <compoundname>SdCardStream.cpp</compoundname>
     <includes refid="_sd_card_stream_8h" local="yes">SdCardStream.h</includes>
     <incdepgraph>
-      <node id="82">
+      <node id="83">
         <label>SD.h</label>
       </node>
-      <node id="83">
+      <node id="84">
         <label>WString.h</label>
       </node>
-      <node id="81">
+      <node id="82">
         <label>SdCardStream.h</label>
         <link refid="_sd_card_stream_8h_source"/>
-        <childnode refid="82" relation="include">
-        </childnode>
         <childnode refid="83" relation="include">
         </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
       </node>
-      <node id="80">
+      <node id="81">
         <label>src/IOStreams/SdCardStream.cpp</label>
         <link refid="SdCardStream.cpp"/>
-        <childnode refid="81" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
     </incdepgraph>

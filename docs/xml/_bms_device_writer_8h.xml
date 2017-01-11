@@ -9,52 +9,52 @@
     <includedby refid="_bms_device_8h" local="yes">src/Bms/BmsDevice.h</includedby>
     <includedby refid="_bms_device_writer_8cpp" local="yes">src/Bms/BmsDeviceWriter.cpp</includedby>
     <incdepgraph>
-      <node id="66">
+      <node id="67">
         <label>src/Bms/BmsDeviceWriter.h</label>
         <link refid="BmsDeviceWriter.h"/>
-        <childnode refid="67" relation="include">
-        </childnode>
         <childnode refid="68" relation="include">
         </childnode>
         <childnode refid="69" relation="include">
         </childnode>
         <childnode refid="70" relation="include">
         </childnode>
-      </node>
-      <node id="70">
-        <label>../data.h</label>
-        <link refid="data_8h_source"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="68">
-        <label>avr/pgmspace.h</label>
-      </node>
-      <node id="67">
-        <label>Arduino.h</label>
+      <node id="71">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="68" relation="include">
+        </childnode>
       </node>
       <node id="69">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="68">
+        <label>Arduino.h</label>
+      </node>
+      <node id="70">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="68" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="73">
+      <node id="74">
         <label>src/RaceUp_ino_core.h</label>
         <link refid="_race_up__ino__core_8h_source"/>
       </node>
-      <node id="71">
+      <node id="72">
         <label>src/Bms/BmsDeviceWriter.h</label>
         <link refid="BmsDeviceWriter.h"/>
-        <childnode refid="72" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="72">
+      <node id="73">
         <label>src/Bms/BmsDevice.h</label>
         <link refid="_bms_device_8h_source"/>
-        <childnode refid="73" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

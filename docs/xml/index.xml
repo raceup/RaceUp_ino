@@ -32,8 +32,6 @@
     <member refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kind="function"><name>bmsDeviceWrite</name></member>
     <member refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kind="function"><name>writeStatusOfBmsDevice</name></member>
   </compound>
-  <compound refid="class_race_up__ino__core" kind="class"><name>RaceUp_ino_core</name>
-  </compound>
   <compound refid="class_sd_card_stream" kind="class"><name>SdCardStream</name>
     <member refid="class_sd_card_stream_1a2659f0129bf2e8a8dd6f100b186a3be2" kind="variable"><name>chipSelect</name></member>
     <member refid="class_sd_card_stream_1a0663dba7c013243f752635cd5981ff9b" kind="variable"><name>currentFile</name></member>
@@ -47,6 +45,8 @@
     <member refid="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" kind="variable"><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
     <member refid="class_utils_1a393f44e0230724e5cd3b7c125b16b5e1" kind="function"><name>fromKelvinToCelsius</name></member>
     <member refid="class_utils_1a70e2b7f69e19a166352387194f83a13c" kind="function"><name>convertCellVoltage</name></member>
+    <member refid="class_utils_1af819499b6a69f2aed478a2945bedc56b" kind="function"><name>frameToFloat</name></member>
+    <member refid="class_utils_1aa3f908c62401cc150a33ac791e0fa1c1" kind="function"><name>frameToFloat</name></member>
   </compound>
   <compound refid="_bms__data_8h" kind="file"><name>Bms_data.h</name>
     <member refid="_bms__data_8h_1abcd396367233a5ebc58b6bcfed102be7" kind="define"><name>SLAVE_SELECT_PIN</name></member>

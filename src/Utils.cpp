@@ -28,7 +28,6 @@ double Utils::fromKelvinToCelsius(double kelvinValue) {
     return kelvinValue + CELSIUS_TO_KELVIN_FACTOR;
 }
 
-#ifdef ARDUINO_DUE
 void Utils::frameToFloat(CAN_FRAME &frame, float *x, float *x1) {
     char vBuffer[4], vBuffer1[4];  // buffers to get frame value
 
@@ -52,4 +51,3 @@ void Utils::frameToFloat(CAN_FRAME &frame, float *x) {
 
     *x = *(float *) &vBuffer;
 }
-#endif

@@ -3,81 +3,108 @@
   <compounddef id="_race_up__ino__core_8h" kind="file" language="C++">
     <compoundname>RaceUp_ino_core.h</compoundname>
     <includes refid="_bms_device_8h" local="yes">Bms/BmsDevice.h</includes>
+    <includes refid="_sd_card_stream_8h" local="yes">IOStreams/SdCardStream.h</includes>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
     <includes refid="data_8h" local="yes">data.h</includes>
     <incdepgraph>
-      <node id="100">
+      <node id="104">
+        <label>SD.h</label>
+      </node>
+      <node id="102">
         <label>WString.h</label>
       </node>
-      <node id="91">
+      <node id="93">
         <label>src/RaceUp_ino_core.h</label>
         <link refid="RaceUp_ino_core.h"/>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="98" relation="include">
-        </childnode>
-      </node>
-      <node id="94">
-        <label>BmsDeviceReader.h</label>
-        <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-      </node>
-      <node id="96">
-        <label>BmsDeviceWriter.h</label>
-        <link refid="_bms_device_writer_8h_source"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="97" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-        <childnode refid="98" relation="include">
-        </childnode>
-      </node>
-      <node id="98">
-        <label>../data.h</label>
-        <link refid="data_8h_source"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-      </node>
-      <node id="97">
-        <label>avr/pgmspace.h</label>
-      </node>
-      <node id="92">
-        <label>Bms/BmsDevice.h</label>
-        <link refid="_bms_device_8h_source"/>
-        <childnode refid="93" relation="include">
-        </childnode>
         <childnode refid="94" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
+        <childnode refid="103" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
-        </childnode>
-      </node>
-      <node id="93">
-        <label>Arduino.h</label>
-      </node>
-      <node id="99">
-        <label>BmsDeviceUpdater.h</label>
-        <link refid="_bms_device_updater_8h_source"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="105" relation="include">
         </childnode>
         <childnode refid="100" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+      </node>
+      <node id="96">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>due_can.h</label>
+      </node>
+      <node id="103">
+        <label>IOStreams/SdCardStream.h</label>
+        <link refid="_sd_card_stream_8h_source"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>BmsDeviceWriter.h</label>
+        <link refid="_bms_device_writer_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>../data.h</label>
+        <link refid="data_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Utils.h</label>
+        <link refid="_utils_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>avr/pgmspace.h</label>
+      </node>
+      <node id="94">
+        <label>Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
         </childnode>
       </node>
       <node id="95">
+        <label>Arduino.h</label>
+      </node>
+      <node id="101">
+        <label>BmsDeviceUpdater.h</label>
+        <link refid="_bms_device_updater_8h_source"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="95" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innerclass refid="class_race_up__ino__core" prot="public">RaceUp_ino_core</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -87,15 +114,17 @@
 <codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bms/BmsDevice.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bms/BmsDevice.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="class_race_up__ino__core" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_race_up__ino__core" kindref="compound">RaceUp_ino_core</ref><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>streams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;IOStreams/SdCardStream.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>utils<sp/>and<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_RACEUP_INO_CORE_H</highlight></codeline>
     </programlisting>
     <location file="src/RaceUp_ino_core.h"/>
   </compounddef>

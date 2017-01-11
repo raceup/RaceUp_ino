@@ -3,8 +3,8 @@
   <compounddef id="class_utils" kind="class" language="C++" prot="public">
     <compoundname>Utils</compoundname>
     <includes refid="_utils_8h" local="no">Utils.h</includes>
-      <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="private" static="yes" mutable="no">
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="public" static="yes" mutable="no">
         <type>const double</type>
         <definition>const double Utils::CELSIUS_TO_KELVIN_FACTOR</definition>
         <argsstring></argsstring>
@@ -16,9 +16,9 @@
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Utils.h" line="64" column="1" bodyfile="src/Utils.h" bodystart="64" bodyend="-1"/>
+        <location file="src/Utils.h" line="58" column="1" bodyfile="src/Utils.h" bodystart="58" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="private" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="public" static="yes" mutable="no">
         <type>const double</type>
         <definition>const double Utils::BMS_VOLTAGE_RATIO_FACTOR</definition>
         <argsstring></argsstring>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Utils.h" line="65" column="1" bodyfile="src/Utils.h" bodystart="65" bodyend="-1"/>
+        <location file="src/Utils.h" line="59" column="1" bodyfile="src/Utils.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -58,7 +58,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Utils.h" line="35" column="1" bodyfile="src/Utils.cpp" bodystart="27" bodyend="29"/>
+        <location file="src/Utils.h" line="33" column="1" bodyfile="src/Utils.cpp" bodystart="27" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_utils_1a70e2b7f69e19a166352387194f83a13c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -84,18 +84,103 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Utils.h" line="42" column="1" bodyfile="src/Utils.cpp" bodystart="23" bodyend="25"/>
+        <location file="src/Utils.h" line="40" column="1" bodyfile="src/Utils.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utils_1af819499b6a69f2aed478a2945bedc56b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Utils::frameToFloat</definition>
+        <argsstring>(CAN_FRAME &amp;frame, float *x, float *x1)</argsstring>
+        <name>frameToFloat</name>
+        <param>
+          <type>CAN_FRAME &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores frame value in 2 buffers of 4 chars each <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame frame to convert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first array of 4 char containing buffer value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second array of 4 char containing buffer value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Utils.h" line="49" column="1" bodyfile="src/Utils.cpp" bodystart="31" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utils_1aa3f908c62401cc150a33ac791e0fa1c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Utils::frameToFloat</definition>
+        <argsstring>(CAN_FRAME &amp;frame, float *x)</argsstring>
+        <name>frameToFloat</name>
+        <param>
+          <type>CAN_FRAME &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores frame value in a buffer with 4 char <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame to convert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of 4 char containing buffer value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Utils.h" line="56" column="1" bodyfile="src/Utils.cpp" bodystart="46" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
-    <location file="src/Utils.h" line="26" column="1" bodyfile="src/Utils.h" bodystart="26" bodyend="66"/>
+    <location file="src/Utils.h" line="24" column="1" bodyfile="src/Utils.h" bodystart="24" bodyend="60"/>
     <listofallmembers>
-      <member refid="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="private" virt="non-virtual"><scope>Utils</scope><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
-      <member refid="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="private" virt="non-virtual"><scope>Utils</scope><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
+      <member refid="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="public" virt="non-virtual"><scope>Utils</scope><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
+      <member refid="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="public" virt="non-virtual"><scope>Utils</scope><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
       <member refid="class_utils_1a70e2b7f69e19a166352387194f83a13c" prot="public" virt="non-virtual"><scope>Utils</scope><name>convertCellVoltage</name></member>
+      <member refid="class_utils_1af819499b6a69f2aed478a2945bedc56b" prot="public" virt="non-virtual"><scope>Utils</scope><name>frameToFloat</name></member>
+      <member refid="class_utils_1aa3f908c62401cc150a33ac791e0fa1c1" prot="public" virt="non-virtual"><scope>Utils</scope><name>frameToFloat</name></member>
       <member refid="class_utils_1a393f44e0230724e5cd3b7c125b16b5e1" prot="public" virt="non-virtual"><scope>Utils</scope><name>fromKelvinToCelsius</name></member>
     </listofallmembers>
   </compounddef>

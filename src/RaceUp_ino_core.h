@@ -18,12 +18,14 @@
 #ifndef RACEUP_INO_CORE_RACEUP_INO_CORE_H
 #define RACEUP_INO_CORE_RACEUP_INO_CORE_H
 
+// devices
 #include "Bms/BmsDevice.h"
+
+// streams
+#include "IOStreams/SdCardStream.h"
+
+// utils and data
+#include "Utils.h"
 #include "data.h"
-
-class RaceUp_ino_core {
-    //
-};
-
 
 #endif //RACEUP_INO_CORE_RACEUP_INO_CORE_H
