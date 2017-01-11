@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_bms_device_reader_8h" kind="file" language="C++">
+    <compoundname>BmsDeviceReader.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="yes">#include</includes>
+    <includedby refid="_bms_device_reader_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp</includedby>
+    <includedby refid="_bms_device_updater_8h" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h</label>
+        <link refid="BmsDeviceReader.h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Arduino.h</label>
+      </node>
+      <node id="15">
+        <label>#include</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h</label>
+        <link refid="BmsDeviceReader.h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h</label>
+        <link refid="_bms_device_updater_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_bms_device_reader" prot="public">BmsDeviceReader</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_BMSDEVICEREADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_BMSDEVICEREADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceReader.h</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#include<sp/>&quot;</highlight><highlight class="normal"><ref refid="class_bms_device_writer" kindref="compound">BmsDeviceWriter</ref>.h</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="26" refid="class_bms_device_reader" refkind="compound"><highlight class="stringliteral">class<sp/>BmsDeviceReader<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral">public:</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>byte<sp/>*bmsDeviceRead(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>length);</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>double<sp/>getTemperature(byte<sp/>device_address,<sp/>byte<sp/>temperature);</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>double<sp/>getGpaiVbatt(byte<sp/>device_address,<sp/>bool<sp/>dev);</highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>int<sp/>getCellVoltage(byte<sp/>deviceAddress,<sp/>byte<sp/>cellNumber);</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>byte<sp/>*getBmsDeviceStatus(byte<sp/>device_address);</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral">private:</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>BETA_THERMISTOR<sp/>=<sp/>3435.0;</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>RB_THERMISTOR<sp/>=<sp/>1800.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>RT_THERMISTOR<sp/>=<sp/>1500.0;</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>const<sp/>double<sp/>R0_THERMISTOR<sp/>=<sp/>10000.0;</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral">};</highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="78"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEREADER_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h"/>
+  </compounddef>
+</doxygen>

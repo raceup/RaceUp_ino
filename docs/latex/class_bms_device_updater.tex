@@ -1,0 +1,179 @@
+\hypertarget{class_bms_device_updater}{}\section{Bms\+Device\+Updater Class Reference}
+\label{class_bms_device_updater}\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+
+
+{\ttfamily \#include $<$Bms\+Device\+Updater.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{class_bms_device_updater_a6ddc61da65da16ff6c24995f43f0a6c1}{send\+Segment\+Status} (String status\+Type, byte cell, byte segment, T value)
+\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{class_bms_device_updater_a9449da7019249fb3ce825c12fb61c134}{send\+Update} (byte type\+Value, T value)
+\item 
+{\footnotesize template$<$class T $>$ }\\static void \hyperlink{class_bms_device_updater_a5cc748a486645d1af6f675274f0d29ae}{send\+Status} (T value)
+\item 
+static void \hyperlink{class_bms_device_updater_adea56427bf1d465febdf5063fe72f47e}{send\+Segment\+Voltage} (byte cell, byte segment, double value)
+\item 
+static void \hyperlink{class_bms_device_updater_a46d75db7fc11f3ab833080a08fea0d8a}{send\+Pack\+Voltage\+Of\+Bms\+Device} (byte n)
+\item 
+static void \hyperlink{class_bms_device_updater_a8a1496a8b64045bc0a21d253de3dd408}{send\+Segment\+Temperature} (byte cell, byte segment, double value)
+\item 
+static void \hyperlink{class_bms_device_updater_adaeff0fa9bc196fbce908b5d741fea3a}{send\+Pack\+Temperature\+Of\+Bms\+Device} (byte n)
+\item 
+static String \hyperlink{class_bms_device_updater_acbdc84250bda4de22237e81cc1d3736f}{get\+Serial\+Update} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Sends updates on bms device to serial 
+
+\subsection{Member Function Documentation}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!get\+Serial\+Update@{get\+Serial\+Update}}
+\index{get\+Serial\+Update@{get\+Serial\+Update}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{get\+Serial\+Update()}{getSerialUpdate()}}]{\setlength{\rightskip}{0pt plus 5cm}static String Bms\+Device\+Updater\+::get\+Serial\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_updater_acbdc84250bda4de22237e81cc1d3736f}{}\label{class_bms_device_updater_acbdc84250bda4de22237e81cc1d3736f}
+Reads serial data and checks if there is an update coming from the client \begin{DoxyReturn}{Returns}
+Raw String read from serial 
+\end{DoxyReturn}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Pack\+Temperature\+Of\+Bms\+Device@{send\+Pack\+Temperature\+Of\+Bms\+Device}}
+\index{send\+Pack\+Temperature\+Of\+Bms\+Device@{send\+Pack\+Temperature\+Of\+Bms\+Device}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Pack\+Temperature\+Of\+Bms\+Device(byte n)}{sendPackTemperatureOfBmsDevice(byte n)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Bms\+Device\+Updater\+::send\+Pack\+Temperature\+Of\+Bms\+Device (
+\begin{DoxyParamCaption}
+\item[{byte}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_updater_adaeff0fa9bc196fbce908b5d741fea3a}{}\label{class_bms_device_updater_adaeff0fa9bc196fbce908b5d741fea3a}
+Send temperature data on the pack of bms\+Device device 
+\begin{DoxyParams}{Parameters}
+{\em n} & bms\+Device device \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Pack\+Voltage\+Of\+Bms\+Device@{send\+Pack\+Voltage\+Of\+Bms\+Device}}
+\index{send\+Pack\+Voltage\+Of\+Bms\+Device@{send\+Pack\+Voltage\+Of\+Bms\+Device}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Pack\+Voltage\+Of\+Bms\+Device(byte n)}{sendPackVoltageOfBmsDevice(byte n)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Bms\+Device\+Updater\+::send\+Pack\+Voltage\+Of\+Bms\+Device (
+\begin{DoxyParamCaption}
+\item[{byte}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_updater_a46d75db7fc11f3ab833080a08fea0d8a}{}\label{class_bms_device_updater_a46d75db7fc11f3ab833080a08fea0d8a}
+Send voltage data on the pack of bms\+Device device 
+\begin{DoxyParams}{Parameters}
+{\em n} & bms\+Device device \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Segment\+Status@{send\+Segment\+Status}}
+\index{send\+Segment\+Status@{send\+Segment\+Status}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Segment\+Status(\+String status\+Type, byte cell, byte segment, T value)}{sendSegmentStatus(String statusType, byte cell, byte segment, T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void Bms\+Device\+Updater\+::send\+Segment\+Status (
+\begin{DoxyParamCaption}
+\item[{String}]{status\+Type, }
+\item[{byte}]{cell, }
+\item[{byte}]{segment, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_bms_device_updater_a6ddc61da65da16ff6c24995f43f0a6c1}{}\label{class_bms_device_updater_a6ddc61da65da16ff6c24995f43f0a6c1}
+Send segment data 
+\begin{DoxyParams}{Parameters}
+{\em status\+Type} & String about type of status to broadcast \\
+\hline
+{\em cell} & number of cell \\
+\hline
+{\em segment} & number of segment \\
+\hline
+{\em value} & value to send \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Segment\+Temperature@{send\+Segment\+Temperature}}
+\index{send\+Segment\+Temperature@{send\+Segment\+Temperature}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Segment\+Temperature(byte cell, byte segment, double value)}{sendSegmentTemperature(byte cell, byte segment, double value)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Bms\+Device\+Updater\+::send\+Segment\+Temperature (
+\begin{DoxyParamCaption}
+\item[{byte}]{cell, }
+\item[{byte}]{segment, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_updater_a8a1496a8b64045bc0a21d253de3dd408}{}\label{class_bms_device_updater_a8a1496a8b64045bc0a21d253de3dd408}
+Send temperature data on the segment 
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender \\
+\hline
+{\em cell} & Cell number \\
+\hline
+{\em segment} & Segment number \\
+\hline
+{\em segment\+Voltage} & Temperature of segment in cell number \\
+\hline
+{\em value} & value to send \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Segment\+Voltage@{send\+Segment\+Voltage}}
+\index{send\+Segment\+Voltage@{send\+Segment\+Voltage}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Segment\+Voltage(byte cell, byte segment, double value)}{sendSegmentVoltage(byte cell, byte segment, double value)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Bms\+Device\+Updater\+::send\+Segment\+Voltage (
+\begin{DoxyParamCaption}
+\item[{byte}]{cell, }
+\item[{byte}]{segment, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_updater_adea56427bf1d465febdf5063fe72f47e}{}\label{class_bms_device_updater_adea56427bf1d465febdf5063fe72f47e}
+Send segment voltage data 
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender \\
+\hline
+{\em cell} & Cell number \\
+\hline
+{\em segment} & Segment number \\
+\hline
+{\em segment\+Voltage} & Voltage of segment in cell number \\
+\hline
+{\em value} & value to send\\
+\hline
+\end{DoxyParams}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. \index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Status@{send\+Status}}
+\index{send\+Status@{send\+Status}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Status(\+T value)}{sendStatus(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void Bms\+Device\+Updater\+::send\+Status (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_bms_device_updater_a5cc748a486645d1af6f675274f0d29ae}{}\label{class_bms_device_updater_a5cc748a486645d1af6f675274f0d29ae}
+Send status 
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender \\
+\hline
+{\em value} & Status to send \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Updater@{Bms\+Device\+Updater}!send\+Update@{send\+Update}}
+\index{send\+Update@{send\+Update}!Bms\+Device\+Updater@{Bms\+Device\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Update(byte type\+Value, T value)}{sendUpdate(byte typeValue, T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void Bms\+Device\+Updater\+::send\+Update (
+\begin{DoxyParamCaption}
+\item[{byte}]{type\+Value, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_bms_device_updater_a9449da7019249fb3ce825c12fb61c134}{}\label{class_bms_device_updater_a9449da7019249fb3ce825c12fb61c134}
+Send data 
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender \\
+\hline
+{\em type\+Value} & Type of arg to send \\
+\hline
+{\em value} & value to send \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/stefano/\+Projects/\+Raceup/\+E\+D/\+Elettronica/projects/\+Race\+Up\+\_\+ino/\+Race\+Up\+\_\+ino\+\_\+core/src/\+Bms/Bms\+Device\+Updater.\+h\item 
+/home/stefano/\+Projects/\+Raceup/\+E\+D/\+Elettronica/projects/\+Race\+Up\+\_\+ino/\+Race\+Up\+\_\+ino\+\_\+core/src/\+Bms/Bms\+Device\+Updater.\+cpp\end{DoxyCompactItemize}

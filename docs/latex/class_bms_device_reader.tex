@@ -1,0 +1,130 @@
+\hypertarget{class_bms_device_reader}{}\section{Bms\+Device\+Reader Class Reference}
+\label{class_bms_device_reader}\index{Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+
+
+{\ttfamily \#include $<$Bms\+Device\+Reader.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static byte $\ast$ \hyperlink{class_bms_device_reader_a1f714eea255931c0f36af3e305412c1e}{bms\+Device\+Read} (byte device\+Address, byte reg\+Address, byte length)
+\item 
+static double \hyperlink{class_bms_device_reader_adbae5620c7b0fc99a4ca4f858f8e0445}{get\+Temperature} (byte device\+\_\+address, byte temperature)
+\item 
+static double \hyperlink{class_bms_device_reader_a6c5950b69bd1c4c9481cfb9dae5eddcd}{get\+Gpai\+Vbatt} (byte device\+\_\+address, bool dev)
+\item 
+static int \hyperlink{class_bms_device_reader_a6419c01acb3752a22909248b089ed883}{get\+Cell\+Voltage} (byte device\+Address, byte cell\+Number)
+\item 
+static byte $\ast$ \hyperlink{class_bms_device_reader_a7acf8a5b5bca22c7e968d90deaaebffc}{get\+Bms\+Device\+Status} (byte device\+\_\+address)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+\subsection{Member Function Documentation}
+\index{Bms\+Device\+Reader@{Bms\+Device\+Reader}!bms\+Device\+Read@{bms\+Device\+Read}}
+\index{bms\+Device\+Read@{bms\+Device\+Read}!Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+\subsubsection[{\texorpdfstring{bms\+Device\+Read(byte device\+Address, byte reg\+Address, byte length)}{bmsDeviceRead(byte deviceAddress, byte regAddress, byte length)}}]{\setlength{\rightskip}{0pt plus 5cm}static byte $\ast$ Bms\+Device\+Reader\+::bms\+Device\+Read (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\+Address, }
+\item[{byte}]{reg\+Address, }
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_reader_a1f714eea255931c0f36af3e305412c1e}{}\label{class_bms_device_reader_a1f714eea255931c0f36af3e305412c1e}
+Read data read from registers 
+\begin{DoxyParams}{Parameters}
+{\em device\+Address} & where to read \\
+\hline
+{\em reg\+Address} & registry address \\
+\hline
+{\em length} & length to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data read from registers
+\end{DoxyReturn}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. \index{Bms\+Device\+Reader@{Bms\+Device\+Reader}!get\+Bms\+Device\+Status@{get\+Bms\+Device\+Status}}
+\index{get\+Bms\+Device\+Status@{get\+Bms\+Device\+Status}!Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+\subsubsection[{\texorpdfstring{get\+Bms\+Device\+Status(byte device\+\_\+address)}{getBmsDeviceStatus(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}static byte $\ast$ Bms\+Device\+Reader\+::get\+Bms\+Device\+Status (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\+\_\+address}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_reader_a7acf8a5b5bca22c7e968d90deaaebffc}{}\label{class_bms_device_reader_a7acf8a5b5bca22c7e968d90deaaebffc}
+Read status 
+\begin{DoxyParams}{Parameters}
+{\em device\+Address} & address of device to get info of \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device\+Reader@{Bms\+Device\+Reader}!get\+Cell\+Voltage@{get\+Cell\+Voltage}}
+\index{get\+Cell\+Voltage@{get\+Cell\+Voltage}!Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+\subsubsection[{\texorpdfstring{get\+Cell\+Voltage(byte device\+Address, byte cell\+Number)}{getCellVoltage(byte deviceAddress, byte cellNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}static int Bms\+Device\+Reader\+::get\+Cell\+Voltage (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\+Address, }
+\item[{byte}]{cell\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_reader_a6419c01acb3752a22909248b089ed883}{}\label{class_bms_device_reader_a6419c01acb3752a22909248b089ed883}
+Return cell voltage 
+\begin{DoxyParams}{Parameters}
+{\em device\+Address} & address of device to get info of \\
+\hline
+{\em cell\+Number} & cell number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell voltage of cell in device 
+\end{DoxyReturn}
+\index{Bms\+Device\+Reader@{Bms\+Device\+Reader}!get\+Gpai\+Vbatt@{get\+Gpai\+Vbatt}}
+\index{get\+Gpai\+Vbatt@{get\+Gpai\+Vbatt}!Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+\subsubsection[{\texorpdfstring{get\+Gpai\+Vbatt(byte device\+\_\+address, bool dev)}{getGpaiVbatt(byte device_address, bool dev)}}]{\setlength{\rightskip}{0pt plus 5cm}static double Bms\+Device\+Reader\+::get\+Gpai\+Vbatt (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\+\_\+address, }
+\item[{bool}]{dev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_reader_a6c5950b69bd1c4c9481cfb9dae5eddcd}{}\label{class_bms_device_reader_a6c5950b69bd1c4c9481cfb9dae5eddcd}
+T\+O\+DO\+: W\+TF?? 
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+address} & address of device \\
+\hline
+{\em dev} & T\+O\+DO\+: W\+TF?? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+O\+DO\+: W\+TF?? 
+\end{DoxyReturn}
+\index{Bms\+Device\+Reader@{Bms\+Device\+Reader}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!Bms\+Device\+Reader@{Bms\+Device\+Reader}}
+\subsubsection[{\texorpdfstring{get\+Temperature(byte device\+\_\+address, byte temperature)}{getTemperature(byte device_address, byte temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}static double Bms\+Device\+Reader\+::get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\+\_\+address, }
+\item[{byte}]{temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_reader_adbae5620c7b0fc99a4ca4f858f8e0445}{}\label{class_bms_device_reader_adbae5620c7b0fc99a4ca4f858f8e0445}
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+address} & address of device \\
+\hline
+{\em temperature} & registry address of temperature to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+temperature of device 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/stefano/\+Projects/\+Raceup/\+E\+D/\+Elettronica/projects/\+Race\+Up\+\_\+ino/\+Race\+Up\+\_\+ino\+\_\+core/src/\+Bms/Bms\+Device\+Reader.\+h\item 
+/home/stefano/\+Projects/\+Raceup/\+E\+D/\+Elettronica/projects/\+Race\+Up\+\_\+ino/\+Race\+Up\+\_\+ino\+\_\+core/src/\+Bms/Bms\+Device\+Reader.\+cpp\end{DoxyCompactItemize}

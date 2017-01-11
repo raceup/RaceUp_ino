@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_bms_device_updater" kind="class" language="C++" prot="public">
+    <compoundname>BmsDeviceUpdater</compoundname>
+    <includes refid="_bms_device_updater_8h" local="no">BmsDeviceUpdater.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bms_device_updater_1a9970075e956204e471a53cca51750e5b" prot="private" static="yes" mutable="no">
+        <type>const byte</type>
+        <definition>const byte BmsDeviceUpdater::TEMPERATURE1</definition>
+        <argsstring></argsstring>
+        <name>TEMPERATURE1</name>
+        <initializer>= 0x0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="126" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendSegmentStatus</definition>
+        <argsstring>(String statusType, byte cell, byte segment, T value)</argsstring>
+        <name>sendSegmentStatus</name>
+        <param>
+          <type>String</type>
+          <declname>statusType</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send segment data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statusType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String about type of status to broadcast </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of cell </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of segment </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="40" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" bodystart="40" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendUpdate</definition>
+        <argsstring>(byte typeValue, T value)</argsstring>
+        <name>sendUpdate</name>
+        <param>
+          <type>byte</type>
+          <declname>typeValue</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of arg to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="73" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1a5cc748a486645d1af6f675274f0d29ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendStatus</definition>
+        <argsstring>(T value)</argsstring>
+        <name>sendStatus</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="83" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1adea56427bf1d465febdf5063fe72f47e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendSegmentVoltage</definition>
+        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <name>sendSegmentVoltage</name>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send segment voltage data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segment number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segmentVoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Voltage of segment in cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="95" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1a46d75db7fc11f3ab833080a08fea0d8a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendPackVoltageOfBmsDevice</definition>
+        <argsstring>(byte n)</argsstring>
+        <name>sendPackVoltageOfBmsDevice</name>
+        <param>
+          <type>byte</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send voltage data on the pack of bmsDevice device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bmsDevice device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="101" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1a8a1496a8b64045bc0a21d253de3dd408" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendSegmentTemperature</definition>
+        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <name>sendSegmentTemperature</name>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send temperature data on the segment <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segment number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segmentVoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature of segment in cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="111" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1adaeff0fa9bc196fbce908b5d741fea3a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice</definition>
+        <argsstring>(byte n)</argsstring>
+        <name>sendPackTemperatureOfBmsDevice</name>
+        <param>
+          <type>byte</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send temperature data on the pack of bmsDevice device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bmsDevice device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="117" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_updater_1acbdc84250bda4de22237e81cc1d3736f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>static String BmsDeviceUpdater::getSerialUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>getSerialUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads serial data and checks if there is an update coming from the client <simplesect kind="return"><para>Raw String read from serial </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="123" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Sends updates on bms device to serial </para>    </detaileddescription>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" line="29" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h" bodystart="29" bodyend="127"/>
+    <listofallmembers>
+      <member refid="class_bms_device_updater_1acbdc84250bda4de22237e81cc1d3736f" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>getSerialUpdate</name></member>
+      <member refid="class_bms_device_updater_1adaeff0fa9bc196fbce908b5d741fea3a" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendPackTemperatureOfBmsDevice</name></member>
+      <member refid="class_bms_device_updater_1a46d75db7fc11f3ab833080a08fea0d8a" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendPackVoltageOfBmsDevice</name></member>
+      <member refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendSegmentStatus</name></member>
+      <member refid="class_bms_device_updater_1a8a1496a8b64045bc0a21d253de3dd408" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendSegmentTemperature</name></member>
+      <member refid="class_bms_device_updater_1adea56427bf1d465febdf5063fe72f47e" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendSegmentVoltage</name></member>
+      <member refid="class_bms_device_updater_1a5cc748a486645d1af6f675274f0d29ae" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendStatus</name></member>
+      <member refid="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" prot="public" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>sendUpdate</name></member>
+      <member refid="class_bms_device_updater_1a9970075e956204e471a53cca51750e5b" prot="private" virt="non-virtual"><scope>BmsDeviceUpdater</scope><name>TEMPERATURE1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

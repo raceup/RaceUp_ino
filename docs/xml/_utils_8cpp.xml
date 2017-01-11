@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_utils_8cpp" kind="file" language="C++">
+    <compoundname>Utils.cpp</compoundname>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
+    <incdepgraph>
+      <node id="44">
+        <label>Utils.h</label>
+        <link refid="_utils_8h_source"/>
+      </node>
+      <node id="43">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.cpp</label>
+        <link refid="Utils.cpp"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;Utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_utils_1a767790e66f3770818054ea2479db7941" kindref="member">Utils::convertCellVoltage</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cellVoltageInt)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellVoltageInt<sp/>*<sp/>BMS_VOLTAGE_RATIO_FACTOR;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_utils_1a48f594cd17936f0bd44d268695eae482" kindref="member">Utils::fromKelvinToCelsius</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kelvinValue)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kelvinValue<sp/>+<sp/>CELSIUS_TO_KELVIN_FACTOR;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.cpp"/>
+  </compounddef>
+</doxygen>

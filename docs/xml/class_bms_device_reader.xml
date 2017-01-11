@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_bms_device_reader" kind="class" language="C++" prot="public">
+    <compoundname>BmsDeviceReader</compoundname>
+    <includes refid="_bms_device_reader_8h" local="no">BmsDeviceReader.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDeviceReader::BETA_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>BETA_THERMISTOR</name>
+        <initializer>= 3435.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thermistor data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="72" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_reader_1a690fcc9572eec59496f5815d5ad96868" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDeviceReader::RB_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>RB_THERMISTOR</name>
+        <initializer>= 1800.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="73" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_reader_1afb697685241c1c09748834cbbc182577" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDeviceReader::RT_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>RT_THERMISTOR</name>
+        <initializer>= 1500.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="74" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_reader_1a80aebbbaaa3fbd33df82d70c185fb738" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDeviceReader::R0_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>R0_THERMISTOR</name>
+        <initializer>= 10000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="75" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_bms_device_reader_1a1f714eea255931c0f36af3e305412c1e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte *</type>
+        <definition>static byte * BmsDeviceReader::bmsDeviceRead</definition>
+        <argsstring>(byte deviceAddress, byte regAddress, byte length)</argsstring>
+        <name>bmsDeviceRead</name>
+        <param>
+          <type>byte</type>
+          <declname>deviceAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>regAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data read from registers <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where to read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>data read from registers</para></simplesect>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="36" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp" bodystart="21" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_reader_1adbae5620c7b0fc99a4ca4f858f8e0445" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double BmsDeviceReader::getTemperature</definition>
+        <argsstring>(byte device_address, byte temperature)</argsstring>
+        <name>getTemperature</name>
+        <param>
+          <type>byte</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address of device </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry address of temperature to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>temperature of device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="43" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp" bodystart="93" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_reader_1a6c5950b69bd1c4c9481cfb9dae5eddcd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double BmsDeviceReader::getGpaiVbatt</definition>
+        <argsstring>(byte device_address, bool dev)</argsstring>
+        <name>getGpaiVbatt</name>
+        <param>
+          <type>byte</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: WTF?? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address of device </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TODO: WTF?? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TODO: WTF?? </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="51" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp" bodystart="102" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_reader_1a6419c01acb3752a22909248b089ed883" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int BmsDeviceReader::getCellVoltage</definition>
+        <argsstring>(byte deviceAddress, byte cellNumber)</argsstring>
+        <name>getCellVoltage</name>
+        <param>
+          <type>byte</type>
+          <declname>deviceAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>cellNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return cell voltage <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address of device to get info of </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cell number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cell voltage of cell in device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="59" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp" bodystart="112" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_reader_1a7acf8a5b5bca22c7e968d90deaaebffc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte *</type>
+        <definition>static byte * BmsDeviceReader::getBmsDeviceStatus</definition>
+        <argsstring>(byte device_address)</argsstring>
+        <name>getBmsDeviceStatus</name>
+        <param>
+          <type>byte</type>
+          <declname>device_address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address of device to get info of </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="65" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.cpp" bodystart="120" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" line="26" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceReader.h" bodystart="26" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" prot="private" virt="non-virtual"><scope>BmsDeviceReader</scope><name>BETA_THERMISTOR</name></member>
+      <member refid="class_bms_device_reader_1a1f714eea255931c0f36af3e305412c1e" prot="public" virt="non-virtual"><scope>BmsDeviceReader</scope><name>bmsDeviceRead</name></member>
+      <member refid="class_bms_device_reader_1a7acf8a5b5bca22c7e968d90deaaebffc" prot="public" virt="non-virtual"><scope>BmsDeviceReader</scope><name>getBmsDeviceStatus</name></member>
+      <member refid="class_bms_device_reader_1a6419c01acb3752a22909248b089ed883" prot="public" virt="non-virtual"><scope>BmsDeviceReader</scope><name>getCellVoltage</name></member>
+      <member refid="class_bms_device_reader_1a6c5950b69bd1c4c9481cfb9dae5eddcd" prot="public" virt="non-virtual"><scope>BmsDeviceReader</scope><name>getGpaiVbatt</name></member>
+      <member refid="class_bms_device_reader_1adbae5620c7b0fc99a4ca4f858f8e0445" prot="public" virt="non-virtual"><scope>BmsDeviceReader</scope><name>getTemperature</name></member>
+      <member refid="class_bms_device_reader_1a80aebbbaaa3fbd33df82d70c185fb738" prot="private" virt="non-virtual"><scope>BmsDeviceReader</scope><name>R0_THERMISTOR</name></member>
+      <member refid="class_bms_device_reader_1a690fcc9572eec59496f5815d5ad96868" prot="private" virt="non-virtual"><scope>BmsDeviceReader</scope><name>RB_THERMISTOR</name></member>
+      <member refid="class_bms_device_reader_1afb697685241c1c09748834cbbc182577" prot="private" virt="non-virtual"><scope>BmsDeviceReader</scope><name>RT_THERMISTOR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

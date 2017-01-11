@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_utils" kind="class" language="C++" prot="public">
+    <compoundname>Utils</compoundname>
+    <includes refid="_utils_8h" local="no">Utils.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double Utils::CELSIUS_TO_KELVIN_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>CELSIUS_TO_KELVIN_FACTOR</name>
+        <initializer>= -273.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" line="41" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double Utils::BMS_VOLTAGE_RATIO_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>BMS_VOLTAGE_RATIO_FACTOR</name>
+        <initializer>= 6250.0 / 16383.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" line="42" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_utils_1a48f594cd17936f0bd44d268695eae482" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double Utils::fromKelvinToCelsius</definition>
+        <argsstring>(double kelvinValue)</argsstring>
+        <name>fromKelvinToCelsius</name>
+        <param>
+          <type>double</type>
+          <declname>kelvinValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert kelving temperature degree to celsius ones <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kelvinValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>kelvin temperature </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>equivalent celsius temperature </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" line="31" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utils_1a767790e66f3770818054ea2479db7941" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double Utils::convertCellVoltage</definition>
+        <argsstring>(double cellVoltageInt)</argsstring>
+        <name>convertCellVoltage</name>
+        <param>
+          <type>double</type>
+          <declname>cellVoltageInt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>View datasheet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellVoltageInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cell voltage according to datasheet</para></simplesect>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" line="38" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" line="22" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Utils.h" bodystart="22" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" prot="private" virt="non-virtual"><scope>Utils</scope><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
+      <member refid="class_utils_1af916f41aa01c118944d9dd91fea3584e" prot="private" virt="non-virtual"><scope>Utils</scope><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
+      <member refid="class_utils_1a767790e66f3770818054ea2479db7941" prot="public" virt="non-virtual"><scope>Utils</scope><name>convertCellVoltage</name></member>
+      <member refid="class_utils_1a48f594cd17936f0bd44d268695eae482" prot="public" virt="non-virtual"><scope>Utils</scope><name>fromKelvinToCelsius</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

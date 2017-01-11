@@ -14,3 +14,13 @@
  * limitations under the License.
  */
 
+
+#include "Utils.h"
+
+static double Utils::convertCellVoltage(double cellVoltageInt) {
+    return cellVoltageInt * BMS_VOLTAGE_RATIO_FACTOR;
+}
+
+static double Utils::fromKelvinToCelsius(double kelvinValue) {
+    return kelvinValue + CELSIUS_TO_KELVIN_FACTOR;
+}

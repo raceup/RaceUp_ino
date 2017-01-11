@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_bms_device_updater_8h" kind="file" language="C++">
+    <compoundname>BmsDeviceUpdater.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">WString.h</includes>
+    <includes refid="_bms_device_reader_8h" local="yes">BmsDeviceReader.h</includes>
+    <includedby refid="_bms_device_updater_8cpp" local="yes">/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.cpp</includedby>
+    <incdepgraph>
+      <node id="27">
+        <label>WString.h</label>
+      </node>
+      <node id="28">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Arduino.h</label>
+      </node>
+      <node id="25">
+        <label>/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h</label>
+        <link refid="BmsDeviceUpdater.h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>#include</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_bms_device_updater" prot="public">BmsDeviceUpdater</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>RACEUP_INO_CORE_BMSDEVICEUPDATER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RACEUP_INO_CORE_BMSDEVICEUPDATER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;BmsDeviceReader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_bms_device_updater" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bms_device_updater" kindref="compound">BmsDeviceUpdater</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="40" refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(String<sp/>statusType,<sp/>byte<sp/>cell,<sp/>byte<sp/>segment,<sp/>T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">));<sp/><sp/></highlight><highlight class="comment">//<sp/>open<sp/>JSON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;\&quot;:\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(statusType);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;,&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;cell&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;\&quot;:\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(cell);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;,&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;segment&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;\&quot;:\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(segment);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;,&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;value&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;:\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.println(F(</highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">));<sp/><sp/></highlight><highlight class="comment">//<sp/>close<sp/>JSON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="73" refid="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" kindref="member">sendUpdate</ref>(byte<sp/>typeValue,<sp/>T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kindref="member">sendSegmentStatus</ref>(Utils::commandToString(typeValue),<sp/>(byte)<sp/>-<sp/>1,<sp/>(byte)<sp/>-<sp/>1,<sp/>value);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="83" refid="class_bms_device_updater_1a5cc748a486645d1af6f675274f0d29ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a5cc748a486645d1af6f675274f0d29ae" kindref="member">sendStatus</ref>(T<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" kindref="member">sendUpdate</ref>(kStatus,<sp/>value);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1adea56427bf1d465febdf5063fe72f47e" kindref="member">sendSegmentVoltage</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a46d75db7fc11f3ab833080a08fea0d8a" kindref="member">sendPackVoltageOfBmsDevice</ref>(byte<sp/>n);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1a8a1496a8b64045bc0a21d253de3dd408" kindref="member">sendSegmentTemperature</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_updater_1adaeff0fa9bc196fbce908b5d741fea3a" kindref="member">sendPackTemperatureOfBmsDevice</ref>(byte<sp/>n);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_bms_device_updater_1acbdc84250bda4de22237e81cc1d3736f" kindref="member">getSerialUpdate</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>byte<sp/>TEMPERATURE1<sp/>=<sp/>0x0F;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RACEUP_INO_CORE_BMSDEVICEUPDATER_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceUpdater.h"/>
+  </compounddef>
+</doxygen>

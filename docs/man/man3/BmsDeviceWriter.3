@@ -1,0 +1,82 @@
+.TH "BmsDeviceWriter" 3 "Wed Jan 11 2017" "Version 0.0" "RaceUp_ino_core" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BmsDeviceWriter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BmsDeviceWriter\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static byte \fBpec\fP (byte crcBuffer[])"
+.br
+.ti -1c
+.RI "static void \fBbmsDeviceWrite\fP (byte deviceAddress, byte regAddress, byte regData)"
+.br
+.ti -1c
+.RI "static void \fBwriteStatusOfBmsDevice\fP (byte device_address, byte value)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static void BmsDeviceWriter::bmsDeviceWrite (byte deviceAddress, byte regAddress, byte regData)\fC [static]\fP"
+Write a bmsDevice device property 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdeviceAddress\fP where to write 
+.br
+\fIregAddress\fP registry address 
+.br
+\fIregData\fP registry data 
+.RE
+.PP
+
+.SS "static byte BmsDeviceWriter::pec (byte crcBuffer[])\fC [static]\fP"
+TODO: WTF?? 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcrcBuffer\fP crc buffer to check for errors 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TODO: WTF??
+.RE
+.PP
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
+.SS "void BmsDeviceWriter::writeStatusOfBmsDevice (byte device_address, byte value)\fC [static]\fP"
+Write status 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdeviceAddress\fP address of device to get info of 
+.br
+\fIvalue\fP value to write 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RaceUp_ino_core from the source code\&.

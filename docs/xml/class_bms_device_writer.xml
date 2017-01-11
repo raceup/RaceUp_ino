@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_bms_device_writer" kind="class" language="C++" prot="public">
+    <compoundname>BmsDeviceWriter</compoundname>
+    <includes refid="_bms_device_writer_8h" local="no">BmsDeviceWriter.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>static byte BmsDeviceWriter::pec</definition>
+        <argsstring>(byte crcBuffer[])</argsstring>
+        <name>pec</name>
+        <param>
+          <type>byte</type>
+          <declname>crcBuffer</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: WTF?? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crcBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crc buffer to check for errors </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TODO: WTF??</para></simplesect>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="33" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BmsDeviceWriter::bmsDeviceWrite</definition>
+        <argsstring>(byte deviceAddress, byte regAddress, byte regData)</argsstring>
+        <name>bmsDeviceWrite</name>
+        <param>
+          <type>byte</type>
+          <declname>deviceAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>regAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>regData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a bmsDevice device property <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where to write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="41" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="30" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BmsDeviceWriter::writeStatusOfBmsDevice</definition>
+        <argsstring>(byte device_address, byte value)</argsstring>
+        <name>writeStatusOfBmsDevice</name>
+        <param>
+          <type>byte</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address of device to get info of </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="48" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.cpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
+    <location file="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" line="24" column="1" bodyfile="/home/stefano/Projects/Raceup/ED/Elettronica/projects/RaceUp_ino/RaceUp_ino_core/src/Bms/BmsDeviceWriter.h" bodystart="24" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" prot="public" virt="non-virtual"><scope>BmsDeviceWriter</scope><name>bmsDeviceWrite</name></member>
+      <member refid="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" prot="public" virt="non-virtual"><scope>BmsDeviceWriter</scope><name>pec</name></member>
+      <member refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" prot="public" virt="non-virtual"><scope>BmsDeviceWriter</scope><name>writeStatusOfBmsDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
