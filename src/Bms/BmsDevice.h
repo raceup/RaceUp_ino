@@ -22,6 +22,7 @@
 
 #include "BmsDeviceReader.h"
 #include "BmsDeviceWriter.h"
+#include "BmsDeviceUpdater.h"ì
 
 /**
  * Manages a BMS device

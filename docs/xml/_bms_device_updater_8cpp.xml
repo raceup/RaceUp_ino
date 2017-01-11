@@ -4,40 +4,40 @@
     <compoundname>BmsDeviceUpdater.cpp</compoundname>
     <includes refid="_bms_device_updater_8h" local="yes">BmsDeviceUpdater.h</includes>
     <incdepgraph>
-      <node id="43">
+      <node id="47">
         <label>WString.h</label>
       </node>
-      <node id="40">
+      <node id="44">
         <label>src/Bms/BmsDeviceUpdater.cpp</label>
         <link refid="BmsDeviceUpdater.cpp"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="44">
-        <label>BmsDeviceReader.h</label>
-        <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="42" relation="include">
-        </childnode>
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="48">
+        <label>BmsDeviceReader.h</label>
+        <link refid="_bms_device_reader_8h_source"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
         <label>Arduino.h</label>
       </node>
-      <node id="41">
+      <node id="45">
         <label>BmsDeviceUpdater.h</label>
         <link refid="_bms_device_updater_8h_source"/>
-        <childnode refid="42" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="43" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="49">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="42" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
     </incdepgraph>

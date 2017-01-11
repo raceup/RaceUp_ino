@@ -6,41 +6,41 @@
     <includes refid="_utils_8h" local="yes">../Utils.h</includes>
     <includes refid="data_8h" local="yes">../data.h</includes>
     <incdepgraph>
-      <node id="27">
+      <node id="31">
         <label>BmsDeviceReader.h</label>
         <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="35">
         <label>../data.h</label>
         <link refid="data_8h_source"/>
-        <childnode refid="28" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>src/Bms/BmsDeviceReader.cpp</label>
-        <link refid="BmsDeviceReader.cpp"/>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="30">
+        <label>src/Bms/BmsDeviceReader.cpp</label>
+        <link refid="BmsDeviceReader.cpp"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
         <label>../Utils.h</label>
         <link refid="_utils_8h_source"/>
       </node>
-      <node id="28">
+      <node id="32">
         <label>Arduino.h</label>
       </node>
-      <node id="29">
+      <node id="33">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -60,108 +60,126 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDeviceReader::RT_THERMISTOR<sp/>=<sp/>1500.0;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDeviceReader::R0_THERMISTOR<sp/>=<sp/>10000.0;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">byte<sp/>*<ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">BmsDeviceReader::bmsDeviceRead</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>regAddress,<sp/>byte<sp/>length)<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ARDUINO_UNO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE1);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>logicalAddress<sp/>&amp;=<sp/>0b11111110;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>receivedData[20];<sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">byte<sp/>*<ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">BmsDeviceReader::bmsDeviceRead</ref>(byte</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">deviceAddress,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">byte<sp/>regAddress,<sp/>byte</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">length)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ARDUINO_UNO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">SPI.setDataMode(SPI_MODE1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">logicalAddress<sp/>&amp;=<sp/>0b11111110;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>LOW);<sp/><sp/></highlight><highlight class="comment">//<sp/>take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">byte<sp/>receivedData[20];<sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);<sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(length);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,HIGH);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE0);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">digitalWrite(SLAVE_SELECT_PIN,<sp/>LOW);<sp/><sp/></highlight><highlight class="comment">//<sp/>take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">SPI.transfer(logicalAddress);<sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">SPI.transfer(length);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">digitalWrite(SLAVE_SELECT_PIN,HIGH);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ARDUINO_DUE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,LOW);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SPI.setDataMode(SPI_MODE1);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.beginTransaction(SPISettings(50000,<sp/>MSBFIRST,<sp/>SPI_MODE1));</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//logicalAddress<sp/>&amp;=<sp/>~(1<sp/>&lt;&lt;<sp/>0);<sp/><sp/>//<sp/>Clear<sp/>bit<sp/>0,<sp/>test<sp/>bitClear(x,n)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>logicalAddress<sp/>&amp;=<sp/>0b11111110;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>receivedData[20];</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.transfer(length);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(1);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length<sp/>+<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>high<sp/>to<sp/>de-select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,HIGH);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">SPI.setDataMode(SPI_MODE0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ARDUINO_DUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">digitalWrite(SLAVE_SELECT_PIN,LOW);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//SPI.setDataMode(SPI_MODE1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">SPI.beginTransaction(SPISettings(50000,<sp/>MSBFIRST,<sp/>SPI_MODE1));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//logicalAddress<sp/>&amp;=<sp/>~(1<sp/>&lt;&lt;<sp/>0);<sp/><sp/>//<sp/>Clear<sp/>bit<sp/>0,<sp/>test<sp/>bitClear(x,n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">logicalAddress<sp/>&amp;=<sp/>0b11111110;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">byte<sp/>receivedData[20];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">SPI.transfer(logicalAddress);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">SPI.transfer(length);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">delayMicroseconds(1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length<sp/>+<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">delayMicroseconds(5);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SPI.setDataMode(SPI_MODE0);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>SPI.endTransaction();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>high<sp/>to<sp/>de-select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">digitalWrite(SLAVE_SELECT_PIN,HIGH);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>data<sp/>read<sp/>from<sp/>registers</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//SPI.setDataMode(SPI_MODE0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">SPI.endTransaction();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Return<sp/>data<sp/>read<sp/>from<sp/>registers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" kindref="member">BmsDeviceReader::getTemperature</ref>(byte<sp/>device_address,<sp/>byte<sp/>temperature)<sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value_read<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>temperature,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>first<sp/>2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>tempRaw<sp/>=<sp/>(value_read[0]<sp/>*<sp/>0x100)<sp/>+<sp/>value_read[1];<sp/><sp/></highlight><highlight class="comment">//<sp/>multiply<sp/>by<sp/>256<sp/>and<sp/>add<sp/>second<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>(tempRaw<sp/>+<sp/>2)<sp/>/<sp/>33046.0;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>((1<sp/>/<sp/>value)<sp/>-<sp/>1)<sp/>*<sp/>BmsDeviceReader::RB_THERMISTOR<sp/>-<sp/>BmsDeviceReader::RT_THERMISTOR;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kindref="member">BmsDeviceReader::BETA_THERMISTOR</ref><sp/>/<sp/>(log(value<sp/>/<sp/>(BmsDeviceReader::R0_THERMISTOR<sp/>*<sp/>exp(-<sp/><ref refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kindref="member">BmsDeviceReader::BETA_THERMISTOR</ref><sp/>/<sp/>298.15))));</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_utils_1a393f44e0230724e5cd3b7c125b16b5e1" kindref="member">Utils::fromKelvinToCelsius</ref>(value);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1a1f0651bfef7b2235825320e1e96993a0" kindref="member">BmsDeviceReader::getGpaiVbatt</ref>(byte<sp/>device_address,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dev)<sp/>{</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*gpaiRaw<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>GPAI,<sp/>0x02);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev)<sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>(100.0<sp/>/<sp/>3.0)<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[V]</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>2500.0<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[mV]</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" kindref="member">BmsDeviceReader::getCellVoltage</ref>(byte<sp/>deviceAddress,<sp/>byte<sp/>cellNumber)<sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*cellRaw<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(deviceAddress,<sp/>cellNumber,<sp/>0x02);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(ONE_CENTSECOND);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" kindref="member">BmsDeviceReader::getTemperature</ref>(byte</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">device_address,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">byte<sp/>temperature</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">byte<sp/>*value_read<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>temperature,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>first<sp/>2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">byte<sp/>tempRaw<sp/>=<sp/>(value_read[0]<sp/>*<sp/>0x100)<sp/>+<sp/>value_read[1];<sp/><sp/></highlight><highlight class="comment">//<sp/>multiply<sp/>by<sp/>256<sp/>and<sp/>add<sp/>second<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>(tempRaw<sp/>+<sp/>2)<sp/>/<sp/>33046.0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">value<sp/>=<sp/>((1<sp/>/<sp/>value)<sp/>-<sp/>1)<sp/>*<sp/>BmsDeviceReader::RB_THERMISTOR<sp/>-<sp/>BmsDeviceReader::RT_THERMISTOR;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">value<sp/>=<sp/><ref refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kindref="member">BmsDeviceReader::BETA_THERMISTOR</ref><sp/>/</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(log(value<sp/>/<sp/>(BmsDeviceReader::R0_THERMISTOR<sp/>*<sp/>exp(-<ref refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kindref="member">BmsDeviceReader::BETA_THERMISTOR</ref><sp/>/<sp/>298.15))));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="class_utils_1a393f44e0230724e5cd3b7c125b16b5e1" kindref="member">Utils::fromKelvinToCelsius</ref>(value);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1a1f0651bfef7b2235825320e1e96993a0" kindref="member">BmsDeviceReader::getGpaiVbatt</ref>(byte</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">device_address,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dev</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">byte<sp/>*gpaiRaw<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>GPAI,<sp/>0x02);</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>parsed<sp/>=<sp/><ref refid="class_utils_1a70e2b7f69e19a166352387194f83a13c" kindref="member">Utils::convertCellVoltage</ref>((cellRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>cellRaw[1]);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>parsed;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal">byte<sp/>*<ref refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kindref="member">BmsDeviceReader::getBmsDeviceStatus</ref>(byte<sp/>device_address)<sp/>{</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>DEVICE_STATUS,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>1<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>(100.0<sp/>/<sp/>3.0)<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[V]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>2500.0<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[mV]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" kindref="member">BmsDeviceReader::getCellVoltage</ref>(byte</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">deviceAddress,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">byte<sp/>cellNumber</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">byte<sp/>*cellRaw<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(deviceAddress,<sp/>cellNumber,<sp/>0x02);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">delay(ONE_CENTSECOND);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>parsed<sp/>=<sp/><ref refid="class_utils_1a70e2b7f69e19a166352387194f83a13c" kindref="member">Utils::convertCellVoltage</ref>((cellRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>cellRaw[1]);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">parsed;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">byte<sp/>*<ref refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kindref="member">BmsDeviceReader::getBmsDeviceStatus</ref>(byte</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">device_address)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">bmsDeviceRead</ref>(device_address,<sp/>DEVICE_STATUS,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">1);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>1<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/Bms/BmsDeviceReader.cpp"/>
   </compounddef>

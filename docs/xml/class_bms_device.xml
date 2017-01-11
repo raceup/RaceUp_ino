@@ -27,7 +27,7 @@
 Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="37" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="21" bodyend="31"/>
+        <location file="src/Bms/BmsDevice.h" line="38" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="20" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -52,14 +52,14 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="43" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="33" bodyend="43"/>
+        <location file="src/Bms/BmsDevice.h" line="44" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="33" bodyend="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Manages a BMS device </para>    </detaileddescription>
-    <location file="src/Bms/BmsDevice.h" line="29" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="29" bodyend="44"/>
+    <location file="src/Bms/BmsDevice.h" line="30" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="30" bodyend="45"/>
     <listofallmembers>
       <member refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearAlertsOnBmsDevice</name></member>
       <member refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearFaultsOnBmsDevice</name></member>

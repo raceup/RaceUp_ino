@@ -1,0 +1,99 @@
+\hypertarget{class_sd_card_stream}{}\section{Sd\+Card\+Stream Class Reference}
+\label{class_sd_card_stream}\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+
+
+{\ttfamily \#include $<$Sd\+Card\+Stream.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sd_card_stream_a0972fdeed91408cfd8b9daab58e1ef2a}{Sd\+Card\+Stream} (const uint8\+\_\+t chip\+Select)
+\item 
+bool \hyperlink{class_sd_card_stream_ab058227f98edd574579e911170f20464}{setup} ()
+\item 
+File \hyperlink{class_sd_card_stream_aeb1d8f51d6ae81703d2140f3f740e732}{open} (const String \&file\+Path, uint8\+\_\+t mode)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_sd_card_stream_af275b7e608c7122279d8d2cc2c50f7f3}{does\+File\+Exists} (String file\+Path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Read and write to/from SD card inserted in Arduino. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}!Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}!Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+\subsubsection[{\texorpdfstring{Sd\+Card\+Stream(const uint8\+\_\+t chip\+Select)}{SdCardStream(const uint8_t chipSelect)}}]{\setlength{\rightskip}{0pt plus 5cm}Sd\+Card\+Stream\+::\+Sd\+Card\+Stream (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t}]{chip\+Select}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sd_card_stream_a0972fdeed91408cfd8b9daab58e1ef2a}{}\label{class_sd_card_stream_a0972fdeed91408cfd8b9daab58e1ef2a}
+Creats SD card stream with chip and file path 
+\begin{DoxyParams}{Parameters}
+{\em chip\+Select} & sd selection pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SD card stream
+\end{DoxyReturn}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+\subsection{Member Function Documentation}
+\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}!does\+File\+Exists@{does\+File\+Exists}}
+\index{does\+File\+Exists@{does\+File\+Exists}!Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+\subsubsection[{\texorpdfstring{does\+File\+Exists(\+String file\+Path)}{doesFileExists(String filePath)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sd\+Card\+Stream\+::does\+File\+Exists (
+\begin{DoxyParamCaption}
+\item[{String}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sd_card_stream_af275b7e608c7122279d8d2cc2c50f7f3}{}\label{class_sd_card_stream_af275b7e608c7122279d8d2cc2c50f7f3}
+Checks if file exists 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & file to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff file exists 
+\end{DoxyReturn}
+\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}!open@{open}}
+\index{open@{open}!Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+\subsubsection[{\texorpdfstring{open(const String \&file\+Path, uint8\+\_\+t mode)}{open(const String &filePath, uint8_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}File Sd\+Card\+Stream\+::open (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{file\+Path, }
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sd_card_stream_aeb1d8f51d6ae81703d2140f3f740e732}{}\label{class_sd_card_stream_aeb1d8f51d6ae81703d2140f3f740e732}
+Open current file as stream 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & file to open \\
+\hline
+{\em mode} & read or write \\
+\hline
+\end{DoxyParams}
+\index{Sd\+Card\+Stream@{Sd\+Card\+Stream}!setup@{setup}}
+\index{setup@{setup}!Sd\+Card\+Stream@{Sd\+Card\+Stream}}
+\subsubsection[{\texorpdfstring{setup()}{setup()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sd\+Card\+Stream\+::setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sd_card_stream_ab058227f98edd574579e911170f20464}{}\label{class_sd_card_stream_ab058227f98edd574579e911170f20464}
+Initialize stream 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O\+Streams/Sd\+Card\+Stream.\+h\item 
+src/\+I\+O\+Streams/Sd\+Card\+Stream.\+cpp\end{DoxyCompactItemize}

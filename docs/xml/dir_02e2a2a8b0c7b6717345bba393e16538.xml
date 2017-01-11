@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_02e2a2a8b0c7b6717345bba393e16538" kind="dir">
+    <compoundname>src/IOStreams</compoundname>
+    <innerfile refid="_sd_card_stream_8cpp">SdCardStream.cpp</innerfile>
+    <innerfile refid="_sd_card_stream_8h">SdCardStream.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/IOStreams/"/>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fromkelvintocelsius',['fromKelvinToCelsius',['../class_utils.html#a393f44e0230724e5cd3b7c125b16b5e1',1,'Utils']]]
+  ['doesfileexists',['doesFileExists',['../class_sd_card_stream.html#af275b7e608c7122279d8d2cc2c50f7f3',1,'SdCardStream']]]
 ];

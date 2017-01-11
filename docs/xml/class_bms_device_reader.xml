@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDeviceReader.h" line="35" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="28" bodyend="98"/>
+        <location file="src/Bms/BmsDeviceReader.h" line="35" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="28" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -145,7 +145,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDeviceReader.h" line="42" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="100" bodyend="107"/>
+        <location file="src/Bms/BmsDeviceReader.h" line="42" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="103" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_reader_1a1f0651bfef7b2235825320e1e96993a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -182,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDeviceReader.h" line="50" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="109" bodyend="117"/>
+        <location file="src/Bms/BmsDeviceReader.h" line="50" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="117" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -219,7 +219,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDeviceReader.h" line="58" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="119" bodyend="125"/>
+        <location file="src/Bms/BmsDeviceReader.h" line="58" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="130" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>byte *</type>
@@ -244,7 +244,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDeviceReader.h" line="64" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="127" bodyend="129"/>
+        <location file="src/Bms/BmsDeviceReader.h" line="64" column="1" bodyfile="src/Bms/BmsDeviceReader.cpp" bodystart="142" bodyend="147"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

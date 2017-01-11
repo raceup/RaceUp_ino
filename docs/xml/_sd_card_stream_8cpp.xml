@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_sd_card_stream_8cpp" kind="file" language="C++">
+    <compoundname>SdCardStream.cpp</compoundname>
+    <includes refid="_sd_card_stream_8h" local="yes">SdCardStream.h</includes>
+    <incdepgraph>
+      <node id="82">
+        <label>SD.h</label>
+      </node>
+      <node id="83">
+        <label>WString.h</label>
+      </node>
+      <node id="81">
+        <label>SdCardStream.h</label>
+        <link refid="_sd_card_stream_8h_source"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>src/IOStreams/SdCardStream.cpp</label>
+        <link refid="SdCardStream.cpp"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;SdCardStream.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="class_sd_card_stream_1a0972fdeed91408cfd8b9daab58e1ef2a" kindref="member">SdCardStream::SdCardStream</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>chipSelect)<sp/>:<sp/>chipSelect(chipSelect)<sp/>{}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_sd_card_stream_1af275b7e608c7122279d8d2cc2c50f7f3" kindref="member">SdCardStream::doesFileExists</ref>(String<sp/>filePath)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SD.exists(filePath);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_sd_card_stream_1ab058227f98edd574579e911170f20464" kindref="member">SdCardStream::setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SD.begin(chipSelect);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">File<sp/><ref refid="class_sd_card_stream_1aeb1d8f51d6ae81703d2140f3f740e732" kindref="member">SdCardStream::open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filePath,<sp/>uint8_t<sp/>mode)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SD.open(filePath,<sp/>mode);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/IOStreams/SdCardStream.cpp"/>
+  </compounddef>
+</doxygen>

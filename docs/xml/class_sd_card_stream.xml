@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_sd_card_stream" kind="class" language="C++" prot="public">
+    <compoundname>SdCardStream</compoundname>
+    <includes refid="_sd_card_stream_8h" local="no">SdCardStream.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sd_card_stream_1a2659f0129bf2e8a8dd6f100b186a3be2" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t SdCardStream::chipSelect</definition>
+        <argsstring></argsstring>
+        <name>chipSelect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="57" column="1" bodyfile="src/IOStreams/SdCardStream.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_card_stream_1a0663dba7c013243f752635cd5981ff9b" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SdCardStream::currentFile</definition>
+        <argsstring></argsstring>
+        <name>currentFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="58" column="1" bodyfile="src/IOStreams/SdCardStream.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sd_card_stream_1a0972fdeed91408cfd8b9daab58e1ef2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SdCardStream::SdCardStream</definition>
+        <argsstring>(const uint8_t chipSelect)</argsstring>
+        <name>SdCardStream</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>chipSelect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creats SD card stream with chip and file path <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chipSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sd selection pin </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SD card stream</para></simplesect>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="35" column="1" bodyfile="src/IOStreams/SdCardStream.cpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_card_stream_1ab058227f98edd574579e911170f20464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SdCardStream::setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize stream </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="40" column="1" bodyfile="src/IOStreams/SdCardStream.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_card_stream_1aeb1d8f51d6ae81703d2140f3f740e732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>File</type>
+        <definition>File SdCardStream::open</definition>
+        <argsstring>(const String &amp;filePath, uint8_t mode)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open current file as stream <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file to open </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>read or write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="47" column="1" bodyfile="src/IOStreams/SdCardStream.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sd_card_stream_1af275b7e608c7122279d8d2cc2c50f7f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SdCardStream::doesFileExists</definition>
+        <argsstring>(String filePath)</argsstring>
+        <name>doesFileExists</name>
+        <param>
+          <type>String</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if file exists <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file to check </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true iff file exists </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IOStreams/SdCardStream.h" line="54" column="1" bodyfile="src/IOStreams/SdCardStream.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Read and write to/from SD card inserted in Arduino. </para>    </detaileddescription>
+    <location file="src/IOStreams/SdCardStream.h" line="27" column="1" bodyfile="src/IOStreams/SdCardStream.h" bodystart="27" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_sd_card_stream_1a2659f0129bf2e8a8dd6f100b186a3be2" prot="private" virt="non-virtual"><scope>SdCardStream</scope><name>chipSelect</name></member>
+      <member refid="class_sd_card_stream_1a0663dba7c013243f752635cd5981ff9b" prot="private" virt="non-virtual"><scope>SdCardStream</scope><name>currentFile</name></member>
+      <member refid="class_sd_card_stream_1af275b7e608c7122279d8d2cc2c50f7f3" prot="public" virt="non-virtual"><scope>SdCardStream</scope><name>doesFileExists</name></member>
+      <member refid="class_sd_card_stream_1aeb1d8f51d6ae81703d2140f3f740e732" prot="public" virt="non-virtual"><scope>SdCardStream</scope><name>open</name></member>
+      <member refid="class_sd_card_stream_1a0972fdeed91408cfd8b9daab58e1ef2a" prot="public" virt="non-virtual"><scope>SdCardStream</scope><name>SdCardStream</name></member>
+      <member refid="class_sd_card_stream_1ab058227f98edd574579e911170f20464" prot="public" virt="non-virtual"><scope>SdCardStream</scope><name>setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

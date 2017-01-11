@@ -5,39 +5,58 @@
     <includes local="no">Arduino.h</includes>
     <includes local="no">WString.h</includes>
     <includes refid="_bms_device_reader_8h" local="yes">BmsDeviceReader.h</includes>
+    <includedby refid="_bms_device_8h" local="yes">src/Bms/BmsDevice.h</includedby>
     <includedby refid="_bms_device_updater_8cpp" local="yes">src/Bms/BmsDeviceUpdater.cpp</includedby>
     <incdepgraph>
-      <node id="49">
+      <node id="53">
         <label>WString.h</label>
       </node>
-      <node id="50">
+      <node id="54">
         <label>BmsDeviceReader.h</label>
         <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="48" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="55" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="52">
         <label>Arduino.h</label>
       </node>
-      <node id="47">
+      <node id="51">
         <label>src/Bms/BmsDeviceUpdater.h</label>
         <link refid="BmsDeviceUpdater.h"/>
-        <childnode refid="48" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="55">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="48" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="58">
+        <label>src/RaceUp_ino_core.h</label>
+        <link refid="_race_up__ino__core_8h_source"/>
+      </node>
+      <node id="57">
+        <label>src/Bms/BmsDevice.h</label>
+        <link refid="_bms_device_8h_source"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>src/Bms/BmsDeviceUpdater.h</label>
+        <link refid="BmsDeviceUpdater.h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_bms_device_updater" prot="public">BmsDeviceUpdater</innerclass>
     <briefdescription>
     </briefdescription>
