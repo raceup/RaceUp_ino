@@ -28,8 +28,8 @@
     <member refid="class_bms_device_updater_1aff1720a11582bd1353c50ced9352eda9" kind="function"><name>commandToString</name></member>
   </compound>
   <compound refid="class_bms_device_writer" kind="class"><name>BmsDeviceWriter</name>
-    <member refid="class_bms_device_writer_1a874622816d57ff0424f99818e974b4a6" kind="function"><name>pec</name></member>
-    <member refid="class_bms_device_writer_1af4b5e88a6ca9bf82af0693fe8fc1086a" kind="function"><name>bmsDeviceWrite</name></member>
+    <member refid="class_bms_device_writer_1af8c0e16d59c6f11848fea970e726592b" kind="function"><name>pec</name></member>
+    <member refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kind="function"><name>bmsDeviceWrite</name></member>
     <member refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kind="function"><name>writeStatusOfBmsDevice</name></member>
   </compound>
   <compound refid="class_race_up__ino__core" kind="class"><name>RaceUp_ino_core</name>

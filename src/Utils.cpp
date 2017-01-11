@@ -27,3 +27,29 @@ double Utils::convertCellVoltage(double cellVoltageInt) {
 double Utils::fromKelvinToCelsius(double kelvinValue) {
     return kelvinValue + CELSIUS_TO_KELVIN_FACTOR;
 }
+
+#ifdef ARDUINO_DUE
+void Utils::frameToFloat(CAN_FRAME &frame, float *x, float *x1) {
+    char vBuffer[4], vBuffer1[4];  // buffers to get frame value
+
+    for (int count = 0; count < 8; count++) {
+        if (count < 4) {
+            vBuffer[count] = (char) frame.data.bytes[count];  // store first array
+        } else {
+            vBuffer1[count - 4] = (char) frame.data.bytes[count];  // store second array
+        }
+    }
+
+    *x = *(float *) &vBuffer;
+    *x1 = *(float *) &vBuffer1;
+}
+
+void Utils::frameToFloat(CAN_FRAME &frame, float *x) {
+    char vBuffer[4];
+    for (int count = 0; count < 4; count++) {
+        vBuffer[count] = (char) frame.data.bytes[count];
+    }
+
+    *x = *(float *) &vBuffer;
+}
+#endif

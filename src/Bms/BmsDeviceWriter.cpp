@@ -17,7 +17,7 @@
 
 #include "BmsDeviceWriter.h"
 
-static byte BmsDeviceWriter::pec(byte *crcBuffer) {
+byte BmsDeviceWriter::pec(byte * crcBuffer) {
     byte crc = 0;
     int temp = 0;
     for (int i = 0; i < 3; i++) {
@@ -27,7 +27,10 @@ static byte BmsDeviceWriter::pec(byte *crcBuffer) {
     return crc;
 }
 
-static void BmsDeviceWriter::bmsDeviceWrite(byte deviceAddress, byte regAddress, byte regData) {
+void BmsDeviceWriter::bmsDeviceWrite(byte
+deviceAddress,
+byte regAddress, byte
+regData) {
 #ifdef ARDUINO_UNO
     SPI.setDataMode(SPI_MODE1);
     byte logicalAddress = (deviceAddress << 1) | 0x01;  // Shift the device bit and set bit 0

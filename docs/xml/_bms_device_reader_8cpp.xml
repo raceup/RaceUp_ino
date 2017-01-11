@@ -33,6 +33,8 @@
       <node id="34">
         <label>../Utils.h</label>
         <link refid="_utils_8h_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
       </node>
       <node id="32">
         <label>Arduino.h</label>

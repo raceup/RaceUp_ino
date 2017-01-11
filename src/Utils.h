@@ -18,6 +18,11 @@
 #ifndef RACEUP_INO_CORE_UTILS_H
 #define RACEUP_INO_CORE_UTILS_H
 
+#include <Arduino.h>
+
+#ifdef ARDUINO_DUE
+#include <due_can.h>
+#endif
 
 class Utils {
 
@@ -36,6 +41,25 @@ public:
      * @return cell voltage according to datasheet
      */
     static double convertCellVoltage(double cellVoltageInt);
+
+#ifdef ARDUINO_DUE
+    // TODO instead of CAN_FRAM& take a byte& input
+
+    /**
+    * Stores frame value in 2 buffers of 4 chars each
+    * @param frame frame frame to convert
+    * @param x first array of 4 char containing buffer value
+    * @param x1 second array of 4 char containing buffer value
+    */
+    static void frameToFloat(CAN_FRAME &frame, float *x, float *x1);
+
+    /**
+     * Stores frame value in a buffer with 4 char
+     * @param frame frame to convert
+     * @param x array of 4 char containing buffer value
+     */
+    static void frameToFloat(CAN_FRAME &frame, float *x);
+#endif
 
 private:
     static const double CELSIUS_TO_KELVIN_FACTOR;
