@@ -18,6 +18,8 @@
 #ifndef RACEUP_INO_CORE_RACEUP_INO_CORE_H
 #define RACEUP_INO_CORE_RACEUP_INO_CORE_H
 
+// TODO find way to include submodules not entire library
+
 // devices
 #include "Bms/BmsDevice.h"
 
