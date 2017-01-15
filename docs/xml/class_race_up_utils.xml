@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_race_up_utils" kind="class" language="C++" prot="public">
+    <compoundname>RaceUpUtils</compoundname>
+    <includes refid="_race_up_utils_8h" local="no">RaceUpUtils.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_race_up_utils_1aa0db44e06e075ffd8693cc222f3becfb" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double RaceUpUtils::CELSIUS_TO_KELVIN_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>CELSIUS_TO_KELVIN_FACTOR</name>
+        <initializer>= -273.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="59" column="1" bodyfile="src/RaceUpUtils.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_race_up_utils_1a0575a05c5b9f884dbaa445fad65a9ccd" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double RaceUpUtils::BMS_VOLTAGE_RATIO_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>BMS_VOLTAGE_RATIO_FACTOR</name>
+        <initializer>= 6250.0 / 16383.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="60" column="1" bodyfile="src/RaceUpUtils.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double RaceUpUtils::fromKelvinToCelsius</definition>
+        <argsstring>(double kelvinValue)</argsstring>
+        <name>fromKelvinToCelsius</name>
+        <param>
+          <type>double</type>
+          <declname>kelvinValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert kelving temperature degree to celsius ones <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kelvinValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>kelvin temperature </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>equivalent celsius temperature </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="32" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double RaceUpUtils::convertCellVoltage</definition>
+        <argsstring>(double cellVoltageInt)</argsstring>
+        <name>convertCellVoltage</name>
+        <param>
+          <type>double</type>
+          <declname>cellVoltageInt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>View datasheet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellVoltageInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cell voltage according to datasheet </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="39" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RaceUpUtils::isArduinoUnoBoard</definition>
+        <argsstring>()</argsstring>
+        <name>isArduinoUnoBoard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if current board is an Arduino UNO <simplesect kind="return"><para>true iff current board is an Arduino UNO </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="45" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RaceUpUtils::isArduinoDueBoard</definition>
+        <argsstring>()</argsstring>
+        <name>isArduinoDueBoard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if current board is an Arduino DUE <simplesect kind="return"><para>true iff current board is an Arduino DUE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="51" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String RaceUpUtils::getArduinoBoardModelName</definition>
+        <argsstring>()</argsstring>
+        <name>getArduinoBoardModelName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets current board model name <simplesect kind="return"><para>current board model name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/RaceUpUtils.h" line="57" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>    </detaileddescription>
+    <location file="src/RaceUpUtils.h" line="24" column="1" bodyfile="src/RaceUpUtils.h" bodystart="24" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_race_up_utils_1a0575a05c5b9f884dbaa445fad65a9ccd" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
+      <member refid="class_race_up_utils_1aa0db44e06e075ffd8693cc222f3becfb" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
+      <member refid="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>convertCellVoltage</name></member>
+      <member refid="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>fromKelvinToCelsius</name></member>
+      <member refid="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>getArduinoBoardModelName</name></member>
+      <member refid="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>isArduinoDueBoard</name></member>
+      <member refid="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" prot="public" virt="non-virtual"><scope>RaceUpUtils</scope><name>isArduinoUnoBoard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

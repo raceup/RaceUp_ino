@@ -19,12 +19,11 @@
 #define RACEUP_INO_CORE_UTILS_H
 
 #include <Arduino.h>
-#include <due_can.h>
+#include <ArduinoBoardManager.h>
 
-class Utils {
+class RaceUpUtils {
 
 public:
-
     /**
      * Convert kelving temperature degree to celsius ones
      * @param kelvinValue kelvin temperature
@@ -39,21 +38,23 @@ public:
      */
     static double convertCellVoltage(double cellVoltageInt);
 
-    // TODO instead of CAN_FRAM& take a byte& input
     /**
-    * Stores frame value in 2 buffers of 4 chars each
-    * @param frame frame frame to convert
-    * @param x first array of 4 char containing buffer value
-    * @param x1 second array of 4 char containing buffer value
-    */
-    static void frameToFloat(CAN_FRAME &frame, float *x, float *x1);
+     * Checks if current board is an Arduino UNO
+     * @return true iff current board is an Arduino UNO
+     */
+    static bool isArduinoUnoBoard();
 
     /**
-     * Stores frame value in a buffer with 4 char
-     * @param frame frame to convert
-     * @param x array of 4 char containing buffer value
+     * Checks if current board is an Arduino DUE
+     * @return true iff current board is an Arduino DUE
      */
-    static void frameToFloat(CAN_FRAME &frame, float *x);
+    static bool isArduinoDueBoard();
+
+    /**
+     * Gets current board model name
+     * @return current board model name
+     */
+    static String getArduinoBoardModelName();
 
     static const double CELSIUS_TO_KELVIN_FACTOR;
     static const double BMS_VOLTAGE_RATIO_FACTOR;

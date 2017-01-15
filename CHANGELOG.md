@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.2 - 2016-01-11
+### Refactored
+- OOP design implemented
+### Removed
+- useless classes like BmsDeviceReader, BmsDeviceWriter BmsDeviceUpdater
+
 ## 0.1.3 - 2016-01-11
 ### Added
 - utils frame conversions

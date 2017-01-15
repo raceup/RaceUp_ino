@@ -3,37 +3,85 @@
   <compounddef id="class_bms_device" kind="class" language="C++" prot="public">
     <compoundname>BmsDevice</compoundname>
     <includes refid="_bms_device_8h" local="no">BmsDevice.h</includes>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void BmsDevice::clearAlertsOnBmsDevice</definition>
-        <argsstring>(byte device_address)</argsstring>
-        <name>clearAlertsOnBmsDevice</name>
-        <param>
-          <type>byte</type>
-          <declname>device_address</declname>
-        </param>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bms_device_1acace1572b82980bf20d697730ef3d0c4" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte BmsDevice::device_address</definition>
+        <argsstring></argsstring>
+        <name>device_address</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Send alert on behalf of this bms <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>device_address</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>address bms of bms to setup</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="38" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="20" bodyend="31"/>
+        <location file="src/Bms/BmsDevice.h" line="90" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="90" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void BmsDevice::clearFaultsOnBmsDevice</definition>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bms_device_1ac66316eac6626bb71a74cd1d55b4d2c4" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDevice::BETA_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>BETA_THERMISTOR</name>
+        <initializer>= 3435.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="93" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDevice::RB_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>RB_THERMISTOR</name>
+        <initializer>= 1800.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="94" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDevice::RT_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>RT_THERMISTOR</name>
+        <initializer>= 1500.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="95" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double BmsDevice::R0_THERMISTOR</definition>
+        <argsstring></argsstring>
+        <name>R0_THERMISTOR</name>
+        <initializer>= 10000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="96" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>void BmsDevice::BmsDevice</definition>
         <argsstring>(byte device_address)</argsstring>
-        <name>clearFaultsOnBmsDevice</name>
+        <name>BmsDevice</name>
         <param>
           <type>byte</type>
           <declname>device_address</declname>
@@ -41,28 +89,290 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Send fault on behalf of this device <parameterlist kind="param"><parameteritem>
+<para>New bms device <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>device_address</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>address bms of bms to setup </para></parameterdescription>
+<para>byte device_address </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new bms device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="41" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1ac61154d9b8cc11061dcc7d0243ed955f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double BmsDevice::getTemperature</definition>
+        <argsstring>(byte temperatureToRead) const </argsstring>
+        <name>getTemperature</name>
+        <param>
+          <type>byte</type>
+          <declname>temperatureToRead</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperatureToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which temperature to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>temperature of device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="49" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="105" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1a8b11a6a96bc0634e14bb7847b448bab6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double BmsDevice::getGpaiVbatt</definition>
+        <argsstring>(bool dev) const </argsstring>
+        <name>getGpaiVbatt</name>
+        <param>
+          <type>bool</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: WTF?? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TODO: WTF?? </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TODO: WTF?? </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="56" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="95" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1a0bdebab046f8337914ba88fdd20da1bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BmsDevice::getCellVoltage</definition>
+        <argsstring>(byte cellNumber) const </argsstring>
+        <name>getCellVoltage</name>
+        <param>
+          <type>byte</type>
+          <declname>cellNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return cell voltage <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cell number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cell voltage of cell in device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="63" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1ad72700d4da6cc7d6ef52e76091ab9d9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>byte *</type>
+        <definition>byte * BmsDevice::getStatus</definition>
+        <argsstring>() const </argsstring>
+        <name>getStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read status <simplesect kind="return"><para>device status </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="69" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BmsDevice::setStatus</definition>
+        <argsstring>(byte value) const </argsstring>
+        <name>setStatus</name>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to write </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="44" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="33" bodyend="45"/>
+        <location file="src/Bms/BmsDevice.h" line="77" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BmsDevice::clearAlerts</definition>
+        <argsstring>() const </argsstring>
+        <name>clearAlerts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send alert on behalf of this bms </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="82" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="119" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BmsDevice::clearFaults</definition>
+        <argsstring>() const </argsstring>
+        <name>clearFaults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send fault on behalf of this device </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="87" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="131" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>byte *</type>
+        <definition>void byte * BmsDevice::readRegister</definition>
+        <argsstring>(byte regAddress, byte length) const </argsstring>
+        <name>readRegister</name>
+        <param>
+          <type>byte</type>
+          <declname>regAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data read from registers <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>regAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>data read from registers </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="104" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="27" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BmsDevice::writeRegister</definition>
+        <argsstring>(byte regAddress, byte regData) const </argsstring>
+        <name>writeRegister</name>
+        <param>
+          <type>byte</type>
+          <declname>regAddress</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>regData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a bmsDevice device property <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>regAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>registry data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="111" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="143" bodyend="187"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_bms_device_1acec676309f368784cae00d2d64dbe40d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte BmsDevice::pec</definition>
+        <argsstring>(byte crcBuffer[])</argsstring>
+        <name>pec</name>
+        <param>
+          <type>byte</type>
+          <declname>crcBuffer</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: WTF?? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crcBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crc buffer to check for errors </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TODO: WTF?? </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/BmsDevice.h" line="118" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="193" bodyend="201"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Manages a BMS device </para>    </detaileddescription>
-    <location file="src/Bms/BmsDevice.h" line="30" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="30" bodyend="45"/>
+    <location file="src/Bms/BmsDevice.h" line="32" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="32" bodyend="119"/>
     <listofallmembers>
-      <member refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearAlertsOnBmsDevice</name></member>
-      <member refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearFaultsOnBmsDevice</name></member>
+      <member refid="class_bms_device_1ac66316eac6626bb71a74cd1d55b4d2c4" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>BETA_THERMISTOR</name></member>
+      <member refid="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>BmsDevice</name></member>
+      <member refid="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearAlerts</name></member>
+      <member refid="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearFaults</name></member>
+      <member refid="class_bms_device_1acace1572b82980bf20d697730ef3d0c4" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>device_address</name></member>
+      <member refid="class_bms_device_1a0bdebab046f8337914ba88fdd20da1bd" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>getCellVoltage</name></member>
+      <member refid="class_bms_device_1a8b11a6a96bc0634e14bb7847b448bab6" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>getGpaiVbatt</name></member>
+      <member refid="class_bms_device_1ad72700d4da6cc7d6ef52e76091ab9d9a" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>getStatus</name></member>
+      <member refid="class_bms_device_1ac61154d9b8cc11061dcc7d0243ed955f" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>getTemperature</name></member>
+      <member refid="class_bms_device_1acec676309f368784cae00d2d64dbe40d" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>pec</name></member>
+      <member refid="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>R0_THERMISTOR</name></member>
+      <member refid="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>RB_THERMISTOR</name></member>
+      <member refid="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>readRegister</name></member>
+      <member refid="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>RT_THERMISTOR</name></member>
+      <member refid="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>setStatus</name></member>
+      <member refid="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>writeRegister</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

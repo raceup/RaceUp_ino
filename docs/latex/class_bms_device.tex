@@ -4,12 +4,24 @@
 
 {\ttfamily \#include $<$Bms\+Device.\+h$>$}
 
-\subsection*{Static Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_bms_device_a6f8832d9d4211aca63fae77444262a16}{clear\+Alerts\+On\+Bms\+Device} (byte device\+\_\+address)
+\hyperlink{class_bms_device_a4035559c9370045a409d33cb8941a9f3}{Bms\+Device} (byte device\+\_\+address)
 \item 
-static void \hyperlink{class_bms_device_a26155b471a97e1bd96485f2e95934a11}{clear\+Faults\+On\+Bms\+Device} (byte device\+\_\+address)
+double \hyperlink{class_bms_device_ac61154d9b8cc11061dcc7d0243ed955f}{get\+Temperature} (byte temperature\+To\+Read) const 
+\item 
+double \hyperlink{class_bms_device_a8b11a6a96bc0634e14bb7847b448bab6}{get\+Gpai\+Vbatt} (bool dev) const 
+\item 
+int \hyperlink{class_bms_device_a0bdebab046f8337914ba88fdd20da1bd}{get\+Cell\+Voltage} (byte cell\+Number) const 
+\item 
+byte $\ast$ \hyperlink{class_bms_device_ad72700d4da6cc7d6ef52e76091ab9d9a}{get\+Status} () const 
+\item 
+void \hyperlink{class_bms_device_af711c0fbff46642d525c63a668cb7a2d}{set\+Status} (byte value) const 
+\item 
+void \hyperlink{class_bms_device_a99aeb3676c9732e8a22d8561b5dde254}{clear\+Alerts} () const 
+\item 
+void \hyperlink{class_bms_device_a20e255789e1b0d8d16059c8ab1ac32dd}{clear\+Faults} () const 
 \end{DoxyCompactItemize}
 
 
@@ -22,35 +34,104 @@ Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Manages a B\+MS device 
 
-\subsection{Member Function Documentation}
-\index{Bms\+Device@{Bms\+Device}!clear\+Alerts\+On\+Bms\+Device@{clear\+Alerts\+On\+Bms\+Device}}
-\index{clear\+Alerts\+On\+Bms\+Device@{clear\+Alerts\+On\+Bms\+Device}!Bms\+Device@{Bms\+Device}}
-\subsubsection[{\texorpdfstring{clear\+Alerts\+On\+Bms\+Device(byte device\+\_\+address)}{clearAlertsOnBmsDevice(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::clear\+Alerts\+On\+Bms\+Device (
+\subsection{Constructor \& Destructor Documentation}
+\index{Bms\+Device@{Bms\+Device}!Bms\+Device@{Bms\+Device}}
+\index{Bms\+Device@{Bms\+Device}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{Bms\+Device(byte device\+\_\+address)}{BmsDevice(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::\+Bms\+Device (
 \begin{DoxyParamCaption}
 \item[{byte}]{device\+\_\+address}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_a6f8832d9d4211aca63fae77444262a16}{}\label{class_bms_device_a6f8832d9d4211aca63fae77444262a16}
-Send alert on behalf of this bms 
+)}\hypertarget{class_bms_device_a4035559c9370045a409d33cb8941a9f3}{}\label{class_bms_device_a4035559c9370045a409d33cb8941a9f3}
+New bms device 
 \begin{DoxyParams}{Parameters}
-{\em device\+\_\+address} & address bms of bms to setup\\
+{\em device\+\_\+address} & byte device\+\_\+address \\
 \hline
 \end{DoxyParams}
-Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+\begin{DoxyReturn}{Returns}
+new bms device 
+\end{DoxyReturn}
 
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. \index{Bms\+Device@{Bms\+Device}!clear\+Faults\+On\+Bms\+Device@{clear\+Faults\+On\+Bms\+Device}}
-\index{clear\+Faults\+On\+Bms\+Device@{clear\+Faults\+On\+Bms\+Device}!Bms\+Device@{Bms\+Device}}
-\subsubsection[{\texorpdfstring{clear\+Faults\+On\+Bms\+Device(byte device\+\_\+address)}{clearFaultsOnBmsDevice(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::clear\+Faults\+On\+Bms\+Device (
+\subsection{Member Function Documentation}
+\index{Bms\+Device@{Bms\+Device}!clear\+Alerts@{clear\+Alerts}}
+\index{clear\+Alerts@{clear\+Alerts}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{clear\+Alerts() const }{clearAlerts() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::clear\+Alerts (
 \begin{DoxyParamCaption}
-\item[{byte}]{device\+\_\+address}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_bms_device_a26155b471a97e1bd96485f2e95934a11}{}\label{class_bms_device_a26155b471a97e1bd96485f2e95934a11}
-Send fault on behalf of this device 
+) const}\hypertarget{class_bms_device_a99aeb3676c9732e8a22d8561b5dde254}{}\label{class_bms_device_a99aeb3676c9732e8a22d8561b5dde254}
+Send alert on behalf of this bms \index{Bms\+Device@{Bms\+Device}!clear\+Faults@{clear\+Faults}}
+\index{clear\+Faults@{clear\+Faults}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{clear\+Faults() const }{clearFaults() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::clear\+Faults (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_a20e255789e1b0d8d16059c8ab1ac32dd}{}\label{class_bms_device_a20e255789e1b0d8d16059c8ab1ac32dd}
+Send fault on behalf of this device \index{Bms\+Device@{Bms\+Device}!get\+Cell\+Voltage@{get\+Cell\+Voltage}}
+\index{get\+Cell\+Voltage@{get\+Cell\+Voltage}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{get\+Cell\+Voltage(byte cell\+Number) const }{getCellVoltage(byte cellNumber) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Bms\+Device\+::get\+Cell\+Voltage (
+\begin{DoxyParamCaption}
+\item[{byte}]{cell\+Number}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_a0bdebab046f8337914ba88fdd20da1bd}{}\label{class_bms_device_a0bdebab046f8337914ba88fdd20da1bd}
+Return cell voltage 
 \begin{DoxyParams}{Parameters}
-{\em device\+\_\+address} & address bms of bms to setup \\
+{\em cell\+Number} & cell number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell voltage of cell in device 
+\end{DoxyReturn}
+\index{Bms\+Device@{Bms\+Device}!get\+Gpai\+Vbatt@{get\+Gpai\+Vbatt}}
+\index{get\+Gpai\+Vbatt@{get\+Gpai\+Vbatt}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{get\+Gpai\+Vbatt(bool dev) const }{getGpaiVbatt(bool dev) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Bms\+Device\+::get\+Gpai\+Vbatt (
+\begin{DoxyParamCaption}
+\item[{bool}]{dev}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_a8b11a6a96bc0634e14bb7847b448bab6}{}\label{class_bms_device_a8b11a6a96bc0634e14bb7847b448bab6}
+T\+O\+DO\+: W\+TF?? 
+\begin{DoxyParams}{Parameters}
+{\em dev} & T\+O\+DO\+: W\+TF?? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+O\+DO\+: W\+TF?? 
+\end{DoxyReturn}
+\index{Bms\+Device@{Bms\+Device}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{get\+Status() const }{getStatus() const }}]{\setlength{\rightskip}{0pt plus 5cm}byte $\ast$ Bms\+Device\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_ad72700d4da6cc7d6ef52e76091ab9d9a}{}\label{class_bms_device_ad72700d4da6cc7d6ef52e76091ab9d9a}
+Read status \begin{DoxyReturn}{Returns}
+device status 
+\end{DoxyReturn}
+\index{Bms\+Device@{Bms\+Device}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{get\+Temperature(byte temperature\+To\+Read) const }{getTemperature(byte temperatureToRead) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Bms\+Device\+::get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{byte}]{temperature\+To\+Read}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_ac61154d9b8cc11061dcc7d0243ed955f}{}\label{class_bms_device_ac61154d9b8cc11061dcc7d0243ed955f}
+
+\begin{DoxyParams}{Parameters}
+{\em temperature\+To\+Read} & which temperature to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+temperature of device 
+\end{DoxyReturn}
+\index{Bms\+Device@{Bms\+Device}!set\+Status@{set\+Status}}
+\index{set\+Status@{set\+Status}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{set\+Status(byte value) const }{setStatus(byte value) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::set\+Status (
+\begin{DoxyParamCaption}
+\item[{byte}]{value}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_af711c0fbff46642d525c63a668cb7a2d}{}\label{class_bms_device_af711c0fbff46642d525c63a668cb7a2d}
+Write status 
+\begin{DoxyParams}{Parameters}
+{\em value} & value to write \\
 \hline
 \end{DoxyParams}
 

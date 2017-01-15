@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['open',['open',['../class_sd_card_stream.html#aeb1d8f51d6ae81703d2140f3f740e732',1,'SdCardStream']]]
+  ['isarduinodueboard',['isArduinoDueBoard',['../class_race_up_utils.html#a2625dadfdc9f45584c71a8872a7058d7',1,'RaceUpUtils']]],
+  ['isarduinounoboard',['isArduinoUnoBoard',['../class_race_up_utils.html#a0cc09fd89b708aed73b075b34b646e9a',1,'RaceUpUtils']]]
 ];

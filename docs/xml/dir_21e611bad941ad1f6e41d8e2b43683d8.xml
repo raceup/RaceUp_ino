@@ -2,15 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_21e611bad941ad1f6e41d8e2b43683d8" kind="dir">
     <compoundname>src/Bms</compoundname>
+    <innerfile refid="_bms_8cpp">Bms.cpp</innerfile>
+    <innerfile refid="_bms_8h">Bms.h</innerfile>
     <innerfile refid="_bms__data_8h">Bms_data.h</innerfile>
     <innerfile refid="_bms_device_8cpp">BmsDevice.cpp</innerfile>
     <innerfile refid="_bms_device_8h">BmsDevice.h</innerfile>
-    <innerfile refid="_bms_device_reader_8cpp">BmsDeviceReader.cpp</innerfile>
-    <innerfile refid="_bms_device_reader_8h">BmsDeviceReader.h</innerfile>
-    <innerfile refid="_bms_device_updater_8cpp">BmsDeviceUpdater.cpp</innerfile>
-    <innerfile refid="_bms_device_updater_8h">BmsDeviceUpdater.h</innerfile>
-    <innerfile refid="_bms_device_writer_8cpp">BmsDeviceWriter.cpp</innerfile>
-    <innerfile refid="_bms_device_writer_8h">BmsDeviceWriter.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

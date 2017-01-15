@@ -15,36 +15,57 @@
  */
 
 
-#include "BmsDeviceUpdater.h"
+#include "Bms.h"
 
-void BmsDeviceUpdater::sendSegmentVoltage(byte cell, byte segment, double value) {
-    sendSegmentStatus(commandToString(kCellVoltage), cell, segment, value);
+void Bms::sendSegmentVoltage(byte
+cell,
+byte segment,
+double value
+) {
+sendSegmentStatus(commandToString(kCellVoltage), cell, segment, value
+);
 }
 
-void BmsDeviceUpdater::sendPackVoltageOfBmsDevice(byte n) {
-    byte segment = (n - 1) / 3;
-    for (byte cell = 0; cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
-        sendSegmentVoltage(cell, segment, BmsDeviceReader::getCellVoltage(n, cell));  // send voltage
-    }
+void Bms::sendPackVoltageOfBmsDevice(byte
+n) {
+byte segment = (n - 1) / 3;
+for (
+byte cell = 0;
+cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
+sendSegmentVoltage(cell, segment, BmsDevice(n)
+.
+getCellVoltage(cell)
+);  // send voltage
+}
 }
 
-void BmsDeviceUpdater::sendSegmentTemperature(byte cell, byte segment, double value) {
-    sendSegmentStatus(commandToString(kCellTemperature), cell, segment, value);
+void Bms::sendSegmentTemperature(byte
+cell,
+byte segment,
+double value
+) {
+sendSegmentStatus(commandToString(kCellTemperature), cell, segment, value
+);
 }
 
-void BmsDeviceUpdater::sendPackTemperatureOfBmsDevice(byte n) {
-    byte segment = (n - 1) / 3;
-    for (byte cell = 0; cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
-        double value = BmsDeviceReader::getTemperature(n, TEMPERATURE1);
-        sendSegmentTemperature(cell, segment, value);
-    }
+void Bms::sendPackTemperatureOfBmsDevice(byte
+n) {
+byte segment = (n - 1) / 3;
+for (
+byte cell = 0;
+cell < 18; cell++) {  // loop through cells monitored by bms device (6 of them)
+sendSegmentTemperature(cell, segment, BmsDevice(n)
+.
+getTemperature(TEMPERATURE1)
+);
+}
 }
 
-String BmsDeviceUpdater::getSerialUpdate() {
+String Bms::getSerialUpdate() {
     return Serial.readString();
 }
 
-String BmsDeviceUpdater::commandToString(int command) {
+String Bms::commandToString(int command) {
     switch (command) {
         case 0:
             return (String) "Acknowledge";

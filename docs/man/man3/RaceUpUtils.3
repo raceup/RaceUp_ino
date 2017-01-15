@@ -1,0 +1,119 @@
+.TH "RaceUpUtils" 3 "Sun Jan 15 2017" "Version 0.0" "RaceUp_ino_core" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RaceUpUtils \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RaceUpUtils\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static double \fBfromKelvinToCelsius\fP (double kelvinValue)"
+.br
+.ti -1c
+.RI "static double \fBconvertCellVoltage\fP (double cellVoltageInt)"
+.br
+.ti -1c
+.RI "static bool \fBisArduinoUnoBoard\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBisArduinoDueBoard\fP ()"
+.br
+.ti -1c
+.RI "static String \fBgetArduinoBoardModelName\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const double \fBCELSIUS_TO_KELVIN_FACTOR\fP = \-273\&.15"
+.br
+.ti -1c
+.RI "static const double \fBBMS_VOLTAGE_RATIO_FACTOR\fP = 6250\&.0 / 16383\&.0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "double RaceUpUtils::convertCellVoltage (double cellVoltageInt)\fC [static]\fP"
+View datasheet 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcellVoltageInt\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+cell voltage according to datasheet 
+.RE
+.PP
+
+.SS "double RaceUpUtils::fromKelvinToCelsius (double kelvinValue)\fC [static]\fP"
+Convert kelving temperature degree to celsius ones 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkelvinValue\fP kelvin temperature 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+equivalent celsius temperature 
+.RE
+.PP
+
+.SS "String RaceUpUtils::getArduinoBoardModelName ()\fC [static]\fP"
+Gets current board model name 
+.PP
+\fBReturns:\fP
+.RS 4
+current board model name 
+.RE
+.PP
+
+.SS "bool RaceUpUtils::isArduinoDueBoard ()\fC [static]\fP"
+Checks if current board is an Arduino DUE 
+.PP
+\fBReturns:\fP
+.RS 4
+true iff current board is an Arduino DUE 
+.RE
+.PP
+
+.SS "bool RaceUpUtils::isArduinoUnoBoard ()\fC [static]\fP"
+Checks if current board is an Arduino UNO 
+.PP
+\fBReturns:\fP
+.RS 4
+true iff current board is an Arduino UNO 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const double RaceUpUtils::CELSIUS_TO_KELVIN_FACTOR = \-273\&.15\fC [static]\fP"
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RaceUp_ino_core from the source code\&.

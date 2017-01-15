@@ -15,20 +15,25 @@
  */
 
 
-#ifndef RACEUP_INO_CORE_BMSDEVICEUPDATER_H
-#define RACEUP_INO_CORE_BMSDEVICEUPDATER_H
+#ifndef RACEUP_INO_CORE_BMS_H
+#define RACEUP_INO_CORE_BMS_H
 
-#include <Arduino.h>
-#include <WString.h>
-
-#include "BmsDeviceReader.h"
+#include "BmsDevice.h"
+#include "Bms_data.h"
 
 /**
- * Sends updates on bms device to serial
+ * Bms device on entire battery pack
  */
-class BmsDeviceUpdater {
-
+class Bms {
 public:
+    /**
+     * New bms
+     * @return new bms
+     */
+    Bms();
+
+    // serial update
+
     /**
      * Send segment data
      * @param statusType String about type of status to broadcast
@@ -37,7 +42,7 @@ public:
      * @param value value to send
      */
     template<class T>
-    static void sendSegmentStatus(String statusType, byte cell, byte segment, T value) {
+    void sendSegmentStatus(String statusType, byte cell, byte segment, T value) const {
         Serial.print(F("{"));  // open JSON
         Serial.print(F("\""));
         Serial.print(F("type"));
@@ -70,7 +75,7 @@ public:
      * @param value value to send
      */
     template<class T>
-    static void sendUpdate(byte typeValue, T value) {
+    void sendUpdate(byte typeValue, T value) const {
         sendSegmentStatus(commandToString(typeValue), (byte) - 1, (byte) - 1, value);
     }
 
@@ -80,7 +85,7 @@ public:
      * @param value Status to send
      */
     template<class T>
-    static void sendStatus(T value) {
+    void sendStatus(T value) const {
         sendUpdate(kStatus, value);
     }
 
@@ -92,13 +97,13 @@ public:
      * @param segmentVoltage Voltage of segment in cell number
      * @param value value to send
      */
-    static void sendSegmentVoltage(byte cell, byte segment, double value);
+    void sendSegmentVoltage(byte cell, byte segment, double value);
 
     /**
      * Send voltage data on the pack of bmsDevice device
      * @param n bmsDevice device
      */
-    static void sendPackVoltageOfBmsDevice(byte n);
+    void sendPackVoltageOfBmsDevice(byte n);
 
     /**
      * Send temperature data on the segment
@@ -108,18 +113,18 @@ public:
      * @param segmentVoltage Temperature of segment in cell number
      * @param value value to send
      */
-    static void sendSegmentTemperature(byte cell, byte segment, double value);
+    void sendSegmentTemperature(byte cell, byte segment, double value);
 
     /**
      * Send temperature data on the pack of bmsDevice device
      * @param n bmsDevice device
      */
-    static void sendPackTemperatureOfBmsDevice(byte n);
+    void sendPackTemperatureOfBmsDevice(byte n);
 
     /**
- * Reads serial data and checks if there is an update coming from the client
- * @return Raw String read from serial
- */
+     * Reads serial data and checks if there is an update coming from the client
+     * @return Raw String read from serial
+     */
     static String getSerialUpdate();
 
     /**
@@ -128,10 +133,7 @@ public:
      * @return string representing name of command
      */
     static String commandToString(int command);
-
-private:
-    static const byte TEMPERATURE1 = 0x0F;
 };
 
 
-#endif //RACEUP_INO_CORE_BMSDEVICEUPDATER_H
+#endif //RACEUP_INO_CORE_BMS_H

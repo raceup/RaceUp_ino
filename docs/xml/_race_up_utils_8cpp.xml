@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_race_up_utils_8cpp" kind="file" language="C++">
+    <compoundname>RaceUpUtils.cpp</compoundname>
+    <includes refid="_race_up_utils_8h" local="yes">RaceUpUtils.h</includes>
+    <incdepgraph>
+      <node id="82">
+        <label>RaceUpUtils.h</label>
+        <link refid="_race_up_utils_8h_source"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>src/RaceUpUtils.cpp</label>
+        <link refid="RaceUpUtils.cpp"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>Arduino.h</label>
+      </node>
+      <node id="84">
+        <label>ArduinoBoardManager.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;RaceUpUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1aa0db44e06e075ffd8693cc222f3becfb" kindref="member">RaceUpUtils::CELSIUS_TO_KELVIN_FACTOR</ref><sp/>=<sp/>-273.15;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RaceUpUtils::BMS_VOLTAGE_RATIO_FACTOR<sp/>=<sp/>6250.0<sp/>/<sp/>16383.0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" kindref="member">RaceUpUtils::convertCellVoltage</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cellVoltageInt)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellVoltageInt<sp/>*<sp/>BMS_VOLTAGE_RATIO_FACTOR;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" kindref="member">RaceUpUtils::fromKelvinToCelsius</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kelvinValue)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kelvinValue<sp/>+<sp/><ref refid="class_race_up_utils_1aa0db44e06e075ffd8693cc222f3becfb" kindref="member">CELSIUS_TO_KELVIN_FACTOR</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">String<sp/><ref refid="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" kindref="member">RaceUpUtils::getArduinoBoardModelName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ArduinoBoardManager<sp/>arduinoBoardManager<sp/>=<sp/>ArduinoBoardManager();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arduinoBoardManager.BOARD_NAME;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" kindref="member">RaceUpUtils::isArduinoUnoBoard</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" kindref="member">getArduinoBoardModelName</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;UNO&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" kindref="member">RaceUpUtils::isArduinoDueBoard</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" kindref="member">getArduinoBoardModelName</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;DUE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/RaceUpUtils.cpp"/>
+  </compounddef>
+</doxygen>

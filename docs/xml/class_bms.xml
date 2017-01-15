@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_bms" kind="class" language="C++" prot="public">
+    <compoundname>Bms</compoundname>
+    <includes refid="_bms_8h" local="no">Bms.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bms_1a5d733fdf4429045471ec8fd56f9ae92e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Bms::Bms</definition>
+        <argsstring>()</argsstring>
+        <name>Bms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>New bms <simplesect kind="return"><para>new bms </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Bms::sendSegmentStatus</definition>
+        <argsstring>(String statusType, byte cell, byte segment, T value) const </argsstring>
+        <name>sendSegmentStatus</name>
+        <param>
+          <type>String</type>
+          <declname>statusType</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send segment data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statusType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String about type of status to broadcast </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of cell </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of segment </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="45" column="1" bodyfile="src/Bms/Bms.h" bodystart="45" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1acac85da825d6567cc0b1752c95a48e56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Bms::sendUpdate</definition>
+        <argsstring>(byte typeValue, T value) const </argsstring>
+        <name>sendUpdate</name>
+        <param>
+          <type>byte</type>
+          <declname>typeValue</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of arg to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="78" column="1" bodyfile="src/Bms/Bms.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1ac2df5edf6db5cffe6c59967d36f4ab37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Bms::sendStatus</definition>
+        <argsstring>(T value) const </argsstring>
+        <name>sendStatus</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="88" column="1" bodyfile="src/Bms/Bms.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bms::sendSegmentVoltage</definition>
+        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <name>sendSegmentVoltage</name>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send segment voltage data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segment number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segmentVoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Voltage of segment in cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="100" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bms::sendPackVoltageOfBmsDevice</definition>
+        <argsstring>(byte n)</argsstring>
+        <name>sendPackVoltageOfBmsDevice</name>
+        <param>
+          <type>byte</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send voltage data on the pack of bmsDevice device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bmsDevice device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="106" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bms::sendSegmentTemperature</definition>
+        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <name>sendSegmentTemperature</name>
+        <param>
+          <type>byte</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send temperature data on the segment <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Segment number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segmentVoltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature of segment in cell number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to send </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="116" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bms::sendPackTemperatureOfBmsDevice</definition>
+        <argsstring>(byte n)</argsstring>
+        <name>sendPackTemperatureOfBmsDevice</name>
+        <param>
+          <type>byte</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send temperature data on the pack of bmsDevice device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bmsDevice device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="122" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="35" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Bms::getSerialUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>getSerialUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads serial data and checks if there is an update coming from the client <simplesect kind="return"><para>Raw String read from serial </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="128" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bms_1aae88d468c07ca6c7cfdc58de46019b7e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Bms::commandToString</definition>
+        <argsstring>(int command)</argsstring>
+        <name>commandToString</name>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Translate enum command to a string <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command number (as from the previously defined enum) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string representing name of command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bms/Bms.h" line="135" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="46" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. <ref refid="class_bms" kindref="compound">Bms</ref> device on entire battery pack </para>    </detaileddescription>
+    <location file="src/Bms/Bms.h" line="27" column="1" bodyfile="src/Bms/Bms.h" bodystart="27" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_bms_1a5d733fdf4429045471ec8fd56f9ae92e" prot="public" virt="non-virtual"><scope>Bms</scope><name>Bms</name></member>
+      <member refid="class_bms_1aae88d468c07ca6c7cfdc58de46019b7e" prot="public" virt="non-virtual"><scope>Bms</scope><name>commandToString</name></member>
+      <member refid="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" prot="public" virt="non-virtual"><scope>Bms</scope><name>getSerialUpdate</name></member>
+      <member refid="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackTemperatureOfBmsDevice</name></member>
+      <member refid="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackVoltageOfBmsDevice</name></member>
+      <member refid="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentStatus</name></member>
+      <member refid="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentTemperature</name></member>
+      <member refid="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentVoltage</name></member>
+      <member refid="class_bms_1ac2df5edf6db5cffe6c59967d36f4ab37" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendStatus</name></member>
+      <member refid="class_bms_1acac85da825d6567cc0b1752c95a48e56" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
-.TH "BmsDevice" 3 "Wed Jan 11 2017" "Version 0.0" "RaceUp_ino_core" \" -*- nroff -*-
+.TH "BmsDevice" 3 "Sun Jan 15 2017" "Version 0.0" "RaceUp_ino_core" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,14 +8,32 @@ BmsDevice \-
 .PP
 .PP
 \fC#include <BmsDevice\&.h>\fP
-.SS "Static Public Member Functions"
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static void \fBclearAlertsOnBmsDevice\fP (byte device_address)"
+.RI "\fBBmsDevice\fP (byte device_address)"
 .br
 .ti -1c
-.RI "static void \fBclearFaultsOnBmsDevice\fP (byte device_address)"
+.RI "double \fBgetTemperature\fP (byte temperatureToRead) const "
+.br
+.ti -1c
+.RI "double \fBgetGpaiVbatt\fP (bool dev) const "
+.br
+.ti -1c
+.RI "int \fBgetCellVoltage\fP (byte cellNumber) const "
+.br
+.ti -1c
+.RI "byte * \fBgetStatus\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetStatus\fP (byte value) const "
+.br
+.ti -1c
+.RI "void \fBclearAlerts\fP () const "
+.br
+.ti -1c
+.RI "void \fBclearFaults\fP () const "
 .br
 .in -1c
 .SH "Detailed Description"
@@ -27,29 +45,85 @@ Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not us
 http://www.apache.org/licenses/LICENSE-2.0
 .PP
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. Manages a BMS device 
-.SH "Member Function Documentation"
+.SH "Constructor & Destructor Documentation"
 .PP 
-.SS "void BmsDevice::clearAlertsOnBmsDevice (byte device_address)\fC [static]\fP"
-Send alert on behalf of this bms 
+.SS "void BmsDevice::BmsDevice (byte device_address)"
+New bms device 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIdevice_address\fP address bms of bms to setup
+\fIdevice_address\fP byte device_address 
 .RE
 .PP
-Copyright 2016 - 2017 RaceUp Team Unipd
+\fBReturns:\fP
+.RS 4
+new bms device 
+.RE
 .PP
-Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
-.PP
-http://www.apache.org/licenses/LICENSE-2.0
-.PP
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
-.SS "void BmsDevice::clearFaultsOnBmsDevice (byte device_address)\fC [static]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void BmsDevice::clearAlerts () const"
+Send alert on behalf of this bms 
+.SS "void BmsDevice::clearFaults () const"
 Send fault on behalf of this device 
+.SS "int BmsDevice::getCellVoltage (byte cellNumber) const"
+Return cell voltage 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIdevice_address\fP address bms of bms to setup 
+\fIcellNumber\fP cell number 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+cell voltage of cell in device 
+.RE
+.PP
+
+.SS "double BmsDevice::getGpaiVbatt (bool dev) const"
+TODO: WTF?? 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdev\fP TODO: WTF?? 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TODO: WTF?? 
+.RE
+.PP
+
+.SS "byte * BmsDevice::getStatus () const"
+Read status 
+.PP
+\fBReturns:\fP
+.RS 4
+device status 
+.RE
+.PP
+
+.SS "double BmsDevice::getTemperature (byte temperatureToRead) const"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItemperatureToRead\fP which temperature to read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+temperature of device 
+.RE
+.PP
+
+.SS "void BmsDevice::setStatus (byte value) const"
+Write status 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP value to write 
 .RE
 .PP
 

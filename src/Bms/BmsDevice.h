@@ -19,10 +19,12 @@
 #define RACEUP_INO_CORE_BMSDEVICE_H
 
 #include <Arduino.h>
+#include <SPI.h>
+#include <avr/pgmspace.h>
 
-#include "BmsDeviceReader.h"
-#include "BmsDeviceWriter.h"
-#include "BmsDeviceUpdater.h"ì
+#include "../RaceUpUtils.h"
+#include "Bms_data.h"
+#include "../data.h"
 
 /**
  * Manages a BMS device
@@ -32,16 +34,88 @@ class BmsDevice {
 public:
 
     /**
-     * Send alert on behalf of this bms
-     * @param device_address address bms of bms to setup
+     * New bms device
+     * @param device_address byte device_address
+     * @return new bms device
      */
-    static void clearAlertsOnBmsDevice(byte device_address);
+    BmsDevice(byte device_address);
+
+    // getters
+
+    /**
+     * @param temperatureToRead which temperature to read
+     * @return temperature of device
+     */
+    double getTemperature(byte temperatureToRead) const;
+
+    /**
+     * TODO: WTF??
+     * @param dev TODO: WTF??
+     * @return TODO: WTF??
+     */
+    double getGpaiVbatt(bool dev) const;
+
+    /**
+     * Return cell voltage
+     * @param cellNumber cell number
+     * @return cell voltage of cell in device
+     */
+    int getCellVoltage(byte cellNumber) const;
+
+    /**
+     * Read status
+     * @return device status
+     */
+    byte *getStatus() const;
+
+    // setters
+
+    /**
+     * Write status
+     * @param value value to write
+     */
+    void setStatus(byte value) const;
+
+    /**
+     * Send alert on behalf of this bms
+     */
+    void clearAlerts() const;
 
     /**
      * Send fault on behalf of this device
-     * @param device_address address bms of bms to setup
      */
-    static void clearFaultsOnBmsDevice(byte device_address);
+    void clearFaults() const;
+
+private:
+    byte device_address;  // address of device
+
+    // Thermistor data
+    static const double BETA_THERMISTOR;
+    static const double RB_THERMISTOR;
+    static const double RT_THERMISTOR;
+    static const double R0_THERMISTOR;
+
+    /**
+     * Read data read from registers
+     * @param regAddress  registry address
+     * @param length length to read
+     * @return data read from registers
+     */
+    byte *readRegister(byte regAddress, byte length) const;
+
+    /**
+     * Write a bmsDevice device property
+     * @param regAddress registry address
+     * @param regData registry data
+     */
+    void writeRegister(byte regAddress, byte regData) const;
+
+    /**
+    * TODO: WTF??
+    * @param crcBuffer crc buffer to check for errors
+    * @return TODO: WTF??
+    */
+    static byte pec(byte crcBuffer[]);
 };
 
 

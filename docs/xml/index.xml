@@ -1,36 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="class_bms" kind="class"><name>Bms</name>
+    <member refid="class_bms_1a5d733fdf4429045471ec8fd56f9ae92e" kind="function"><name>Bms</name></member>
+    <member refid="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" kind="function"><name>sendSegmentStatus</name></member>
+    <member refid="class_bms_1acac85da825d6567cc0b1752c95a48e56" kind="function"><name>sendUpdate</name></member>
+    <member refid="class_bms_1ac2df5edf6db5cffe6c59967d36f4ab37" kind="function"><name>sendStatus</name></member>
+    <member refid="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" kind="function"><name>sendSegmentVoltage</name></member>
+    <member refid="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" kind="function"><name>sendPackVoltageOfBmsDevice</name></member>
+    <member refid="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" kind="function"><name>sendSegmentTemperature</name></member>
+    <member refid="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" kind="function"><name>sendPackTemperatureOfBmsDevice</name></member>
+    <member refid="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" kind="function"><name>getSerialUpdate</name></member>
+    <member refid="class_bms_1aae88d468c07ca6c7cfdc58de46019b7e" kind="function"><name>commandToString</name></member>
+  </compound>
   <compound refid="class_bms_device" kind="class"><name>BmsDevice</name>
-    <member refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" kind="function"><name>clearAlertsOnBmsDevice</name></member>
-    <member refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" kind="function"><name>clearFaultsOnBmsDevice</name></member>
+    <member refid="class_bms_device_1acace1572b82980bf20d697730ef3d0c4" kind="variable"><name>device_address</name></member>
+    <member refid="class_bms_device_1ac66316eac6626bb71a74cd1d55b4d2c4" kind="variable"><name>BETA_THERMISTOR</name></member>
+    <member refid="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" kind="variable"><name>RB_THERMISTOR</name></member>
+    <member refid="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" kind="variable"><name>RT_THERMISTOR</name></member>
+    <member refid="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" kind="variable"><name>R0_THERMISTOR</name></member>
+    <member refid="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" kind="function"><name>BmsDevice</name></member>
+    <member refid="class_bms_device_1ac61154d9b8cc11061dcc7d0243ed955f" kind="function"><name>getTemperature</name></member>
+    <member refid="class_bms_device_1a8b11a6a96bc0634e14bb7847b448bab6" kind="function"><name>getGpaiVbatt</name></member>
+    <member refid="class_bms_device_1a0bdebab046f8337914ba88fdd20da1bd" kind="function"><name>getCellVoltage</name></member>
+    <member refid="class_bms_device_1ad72700d4da6cc7d6ef52e76091ab9d9a" kind="function"><name>getStatus</name></member>
+    <member refid="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" kind="function"><name>setStatus</name></member>
+    <member refid="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" kind="function"><name>clearAlerts</name></member>
+    <member refid="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" kind="function"><name>clearFaults</name></member>
+    <member refid="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" kind="function"><name>readRegister</name></member>
+    <member refid="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" kind="function"><name>writeRegister</name></member>
+    <member refid="class_bms_device_1acec676309f368784cae00d2d64dbe40d" kind="function"><name>pec</name></member>
   </compound>
-  <compound refid="class_bms_device_reader" kind="class"><name>BmsDeviceReader</name>
-    <member refid="class_bms_device_reader_1a00678a97467753d00db7f52209652bb9" kind="variable"><name>BETA_THERMISTOR</name></member>
-    <member refid="class_bms_device_reader_1a690fcc9572eec59496f5815d5ad96868" kind="variable"><name>RB_THERMISTOR</name></member>
-    <member refid="class_bms_device_reader_1afb697685241c1c09748834cbbc182577" kind="variable"><name>RT_THERMISTOR</name></member>
-    <member refid="class_bms_device_reader_1a80aebbbaaa3fbd33df82d70c185fb738" kind="variable"><name>R0_THERMISTOR</name></member>
-    <member refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kind="function"><name>bmsDeviceRead</name></member>
-    <member refid="class_bms_device_reader_1ad3a3a7bb7cae1e3a69f092004cb533ed" kind="function"><name>getTemperature</name></member>
-    <member refid="class_bms_device_reader_1a1f0651bfef7b2235825320e1e96993a0" kind="function"><name>getGpaiVbatt</name></member>
-    <member refid="class_bms_device_reader_1abcc5341d72ed906225e85b5faa5cf6e8" kind="function"><name>getCellVoltage</name></member>
-    <member refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kind="function"><name>getBmsDeviceStatus</name></member>
-  </compound>
-  <compound refid="class_bms_device_updater" kind="class"><name>BmsDeviceUpdater</name>
-    <member refid="class_bms_device_updater_1a9970075e956204e471a53cca51750e5b" kind="variable"><name>TEMPERATURE1</name></member>
-    <member refid="class_bms_device_updater_1a6ddc61da65da16ff6c24995f43f0a6c1" kind="function"><name>sendSegmentStatus</name></member>
-    <member refid="class_bms_device_updater_1a9449da7019249fb3ce825c12fb61c134" kind="function"><name>sendUpdate</name></member>
-    <member refid="class_bms_device_updater_1a5cc748a486645d1af6f675274f0d29ae" kind="function"><name>sendStatus</name></member>
-    <member refid="class_bms_device_updater_1ab1873577d7413c453222da23b8f6a1ac" kind="function"><name>sendSegmentVoltage</name></member>
-    <member refid="class_bms_device_updater_1a655ccc4e5f315c383d066c502b73b9e2" kind="function"><name>sendPackVoltageOfBmsDevice</name></member>
-    <member refid="class_bms_device_updater_1aae3a833fa2bd8403d9b55c358a6d2820" kind="function"><name>sendSegmentTemperature</name></member>
-    <member refid="class_bms_device_updater_1ac2bf4bba3100b48c1f8b42d21c8670f1" kind="function"><name>sendPackTemperatureOfBmsDevice</name></member>
-    <member refid="class_bms_device_updater_1a9c5b00e6d5f24df9a7adbb2b772cfafd" kind="function"><name>getSerialUpdate</name></member>
-    <member refid="class_bms_device_updater_1aff1720a11582bd1353c50ced9352eda9" kind="function"><name>commandToString</name></member>
-  </compound>
-  <compound refid="class_bms_device_writer" kind="class"><name>BmsDeviceWriter</name>
-    <member refid="class_bms_device_writer_1af8c0e16d59c6f11848fea970e726592b" kind="function"><name>pec</name></member>
-    <member refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kind="function"><name>bmsDeviceWrite</name></member>
-    <member refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kind="function"><name>writeStatusOfBmsDevice</name></member>
+  <compound refid="class_race_up_utils" kind="class"><name>RaceUpUtils</name>
+    <member refid="class_race_up_utils_1aa0db44e06e075ffd8693cc222f3becfb" kind="variable"><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
+    <member refid="class_race_up_utils_1a0575a05c5b9f884dbaa445fad65a9ccd" kind="variable"><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
+    <member refid="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" kind="function"><name>fromKelvinToCelsius</name></member>
+    <member refid="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" kind="function"><name>convertCellVoltage</name></member>
+    <member refid="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" kind="function"><name>isArduinoUnoBoard</name></member>
+    <member refid="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" kind="function"><name>isArduinoDueBoard</name></member>
+    <member refid="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" kind="function"><name>getArduinoBoardModelName</name></member>
   </compound>
   <compound refid="class_sd_card_stream" kind="class"><name>SdCardStream</name>
     <member refid="class_sd_card_stream_1a2659f0129bf2e8a8dd6f100b186a3be2" kind="variable"><name>chipSelect</name></member>
@@ -40,13 +47,9 @@
     <member refid="class_sd_card_stream_1aeb1d8f51d6ae81703d2140f3f740e732" kind="function"><name>open</name></member>
     <member refid="class_sd_card_stream_1af275b7e608c7122279d8d2cc2c50f7f3" kind="function"><name>doesFileExists</name></member>
   </compound>
-  <compound refid="class_utils" kind="class"><name>Utils</name>
-    <member refid="class_utils_1af916f41aa01c118944d9dd91fea3584e" kind="variable"><name>CELSIUS_TO_KELVIN_FACTOR</name></member>
-    <member refid="class_utils_1a1a92d9c2edea3e4b3abd48994a4475fa" kind="variable"><name>BMS_VOLTAGE_RATIO_FACTOR</name></member>
-    <member refid="class_utils_1a393f44e0230724e5cd3b7c125b16b5e1" kind="function"><name>fromKelvinToCelsius</name></member>
-    <member refid="class_utils_1a70e2b7f69e19a166352387194f83a13c" kind="function"><name>convertCellVoltage</name></member>
-    <member refid="class_utils_1af819499b6a69f2aed478a2945bedc56b" kind="function"><name>frameToFloat</name></member>
-    <member refid="class_utils_1aa3f908c62401cc150a33ac791e0fa1c1" kind="function"><name>frameToFloat</name></member>
+  <compound refid="_bms_8cpp" kind="file"><name>Bms.cpp</name>
+  </compound>
+  <compound refid="_bms_8h" kind="file"><name>Bms.h</name>
   </compound>
   <compound refid="_bms__data_8h" kind="file"><name>Bms_data.h</name>
     <member refid="_bms__data_8h_1abcd396367233a5ebc58b6bcfed102be7" kind="define"><name>SLAVE_SELECT_PIN</name></member>
@@ -94,18 +97,6 @@
   </compound>
   <compound refid="_bms_device_8h" kind="file"><name>BmsDevice.h</name>
   </compound>
-  <compound refid="_bms_device_reader_8cpp" kind="file"><name>BmsDeviceReader.cpp</name>
-  </compound>
-  <compound refid="_bms_device_reader_8h" kind="file"><name>BmsDeviceReader.h</name>
-  </compound>
-  <compound refid="_bms_device_updater_8cpp" kind="file"><name>BmsDeviceUpdater.cpp</name>
-  </compound>
-  <compound refid="_bms_device_updater_8h" kind="file"><name>BmsDeviceUpdater.h</name>
-  </compound>
-  <compound refid="_bms_device_writer_8cpp" kind="file"><name>BmsDeviceWriter.cpp</name>
-  </compound>
-  <compound refid="_bms_device_writer_8h" kind="file"><name>BmsDeviceWriter.h</name>
-  </compound>
   <compound refid="data_8h" kind="file"><name>data.h</name>
     <member refid="data_8h_1afe1cde8f0d76b92fbe41bc507778ac94" kind="define"><name>ONE_MILLISECOND</name></member>
     <member refid="data_8h_1a0198aac1ba775a6692aaa7566b59bb67" kind="define"><name>ONE_CENTSECOND</name></member>
@@ -121,9 +112,9 @@
   </compound>
   <compound refid="_race_up__ino__core_8h" kind="file"><name>RaceUp_ino_core.h</name>
   </compound>
-  <compound refid="_utils_8cpp" kind="file"><name>Utils.cpp</name>
+  <compound refid="_race_up_utils_8cpp" kind="file"><name>RaceUpUtils.cpp</name>
   </compound>
-  <compound refid="_utils_8h" kind="file"><name>Utils.h</name>
+  <compound refid="_race_up_utils_8h" kind="file"><name>RaceUpUtils.h</name>
   </compound>
   <compound refid="dir_21e611bad941ad1f6e41d8e2b43683d8" kind="dir"><name>src/Bms</name>
   </compound>

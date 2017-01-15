@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['beta_5fthermistor',['BETA_THERMISTOR',['../class_bms_device_reader.html#a00678a97467753d00db7f52209652bb9',1,'BmsDeviceReader']]]
+  ['celsius_5fto_5fkelvin_5ffactor',['CELSIUS_TO_KELVIN_FACTOR',['../class_race_up_utils.html#aa0db44e06e075ffd8693cc222f3becfb',1,'RaceUpUtils']]]
 ];

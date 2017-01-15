@@ -4,73 +4,58 @@
     <compoundname>BmsDevice.cpp</compoundname>
     <includes refid="_bms_device_8h" local="yes">BmsDevice.h</includes>
     <incdepgraph>
-      <node id="17">
-        <label>WString.h</label>
+      <node id="31">
+        <label>SPI.h</label>
       </node>
-      <node id="11">
-        <label>BmsDeviceReader.h</label>
-        <link refid="_bms_device_reader_8h_source"/>
-        <childnode refid="10" relation="include">
+      <node id="33">
+        <label>../RaceUpUtils.h</label>
+        <link refid="_race_up_utils_8h_source"/>
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>BmsDeviceWriter.h</label>
-        <link refid="_bms_device_writer_8h_source"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="36">
         <label>../data.h</label>
         <link refid="data_8h_source"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="32">
         <label>avr/pgmspace.h</label>
       </node>
-      <node id="8">
+      <node id="28">
         <label>src/Bms/BmsDevice.cpp</label>
         <link refid="BmsDevice.cpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="29">
         <label>BmsDevice.h</label>
         <link refid="_bms_device_8h_source"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="30">
         <label>Arduino.h</label>
       </node>
-      <node id="16">
-        <label>BmsDeviceUpdater.h</label>
-        <link refid="_bms_device_updater_8h_source"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
+      <node id="34">
+        <label>ArduinoBoardManager.h</label>
       </node>
-      <node id="12">
+      <node id="35">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -82,32 +67,188 @@
 <codeline lineno="1"></codeline>
 <codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;BmsDevice.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a6f8832d9d4211aca63fae77444262a16" kindref="member">BmsDevice::clearAlertsOnBmsDevice</ref>(byte</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">device_address)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1a824d04ae77bd18902c1445980fe9dc3a" kindref="member">BmsDeviceReader::getBmsDeviceStatus</ref>(device_address);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b00100000;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDevice::BETA_THERMISTOR<sp/>=<sp/>3435.0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDevice::RB_THERMISTOR<sp/>=<sp/>1800.0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDevice::RT_THERMISTOR<sp/>=<sp/>1500.0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BmsDevice::R0_THERMISTOR<sp/>=<sp/>10000.0;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b11011111;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>ALERT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a26155b471a97e1bd96485f2e95934a11" kindref="member">BmsDevice::clearFaultsOnBmsDevice</ref>(byte</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">device_address)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">byte<sp/>*value<sp/>=<sp/><ref refid="class_bms_device_reader_1af56a2eaeb612587f91b9271ffaf8cda0" kindref="member">BmsDeviceReader::bmsDeviceRead</ref>(device_address,<sp/>DEVICE_STATUS,</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b01000000;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b10111111;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a43507694298062698dd72e1ff7599bea" kindref="member">BmsDeviceWriter::writeStatusOfBmsDevice</ref>(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bms_device_writer_1a0f1433d379e82698c1d48abd8e935e13" kindref="member">BmsDeviceWriter::bmsDeviceWrite</ref>(device_address,<sp/>FAULT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" kindref="member">BmsDevice::BmsDevice</ref>(byte<sp/>device_address)<sp/>:<sp/>device_address(device_address)<sp/>{}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>byte<sp/>*<sp/>BmsDevice::readRegister(byte<sp/>regAddress,<sp/>byte<sp/>length)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" kindref="member">RaceUpUtils::isArduinoUnoBoard</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logicalAddress<sp/>&amp;=<sp/>0b11111110;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>receivedData[20];<sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>LOW);<sp/><sp/></highlight><highlight class="comment">//<sp/>take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);<sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(length);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" kindref="member">RaceUpUtils::isArduinoDueBoard</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>LOW);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.beginTransaction(SPISettings(50000,<sp/>MSBFIRST,<sp/>SPI_MODE1));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>deviceAddress<sp/>&lt;&lt;<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>clear<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logicalAddress<sp/>&amp;=<sp/>0b11111110;<sp/><sp/></highlight><highlight class="comment">//<sp/>logicalAddress<sp/>&amp;=<sp/>~(1<sp/>&lt;&lt;<sp/>0);<sp/><sp/>//<sp/>Clear<sp/>bit<sp/>0,<sp/>test<sp/>bitClear(x,n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>buffer<sp/>for<sp/>receivedData<sp/>and<sp/>clear<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>receivedData[20];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(receivedData,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(receivedData));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(length);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length<sp/>+<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>receivedData[i]<sp/>=<sp/>SPI.transfer(0x00);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>HIGH);<sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>high<sp/>to<sp/>de-select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.endTransaction();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>receivedData;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a0bdebab046f8337914ba88fdd20da1bd" kindref="member">BmsDevice::getCellVoltage</ref>(byte<sp/>cellNumber)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*cellRaw<sp/>=<sp/>readRegister(cellNumber,<sp/>0x02);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(ONE_CENTSECOND);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>parsed<sp/>=<sp/><ref refid="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" kindref="member">RaceUpUtils::convertCellVoltage</ref>((cellRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>cellRaw[1]);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>parsed;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a8b11a6a96bc0634e14bb7847b448bab6" kindref="member">BmsDevice::getGpaiVbatt</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dev)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*gpaiRaw<sp/>=<sp/>readRegister(device_address,<sp/>GPAI,<sp/>0x02);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>(100.0<sp/>/<sp/>3.0)<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[V]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((gpaiRaw[0]<sp/>*<sp/>256)<sp/>+<sp/>gpaiRaw[1])<sp/>*<sp/>2500.0<sp/>/<sp/>16383;<sp/></highlight><highlight class="comment">//<sp/>[mV]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1ac61154d9b8cc11061dcc7d0243ed955f" kindref="member">BmsDevice::getTemperature</ref>(byte<sp/>temperatureToRead)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*value_read<sp/>=<sp/>readRegister(device_address,<sp/>temperatureToRead,<sp/>2);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>first<sp/>2<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>tempRaw<sp/>=<sp/>(value_read[0]<sp/>*<sp/>0x100)<sp/>+<sp/>value_read[1];<sp/><sp/></highlight><highlight class="comment">//<sp/>multiply<sp/>by<sp/>256<sp/>and<sp/>add<sp/>second<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>(tempRaw<sp/>+<sp/>2)<sp/>/<sp/>33046.0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>((1<sp/>/<sp/>value)<sp/>-<sp/>1)<sp/>*<sp/>RB_THERMISTOR<sp/>-<sp/>RT_THERMISTOR;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>BETA_THERMISTOR<sp/>/<sp/>(log(value<sp/>/<sp/>(R0_THERMISTOR<sp/>*<sp/>exp(-BETA_THERMISTOR<sp/>/<sp/>298.15))));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" kindref="member">RaceUpUtils::fromKelvinToCelsius</ref>(value);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">byte<sp/>*<ref refid="class_bms_device_1ad72700d4da6cc7d6ef52e76091ab9d9a" kindref="member">BmsDevice::getStatus</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>readRegister(device_address,<sp/>DEVICE_STATUS,<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>only<sp/>1<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" kindref="member">BmsDevice::clearAlerts</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*<sp/>value<sp/>=<sp/>getStatus();<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b00100000;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::writeStatusOfBmsDevice(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b11011111;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::writeStatusOfBmsDevice(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::bmsDeviceWrite(device_address,<sp/>ALERT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::bmsDeviceWrite(device_address,<sp/>ALERT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" kindref="member">BmsDevice::clearFaults</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>*<sp/>value<sp/>=<sp/>getStatus();<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit<sp/>in<sp/>device<sp/>status<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>|=<sp/>0b01000000;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::writeStatusOfBmsDevice(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>alert<sp/>bit<sp/>as<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>value[0]<sp/>&amp;=<sp/>0b10111111;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::writeStatusOfBmsDevice(device_address,<sp/>value[0]);<sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>alert<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::bmsDeviceWrite(device_address,<sp/>FAULT_STATUS,<sp/>0xFF);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>1&apos;s<sp/>to<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>BmsDeviceWriter::bmsDeviceWrite(device_address,<sp/>FAULT_STATUS,<sp/>0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>0&apos;s<sp/>ALERT_STATUS_REG<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BmsDevice::writeRegister(byte<sp/>regAddress,<sp/>byte<sp/>regData)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" kindref="member">RaceUpUtils::isArduinoUnoBoard</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE1);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>(deviceAddress<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;<sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>set<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>crcInput[3]<sp/>=<sp/>{logicalAddress,<sp/>regAddress,<sp/>regData};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>LOW);<sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(1);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);<sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regData);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(pec(crcInput));</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(1);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,<sp/>HIGH);<sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>high<sp/>to<sp/>de-select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE0);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" kindref="member">RaceUpUtils::isArduinoDueBoard</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>low<sp/>to<sp/>select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,LOW);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.setDataMode(SPI_MODE1);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.beginTransaction(SPISettings(50000,<sp/>MSBFIRST,<sp/>SPI_MODE1));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>the<sp/>device<sp/>bit<sp/>and<sp/>set<sp/>bit<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>logicalAddress<sp/>=<sp/>(deviceAddress<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//logicalAddress<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>0;<sp/><sp/>//<sp/>Set<sp/>bit<sp/>0,<sp/>test<sp/>bitSet(x,n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>crcInput[3]<sp/>=<sp/>{logicalAddress,<sp/>regAddress,<sp/>regData};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>and<sp/>receive<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(logicalAddress);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regAddress);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(regData);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI.transfer(pec(crcInput));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(5);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Take<sp/>the<sp/>SS<sp/>pin<sp/>high<sp/>to<sp/>de-select<sp/>the<sp/>chip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(SLAVE_SELECT_PIN,HIGH);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" kindref="member">BmsDevice::setStatus</ref>(byte<sp/>value)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>writeRegister(DEVICE_STATUS,<sp/>value);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">byte<sp/>BmsDevice::pec(byte<sp/>crcBuffer[])<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>byte<sp/>crc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>crc<sp/>^<sp/>crcBuffer[i];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crc<sp/>=<sp/>pgm_read_word_near(crcTable<sp/>+<sp/>temp);<sp/><sp/></highlight><highlight class="comment">//<sp/>fetch<sp/>data<sp/>from<sp/>flash,<sp/>load<sp/>in<sp/>SRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crc;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/Bms/BmsDevice.cpp"/>
   </compounddef>

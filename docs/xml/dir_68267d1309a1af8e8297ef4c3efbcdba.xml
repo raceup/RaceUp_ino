@@ -7,8 +7,8 @@
     <innerfile refid="data_8h">data.h</innerfile>
     <innerfile refid="_race_up__ino__core_8cpp">RaceUp_ino_core.cpp</innerfile>
     <innerfile refid="_race_up__ino__core_8h">RaceUp_ino_core.h</innerfile>
-    <innerfile refid="_utils_8cpp">Utils.cpp</innerfile>
-    <innerfile refid="_utils_8h">Utils.h</innerfile>
+    <innerfile refid="_race_up_utils_8cpp">RaceUpUtils.cpp</innerfile>
+    <innerfile refid="_race_up_utils_8h">RaceUpUtils.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

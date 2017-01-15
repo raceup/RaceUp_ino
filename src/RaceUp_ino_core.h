@@ -18,16 +18,14 @@
 #ifndef RACEUP_INO_CORE_RACEUP_INO_CORE_H
 #define RACEUP_INO_CORE_RACEUP_INO_CORE_H
 
-// TODO find way to include submodules not entire library
-
 // devices
-#include "Bms/BmsDevice.h"
+#include "Bms/Bms.h"
 
 // streams
 #include "IOStreams/SdCardStream.h"
 
 // utils and data
-#include "Utils.h"
+#include "RaceUpUtils.h"
 #include "data.h"
 
 #endif //RACEUP_INO_CORE_RACEUP_INO_CORE_H

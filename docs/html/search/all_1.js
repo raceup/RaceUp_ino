@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['celsius_5fto_5fkelvin_5ffactor',['CELSIUS_TO_KELVIN_FACTOR',['../class_utils.html#af916f41aa01c118944d9dd91fea3584e',1,'Utils']]],
-  ['clearalertsonbmsdevice',['clearAlertsOnBmsDevice',['../class_bms_device.html#a6f8832d9d4211aca63fae77444262a16',1,'BmsDevice']]],
-  ['clearfaultsonbmsdevice',['clearFaultsOnBmsDevice',['../class_bms_device.html#a26155b471a97e1bd96485f2e95934a11',1,'BmsDevice']]],
-  ['commandtostring',['commandToString',['../class_bms_device_updater.html#aff1720a11582bd1353c50ced9352eda9',1,'BmsDeviceUpdater']]],
-  ['convertcellvoltage',['convertCellVoltage',['../class_utils.html#a70e2b7f69e19a166352387194f83a13c',1,'Utils']]]
+  ['celsius_5fto_5fkelvin_5ffactor',['CELSIUS_TO_KELVIN_FACTOR',['../class_race_up_utils.html#aa0db44e06e075ffd8693cc222f3becfb',1,'RaceUpUtils']]],
+  ['clearalerts',['clearAlerts',['../class_bms_device.html#a99aeb3676c9732e8a22d8561b5dde254',1,'BmsDevice']]],
+  ['clearfaults',['clearFaults',['../class_bms_device.html#a20e255789e1b0d8d16059c8ab1ac32dd',1,'BmsDevice']]],
+  ['commandtostring',['commandToString',['../class_bms.html#aae88d468c07ca6c7cfdc58de46019b7e',1,'Bms']]],
+  ['convertcellvoltage',['convertCellVoltage',['../class_race_up_utils.html#ad57a448fb6131a2a38b0c3a8c967ee58',1,'RaceUpUtils']]]
 ];

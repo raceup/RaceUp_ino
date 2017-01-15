@@ -1,0 +1,117 @@
+\hypertarget{class_race_up_utils}{}\section{Race\+Up\+Utils Class Reference}
+\label{class_race_up_utils}\index{Race\+Up\+Utils@{Race\+Up\+Utils}}
+
+
+{\ttfamily \#include $<$Race\+Up\+Utils.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_race_up_utils_ac40afe767e8d781d06effb03e9de8971}{from\+Kelvin\+To\+Celsius} (double kelvin\+Value)
+\item 
+static double \hyperlink{class_race_up_utils_ad57a448fb6131a2a38b0c3a8c967ee58}{convert\+Cell\+Voltage} (double cell\+Voltage\+Int)
+\item 
+static bool \hyperlink{class_race_up_utils_a0cc09fd89b708aed73b075b34b646e9a}{is\+Arduino\+Uno\+Board} ()
+\item 
+static bool \hyperlink{class_race_up_utils_a2625dadfdc9f45584c71a8872a7058d7}{is\+Arduino\+Due\+Board} ()
+\item 
+static String \hyperlink{class_race_up_utils_a331fe79dbe61bd7cd84a61b9a05c72e4}{get\+Arduino\+Board\+Model\+Name} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{class_race_up_utils_aa0db44e06e075ffd8693cc222f3becfb}{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR} = -\/273.\+15
+\item 
+static const double {\bfseries B\+M\+S\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+A\+T\+I\+O\+\_\+\+F\+A\+C\+T\+OR} = 6250.\+0 / 16383.\+0\hypertarget{class_race_up_utils_a0575a05c5b9f884dbaa445fad65a9ccd}{}\label{class_race_up_utils_a0575a05c5b9f884dbaa445fad65a9ccd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+\subsection{Member Function Documentation}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!convert\+Cell\+Voltage@{convert\+Cell\+Voltage}}
+\index{convert\+Cell\+Voltage@{convert\+Cell\+Voltage}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{convert\+Cell\+Voltage(double cell\+Voltage\+Int)}{convertCellVoltage(double cellVoltageInt)}}]{\setlength{\rightskip}{0pt plus 5cm}double Race\+Up\+Utils\+::convert\+Cell\+Voltage (
+\begin{DoxyParamCaption}
+\item[{double}]{cell\+Voltage\+Int}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_ad57a448fb6131a2a38b0c3a8c967ee58}{}\label{class_race_up_utils_ad57a448fb6131a2a38b0c3a8c967ee58}
+View datasheet 
+\begin{DoxyParams}{Parameters}
+{\em cell\+Voltage\+Int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell voltage according to datasheet 
+\end{DoxyReturn}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!from\+Kelvin\+To\+Celsius@{from\+Kelvin\+To\+Celsius}}
+\index{from\+Kelvin\+To\+Celsius@{from\+Kelvin\+To\+Celsius}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{from\+Kelvin\+To\+Celsius(double kelvin\+Value)}{fromKelvinToCelsius(double kelvinValue)}}]{\setlength{\rightskip}{0pt plus 5cm}double Race\+Up\+Utils\+::from\+Kelvin\+To\+Celsius (
+\begin{DoxyParamCaption}
+\item[{double}]{kelvin\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_ac40afe767e8d781d06effb03e9de8971}{}\label{class_race_up_utils_ac40afe767e8d781d06effb03e9de8971}
+Convert kelving temperature degree to celsius ones 
+\begin{DoxyParams}{Parameters}
+{\em kelvin\+Value} & kelvin temperature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+equivalent celsius temperature 
+\end{DoxyReturn}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!get\+Arduino\+Board\+Model\+Name@{get\+Arduino\+Board\+Model\+Name}}
+\index{get\+Arduino\+Board\+Model\+Name@{get\+Arduino\+Board\+Model\+Name}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{get\+Arduino\+Board\+Model\+Name()}{getArduinoBoardModelName()}}]{\setlength{\rightskip}{0pt plus 5cm}String Race\+Up\+Utils\+::get\+Arduino\+Board\+Model\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_a331fe79dbe61bd7cd84a61b9a05c72e4}{}\label{class_race_up_utils_a331fe79dbe61bd7cd84a61b9a05c72e4}
+Gets current board model name \begin{DoxyReturn}{Returns}
+current board model name 
+\end{DoxyReturn}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!is\+Arduino\+Due\+Board@{is\+Arduino\+Due\+Board}}
+\index{is\+Arduino\+Due\+Board@{is\+Arduino\+Due\+Board}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{is\+Arduino\+Due\+Board()}{isArduinoDueBoard()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Race\+Up\+Utils\+::is\+Arduino\+Due\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_a2625dadfdc9f45584c71a8872a7058d7}{}\label{class_race_up_utils_a2625dadfdc9f45584c71a8872a7058d7}
+Checks if current board is an Arduino D\+UE \begin{DoxyReturn}{Returns}
+true iff current board is an Arduino D\+UE 
+\end{DoxyReturn}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!is\+Arduino\+Uno\+Board@{is\+Arduino\+Uno\+Board}}
+\index{is\+Arduino\+Uno\+Board@{is\+Arduino\+Uno\+Board}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{is\+Arduino\+Uno\+Board()}{isArduinoUnoBoard()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Race\+Up\+Utils\+::is\+Arduino\+Uno\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_a0cc09fd89b708aed73b075b34b646e9a}{}\label{class_race_up_utils_a0cc09fd89b708aed73b075b34b646e9a}
+Checks if current board is an Arduino U\+NO \begin{DoxyReturn}{Returns}
+true iff current board is an Arduino U\+NO 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Race\+Up\+Utils@{Race\+Up\+Utils}!C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR@{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR@{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}!Race\+Up\+Utils@{Race\+Up\+Utils}}
+\subsubsection[{\texorpdfstring{C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR}{CELSIUS_TO_KELVIN_FACTOR}}]{\setlength{\rightskip}{0pt plus 5cm}const double Race\+Up\+Utils\+::\+C\+E\+L\+S\+I\+U\+S\+\_\+\+T\+O\+\_\+\+K\+E\+L\+V\+I\+N\+\_\+\+F\+A\+C\+T\+OR = -\/273.\+15\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_race_up_utils_aa0db44e06e075ffd8693cc222f3becfb}{}\label{class_race_up_utils_aa0db44e06e075ffd8693cc222f3becfb}
+Copyright 2016 -\/ 2017 Race\+Up Team Unipd
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Race\+Up\+Utils.\+h\item 
+src/Race\+Up\+Utils.\+cpp\end{DoxyCompactItemize}

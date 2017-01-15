@@ -1,0 +1,194 @@
+.TH "Bms" 3 "Sun Jan 15 2017" "Version 0.0" "RaceUp_ino_core" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bms \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Bms\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBms\fP ()"
+.br
+.ti -1c
+.RI "template<class T > void \fBsendSegmentStatus\fP (String statusType, byte cell, byte segment, T value) const "
+.br
+.ti -1c
+.RI "template<class T > void \fBsendUpdate\fP (byte typeValue, T value) const "
+.br
+.ti -1c
+.RI "template<class T > void \fBsendStatus\fP (T value) const "
+.br
+.ti -1c
+.RI "void \fBsendSegmentVoltage\fP (byte cell, byte segment, double value)"
+.br
+.ti -1c
+.RI "void \fBsendPackVoltageOfBmsDevice\fP (byte n)"
+.br
+.ti -1c
+.RI "void \fBsendSegmentTemperature\fP (byte cell, byte segment, double value)"
+.br
+.ti -1c
+.RI "void \fBsendPackTemperatureOfBmsDevice\fP (byte n)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBgetSerialUpdate\fP ()"
+.br
+.ti -1c
+.RI "static String \fBcommandToString\fP (int command)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. \fBBms\fP device on entire battery pack 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Bms::Bms ()"
+New bms 
+.PP
+\fBReturns:\fP
+.RS 4
+new bms 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "String Bms::commandToString (int command)\fC [static]\fP"
+Translate enum command to a string 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommand\fP command number (as from the previously defined enum) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string representing name of command 
+.RE
+.PP
+
+.SS "String Bms::getSerialUpdate ()\fC [static]\fP"
+Reads serial data and checks if there is an update coming from the client 
+.PP
+\fBReturns:\fP
+.RS 4
+Raw String read from serial 
+.RE
+.PP
+
+.SS "void Bms::sendPackTemperatureOfBmsDevice (byte n)"
+Send temperature data on the pack of bmsDevice device 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP bmsDevice device 
+.RE
+.PP
+
+.SS "void Bms::sendPackVoltageOfBmsDevice (byte n)"
+Send voltage data on the pack of bmsDevice device 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP bmsDevice device 
+.RE
+.PP
+
+.SS "template<class T > void Bms::sendSegmentStatus (String statusType, byte cell, byte segment, T value) const\fC [inline]\fP"
+Send segment data 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstatusType\fP String about type of status to broadcast 
+.br
+\fIcell\fP number of cell 
+.br
+\fIsegment\fP number of segment 
+.br
+\fIvalue\fP value to send 
+.RE
+.PP
+
+.SS "void Bms::sendSegmentTemperature (byte cell, byte segment, double value)"
+Send temperature data on the segment 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsender\fP Sender 
+.br
+\fIcell\fP Cell number 
+.br
+\fIsegment\fP Segment number 
+.br
+\fIsegmentVoltage\fP Temperature of segment in cell number 
+.br
+\fIvalue\fP value to send 
+.RE
+.PP
+
+.SS "void Bms::sendSegmentVoltage (byte cell, byte segment, double value)"
+Send segment voltage data 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsender\fP Sender 
+.br
+\fIcell\fP Cell number 
+.br
+\fIsegment\fP Segment number 
+.br
+\fIsegmentVoltage\fP Voltage of segment in cell number 
+.br
+\fIvalue\fP value to send
+.RE
+.PP
+Copyright 2016 - 2017 RaceUp Team Unipd
+.PP
+Licensed under the Apache License, Version 2\&.0 (the 'License'); you may not use this file except in compliance with the License\&. You may obtain a copy of the License at
+.PP
+http://www.apache.org/licenses/LICENSE-2.0
+.PP
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. 
+.SS "template<class T > void Bms::sendStatus (T value) const\fC [inline]\fP"
+Send status 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsender\fP Sender 
+.br
+\fIvalue\fP Status to send 
+.RE
+.PP
+
+.SS "template<class T > void Bms::sendUpdate (byte typeValue, T value) const\fC [inline]\fP"
+Send data 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsender\fP Sender 
+.br
+\fItypeValue\fP Type of arg to send 
+.br
+\fIvalue\fP value to send 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RaceUp_ino_core from the source code\&.

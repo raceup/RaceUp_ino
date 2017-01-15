@@ -1,9 +1,7 @@
 var annotated_dup =
 [
-    [ "BmsDevice", "class_bms_device.html", null ],
-    [ "BmsDeviceReader", "class_bms_device_reader.html", null ],
-    [ "BmsDeviceUpdater", "class_bms_device_updater.html", null ],
-    [ "BmsDeviceWriter", "class_bms_device_writer.html", null ],
-    [ "SdCardStream", "class_sd_card_stream.html", "class_sd_card_stream" ],
-    [ "Utils", "class_utils.html", null ]
+    [ "Bms", "class_bms.html", "class_bms" ],
+    [ "BmsDevice", "class_bms_device.html", "class_bms_device" ],
+    [ "RaceUpUtils", "class_race_up_utils.html", null ],
+    [ "SdCardStream", "class_sd_card_stream.html", "class_sd_card_stream" ]
 ];
