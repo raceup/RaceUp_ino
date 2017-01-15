@@ -23,8 +23,8 @@
 #include <avr/pgmspace.h>
 
 #include "../RaceUpUtils.h"
-#include "Bms_data.h"
 #include "../data.h"
+#include "Bms_data.h"
 
 /**
  * Manages a BMS device
@@ -86,14 +86,7 @@ public:
      */
     void clearFaults() const;
 
-private:
-    byte device_address;  // address of device
-
-    // Thermistor data
-    static const double BETA_THERMISTOR;
-    static const double RB_THERMISTOR;
-    static const double RT_THERMISTOR;
-    static const double R0_THERMISTOR;
+    // i/o
 
     /**
      * Read data read from registers
@@ -109,6 +102,15 @@ private:
      * @param regData registry data
      */
     void writeRegister(byte regAddress, byte regData) const;
+
+private:
+    byte device_address;  // address of device
+
+    // Thermistor data
+    static const double BETA_THERMISTOR;
+    static const double RB_THERMISTOR;
+    static const double RT_THERMISTOR;
+    static const double R0_THERMISTOR;
 
     /**
     * TODO: WTF??

@@ -18,7 +18,7 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="18">
         <label>../data.h</label>
         <link refid="data_8h_source"/>
         <childnode refid="13" relation="include">
@@ -48,7 +48,7 @@
         <link refid="Bms.h"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="13">
@@ -57,7 +57,7 @@
       <node id="17">
         <label>ArduinoBoardManager.h</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>Bms_data.h</label>
         <link refid="_bms__data_8h_source"/>
         <childnode refid="13" relation="include">
@@ -132,13 +132,13 @@
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bms_1acac85da825d6567cc0b1752c95a48e56" kindref="member">sendUpdate</ref>(kStatus,<sp/>value);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" kindref="member">sendSegmentVoltage</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1accf66c78b3c4bda702f84ceaa0bc802a" kindref="member">sendSegmentVoltage</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" kindref="member">sendPackVoltageOfBmsDevice</ref>(byte<sp/>n);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1ade1ae5d12af033485a2c7884f293e13b" kindref="member">sendPackVoltageOfBmsDevice</ref>(byte<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" kindref="member">sendSegmentTemperature</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1a3aae77be4cf19a05b8bec3fa8d1344f8" kindref="member">sendSegmentTemperature</ref>(byte<sp/>cell,<sp/>byte<sp/>segment,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" kindref="member">sendPackTemperatureOfBmsDevice</ref>(byte<sp/>n);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bms_1a648ee6207c22128369a36391910514b0" kindref="member">sendPackTemperatureOfBmsDevice</ref>(byte<sp/>n)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" kindref="member">getSerialUpdate</ref>();</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>

@@ -22,24 +22,26 @@ const double BmsDevice::RB_THERMISTOR = 1800.0;
 const double BmsDevice::RT_THERMISTOR = 1500.0;
 const double BmsDevice::R0_THERMISTOR = 10000.0;
 
-void BmsDevice::BmsDevice(byte
+BmsDevice::BmsDevice(byte
 device_address) :
 device_address(device_address) {}
 
-void byte
-*
-BmsDevice::readRegister(byte
+byte *BmsDevice::readRegister(byte
 regAddress,
 byte length
 ) const {
 if (
 
-RaceUpUtils::isArduinoUnoBoard()
+RaceUpUtils()
+
+.
+
+isArduinoUnoBoard()
 
 ) {
 SPI.
 setDataMode(SPI_MODE1);
-byte logicalAddress = deviceAddress << 1;  // Shift the device bit and clear bit 0
+byte logicalAddress = device_address << 1;  // Shift the device bit and clear bit 0
 logicalAddress &= 0b11111110;
 
 byte receivedData[20];  // Create buffer for receivedData and clear it
@@ -73,7 +75,11 @@ return
 receivedData;
 } else if (
 
-RaceUpUtils::isArduinoDueBoard()
+RaceUpUtils()
+
+.
+
+isArduinoDueBoard()
 
 ) {
 // Take the SS pin low to select the chip
@@ -84,7 +90,7 @@ delayMicroseconds(5);
 SPI.
 beginTransaction(SPISettings(50000, MSBFIRST, SPI_MODE1));
 
-byte logicalAddress = deviceAddress << 1;  // Shift the device bit and clear bit 0
+byte logicalAddress = device_address << 1;  // Shift the device bit and clear bit 0
 logicalAddress &= 0b11111110;  // logicalAddress &= ~(1 << 0);  // Clear bit 0, test bitClear(x,n)
 
 // Create buffer for receivedData and clear it
@@ -125,13 +131,13 @@ cellNumber) const {
 byte *cellRaw = readRegister(cellNumber, 0x02);
 delay(ONE_CENTSECOND);
 
-double parsed = RaceUpUtils::convertCellVoltage((cellRaw[0] * 256) + cellRaw[1]);
+double parsed = RaceUpUtils().convertCellVoltage((cellRaw[0] * 256) + cellRaw[1]);
 return (int)
 parsed;
 }
 
 double BmsDevice::getGpaiVbatt(bool dev) const {
-    byte * gpaiRaw = readRegister(device_address, GPAI, 0x02);
+    byte * gpaiRaw = readRegister(GPAI, 0x02);
 
     if (dev) {
         return ((gpaiRaw[0] * 256) + gpaiRaw[1]) * (100.0 / 3.0) / 16383; // [V]
@@ -142,42 +148,46 @@ double BmsDevice::getGpaiVbatt(bool dev) const {
 
 double BmsDevice::getTemperature(byte
 temperatureToRead) const {
-byte *value_read = readRegister(device_address, temperatureToRead, 2);  // read only first 2 bytes
+byte *value_read = readRegister(temperatureToRead, 2);  // read only first 2 bytes
 byte tempRaw = (value_read[0] * 0x100) + value_read[1];  // multiply by 256 and add second byte
 double value = (tempRaw + 2) / 33046.0;
 
 value = ((1 / value) - 1) * RB_THERMISTOR - RT_THERMISTOR;
 value = BETA_THERMISTOR / (log(value / (R0_THERMISTOR * exp(-BETA_THERMISTOR / 298.15))));
 return
-RaceUpUtils::fromKelvinToCelsius(value);
+
+RaceUpUtils()
+
+.
+fromKelvinToCelsius(value);
 }
 
 byte *BmsDevice::getStatus() const {
-    return readRegister(device_address, DEVICE_STATUS, 1);  // read only 1 bit
+    return readRegister(DEVICE_STATUS, 1);  // read only 1 bit
 }
 
 void BmsDevice::clearAlerts() const {
     byte * value = getStatus();  // clear alert bit in device status register
     value[0] |= 0b00100000;
 
-    BmsDeviceWriter::writeStatusOfBmsDevice(device_address, value[0]);  // set alert bit as 1
+    BmsDevice(device_address).setStatus(value[0]);  // set alert bit as 1
     value[0] &= 0b11011111;
-    BmsDeviceWriter::writeStatusOfBmsDevice(device_address, value[0]);  // clear alert bit
+    BmsDevice(device_address).setStatus(value[0]);  // clear alert bit
 
-    BmsDeviceWriter::bmsDeviceWrite(device_address, ALERT_STATUS, 0xFF);  // write 1's to ALERT_STATUS_REG register
-    BmsDeviceWriter::bmsDeviceWrite(device_address, ALERT_STATUS, 0x00);  // Write 0's ALERT_STATUS_REG register
+    BmsDevice(device_address).writeRegister(ALERT_STATUS, 0xFF);  // write 1's to ALERT_STATUS_REG register
+    BmsDevice(device_address).writeRegister(ALERT_STATUS, 0x00);  // Write 0's ALERT_STATUS_REG register
 }
 
 void BmsDevice::clearFaults() const {
     byte * value = getStatus();  // clear alert bit in device status register
     value[0] |= 0b01000000;
 
-    BmsDeviceWriter::writeStatusOfBmsDevice(device_address, value[0]);  // set alert bit as 1
+    BmsDevice(device_address).setStatus(value[0]);  // set alert bit as 1
     value[0] &= 0b10111111;
-    BmsDeviceWriter::writeStatusOfBmsDevice(device_address, value[0]);  // clear alert bit
+    BmsDevice(device_address).setStatus(value[0]);  // clear alert bit
 
-    BmsDeviceWriter::bmsDeviceWrite(device_address, FAULT_STATUS, 0xFF);  // write 1's to ALERT_STATUS_REG register
-    BmsDeviceWriter::bmsDeviceWrite(device_address, FAULT_STATUS, 0x00);  // write 0's ALERT_STATUS_REG register
+    BmsDevice(device_address).writeRegister(FAULT_STATUS, 0xFF);  // write 1's to ALERT_STATUS_REG register
+    BmsDevice(device_address).writeRegister(FAULT_STATUS, 0x00);  // write 0's ALERT_STATUS_REG register
 }
 
 void BmsDevice::writeRegister(byte
@@ -186,12 +196,16 @@ byte regData
 ) const {
 if (
 
-RaceUpUtils::isArduinoUnoBoard()
+RaceUpUtils()
+
+.
+
+isArduinoUnoBoard()
 
 ) {
 SPI.
 setDataMode(SPI_MODE1);
-byte logicalAddress = (deviceAddress << 1) | 0x01;  // Shift the device bit and set bit 0
+byte logicalAddress = (device_address << 1) | 0x01;  // Shift the device bit and set bit 0
 
 byte crcInput[3] = {logicalAddress, regAddress, regData};
 digitalWrite(SLAVE_SELECT_PIN, LOW);  // Take the SS pin low to select the chip
@@ -212,7 +226,11 @@ SPI.
 setDataMode(SPI_MODE0);
 } else if (
 
-RaceUpUtils::isArduinoDueBoard()
+RaceUpUtils()
+
+.
+
+isArduinoDueBoard()
 
 ) {
 delayMicroseconds(5);
@@ -227,7 +245,7 @@ SPI.
 beginTransaction(SPISettings(50000, MSBFIRST, SPI_MODE1));
 
 // Shift the device bit and set bit 0
-byte logicalAddress = (deviceAddress << 1) | 0x01;
+byte logicalAddress = (device_address << 1) | 0x01;
 //logicalAddress |= 1 << 0;  // Set bit 0, test bitSet(x,n)
 
 byte crcInput[3] = {logicalAddress, regAddress, regData};

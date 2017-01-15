@@ -21,13 +21,13 @@ void Bms::sendSegmentVoltage(byte
 cell,
 byte segment,
 double value
-) {
+) const {
 sendSegmentStatus(commandToString(kCellVoltage), cell, segment, value
 );
 }
 
 void Bms::sendPackVoltageOfBmsDevice(byte
-n) {
+n) const {
 byte segment = (n - 1) / 3;
 for (
 byte cell = 0;
@@ -43,13 +43,13 @@ void Bms::sendSegmentTemperature(byte
 cell,
 byte segment,
 double value
-) {
+) const {
 sendSegmentStatus(commandToString(kCellTemperature), cell, segment, value
 );
 }
 
 void Bms::sendPackTemperatureOfBmsDevice(byte
-n) {
+n) const {
 byte segment = (n - 1) / 3;
 for (
 byte cell = 0;
@@ -91,3 +91,5 @@ String Bms::commandToString(int command) {
             return (String) "Unknown";
     }
 }
+
+Bms::Bms() {}

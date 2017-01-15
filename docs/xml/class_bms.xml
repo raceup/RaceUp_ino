@@ -16,7 +16,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/Bms.h" line="33" column="1"/>
+        <location file="src/Bms/Bms.h" line="33" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="73" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -166,10 +166,10 @@
         </inbodydescription>
         <location file="src/Bms/Bms.h" line="88" column="1" bodyfile="src/Bms/Bms.h" bodystart="88" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_1accf66c78b3c4bda702f84ceaa0bc802a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Bms::sendSegmentVoltage</definition>
-        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <argsstring>(byte cell, byte segment, double value) const </argsstring>
         <name>sendSegmentVoltage</name>
         <param>
           <type>byte</type>
@@ -227,10 +227,10 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
         </inbodydescription>
         <location file="src/Bms/Bms.h" line="100" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="20" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_1ade1ae5d12af033485a2c7884f293e13b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Bms::sendPackVoltageOfBmsDevice</definition>
-        <argsstring>(byte n)</argsstring>
+        <argsstring>(byte n) const </argsstring>
         <name>sendPackVoltageOfBmsDevice</name>
         <param>
           <type>byte</type>
@@ -252,10 +252,10 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
         </inbodydescription>
         <location file="src/Bms/Bms.h" line="106" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="24" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_1a3aae77be4cf19a05b8bec3fa8d1344f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Bms::sendSegmentTemperature</definition>
-        <argsstring>(byte cell, byte segment, double value)</argsstring>
+        <argsstring>(byte cell, byte segment, double value) const </argsstring>
         <name>sendSegmentTemperature</name>
         <param>
           <type>byte</type>
@@ -313,10 +313,10 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
         </inbodydescription>
         <location file="src/Bms/Bms.h" line="116" column="1" bodyfile="src/Bms/Bms.cpp" bodystart="31" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_1a648ee6207c22128369a36391910514b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Bms::sendPackTemperatureOfBmsDevice</definition>
-        <argsstring>(byte n)</argsstring>
+        <argsstring>(byte n) const </argsstring>
         <name>sendPackTemperatureOfBmsDevice</name>
         <param>
           <type>byte</type>
@@ -390,11 +390,11 @@ Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache Li
       <member refid="class_bms_1a5d733fdf4429045471ec8fd56f9ae92e" prot="public" virt="non-virtual"><scope>Bms</scope><name>Bms</name></member>
       <member refid="class_bms_1aae88d468c07ca6c7cfdc58de46019b7e" prot="public" virt="non-virtual"><scope>Bms</scope><name>commandToString</name></member>
       <member refid="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" prot="public" virt="non-virtual"><scope>Bms</scope><name>getSerialUpdate</name></member>
-      <member refid="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackTemperatureOfBmsDevice</name></member>
-      <member refid="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackVoltageOfBmsDevice</name></member>
+      <member refid="class_bms_1a648ee6207c22128369a36391910514b0" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackTemperatureOfBmsDevice</name></member>
+      <member refid="class_bms_1ade1ae5d12af033485a2c7884f293e13b" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendPackVoltageOfBmsDevice</name></member>
       <member refid="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentStatus</name></member>
-      <member refid="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentTemperature</name></member>
-      <member refid="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentVoltage</name></member>
+      <member refid="class_bms_1a3aae77be4cf19a05b8bec3fa8d1344f8" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentTemperature</name></member>
+      <member refid="class_bms_1accf66c78b3c4bda702f84ceaa0bc802a" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendSegmentVoltage</name></member>
       <member refid="class_bms_1ac2df5edf6db5cffe6c59967d36f4ab37" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendStatus</name></member>
       <member refid="class_bms_1acac85da825d6567cc0b1752c95a48e56" prot="public" virt="non-virtual"><scope>Bms</scope><name>sendUpdate</name></member>
     </listofallmembers>

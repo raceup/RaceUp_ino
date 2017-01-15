@@ -29,32 +29,32 @@ public:
      * @param kelvinValue kelvin temperature
      * @return equivalent celsius temperature
      */
-    static double fromKelvinToCelsius(double kelvinValue);
+    double fromKelvinToCelsius(double kelvinValue);
 
     /**
      * View datasheet
      * @param cellVoltageInt
      * @return cell voltage according to datasheet
      */
-    static double convertCellVoltage(double cellVoltageInt);
+    double convertCellVoltage(double cellVoltageInt);
 
     /**
      * Checks if current board is an Arduino UNO
      * @return true iff current board is an Arduino UNO
      */
-    static bool isArduinoUnoBoard();
+    bool isArduinoUnoBoard();
 
     /**
      * Checks if current board is an Arduino DUE
      * @return true iff current board is an Arduino DUE
      */
-    static bool isArduinoDueBoard();
+    bool isArduinoDueBoard();
 
     /**
      * Gets current board model name
      * @return current board model name
      */
-    static String getArduinoBoardModelName();
+    String getArduinoBoardModelName();
 
     static const double CELSIUS_TO_KELVIN_FACTOR;
     static const double BMS_VOLTAGE_RATIO_FACTOR;

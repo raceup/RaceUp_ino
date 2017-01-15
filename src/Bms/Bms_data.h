@@ -32,18 +32,6 @@
 #define CHARGER_PIN 6
 #endif
 
-#ifndef SERIAL_COMMUNICATION_FREQUENCY
-#define SERIAL_COMMUNICATION_FREQUENCY 115200  // communication
-#endif
-
-#ifndef NUMBER_OF_BMS_DEVICES
-#define NUMBER_OF_BMS_DEVICES 6 // number of bms
-#endif
-
-#ifndef BATTERY_PACK_NUMBER
-#define BATTERY_PACK_NUMBER 6  // number of cells monitored by a single bms
-#endif
-
 /**
  * This is the list of recognized commands. These can be commands that can either be sent or received.
  * In order to receive, attach a callback function to these events
@@ -79,7 +67,6 @@ const byte CONFIG_COV = 0x42;
 const byte CONFIG_COVT = 0x43;
 const byte CONFIG_CUV = 0x44;
 const byte CONFIG_CUVT = 0x45;
-const double MAX_CELL_VOLTAGE = 4200;  // mV
 const byte OV_THRESHOLD = 0x2c;  // -> 4.2V -> (4.2-2)/0.05 = 44 = 0x2c
 const byte UV_THRESHOLD = 0x17;  // -> 3V -> (3-0.7)/0.1 = 23 = 0x17
 const byte OV_TIMER = (const byte) true;  // (0x01 || 0x80) 100ms + MSB set to 1 for milliseconds -> 100 = 0x01 ; MSB 1 = 0x80

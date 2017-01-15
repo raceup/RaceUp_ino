@@ -7,7 +7,7 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_bms_device_a4035559c9370045a409d33cb8941a9f3}{Bms\+Device} (byte device\+\_\+address)
+\hyperlink{class_bms_device_aba102aa7de2c504017d67bc6c24dae39}{Bms\+Device} (byte device\+\_\+address)
 \item 
 double \hyperlink{class_bms_device_ac61154d9b8cc11061dcc7d0243ed955f}{get\+Temperature} (byte temperature\+To\+Read) const 
 \item 
@@ -22,6 +22,10 @@ void \hyperlink{class_bms_device_af711c0fbff46642d525c63a668cb7a2d}{set\+Status}
 void \hyperlink{class_bms_device_a99aeb3676c9732e8a22d8561b5dde254}{clear\+Alerts} () const 
 \item 
 void \hyperlink{class_bms_device_a20e255789e1b0d8d16059c8ab1ac32dd}{clear\+Faults} () const 
+\item 
+byte $\ast$ \hyperlink{class_bms_device_ae21dd2360edf7b3f21e2086315ddecfb}{read\+Register} (byte reg\+Address, byte length) const 
+\item 
+void \hyperlink{class_bms_device_a7c37cd79623465ddee0f1b4d6be0e86c}{write\+Register} (byte reg\+Address, byte reg\+Data) const 
 \end{DoxyCompactItemize}
 
 
@@ -37,11 +41,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 \subsection{Constructor \& Destructor Documentation}
 \index{Bms\+Device@{Bms\+Device}!Bms\+Device@{Bms\+Device}}
 \index{Bms\+Device@{Bms\+Device}!Bms\+Device@{Bms\+Device}}
-\subsubsection[{\texorpdfstring{Bms\+Device(byte device\+\_\+address)}{BmsDevice(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::\+Bms\+Device (
+\subsubsection[{\texorpdfstring{Bms\+Device(byte device\+\_\+address)}{BmsDevice(byte device_address)}}]{\setlength{\rightskip}{0pt plus 5cm}Bms\+Device\+::\+Bms\+Device (
 \begin{DoxyParamCaption}
 \item[{byte}]{device\+\_\+address}
 \end{DoxyParamCaption}
-)}\hypertarget{class_bms_device_a4035559c9370045a409d33cb8941a9f3}{}\label{class_bms_device_a4035559c9370045a409d33cb8941a9f3}
+)}\hypertarget{class_bms_device_aba102aa7de2c504017d67bc6c24dae39}{}\label{class_bms_device_aba102aa7de2c504017d67bc6c24dae39}
 New bms device 
 \begin{DoxyParams}{Parameters}
 {\em device\+\_\+address} & byte device\+\_\+address \\
@@ -122,6 +126,24 @@ device status
 \begin{DoxyReturn}{Returns}
 temperature of device 
 \end{DoxyReturn}
+\index{Bms\+Device@{Bms\+Device}!read\+Register@{read\+Register}}
+\index{read\+Register@{read\+Register}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{read\+Register(byte reg\+Address, byte length) const }{readRegister(byte regAddress, byte length) const }}]{\setlength{\rightskip}{0pt plus 5cm}byte $\ast$ Bms\+Device\+::read\+Register (
+\begin{DoxyParamCaption}
+\item[{byte}]{reg\+Address, }
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_ae21dd2360edf7b3f21e2086315ddecfb}{}\label{class_bms_device_ae21dd2360edf7b3f21e2086315ddecfb}
+Read data read from registers 
+\begin{DoxyParams}{Parameters}
+{\em reg\+Address} & registry address \\
+\hline
+{\em length} & length to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data read from registers 
+\end{DoxyReturn}
 \index{Bms\+Device@{Bms\+Device}!set\+Status@{set\+Status}}
 \index{set\+Status@{set\+Status}!Bms\+Device@{Bms\+Device}}
 \subsubsection[{\texorpdfstring{set\+Status(byte value) const }{setStatus(byte value) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::set\+Status (
@@ -132,6 +154,21 @@ temperature of device
 Write status 
 \begin{DoxyParams}{Parameters}
 {\em value} & value to write \\
+\hline
+\end{DoxyParams}
+\index{Bms\+Device@{Bms\+Device}!write\+Register@{write\+Register}}
+\index{write\+Register@{write\+Register}!Bms\+Device@{Bms\+Device}}
+\subsubsection[{\texorpdfstring{write\+Register(byte reg\+Address, byte reg\+Data) const }{writeRegister(byte regAddress, byte regData) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+Device\+::write\+Register (
+\begin{DoxyParamCaption}
+\item[{byte}]{reg\+Address, }
+\item[{byte}]{reg\+Data}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_bms_device_a7c37cd79623465ddee0f1b4d6be0e86c}{}\label{class_bms_device_a7c37cd79623465ddee0f1b4d6be0e86c}
+Write a bms\+Device device property 
+\begin{DoxyParams}{Parameters}
+{\em reg\+Address} & registry address \\
+\hline
+{\em reg\+Data} & registry data \\
 \hline
 \end{DoxyParams}
 

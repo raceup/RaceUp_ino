@@ -20,6 +20,8 @@
 
 // devices
 #include "Bms/Bms.h"
+#include "Bms/BmsDevice.h"
+#include "RaceUpUtils.h"
 
 // streams
 #include "IOStreams/SdCardStream.h"

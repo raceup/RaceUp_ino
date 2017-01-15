@@ -15,13 +15,13 @@
 \item 
 {\footnotesize template$<$class T $>$ }\\void \hyperlink{class_bms_ac2df5edf6db5cffe6c59967d36f4ab37}{send\+Status} (T value) const 
 \item 
-void \hyperlink{class_bms_a1ee6832e0d5662961f15bcb2e9021a44}{send\+Segment\+Voltage} (byte cell, byte segment, double value)
+void \hyperlink{class_bms_accf66c78b3c4bda702f84ceaa0bc802a}{send\+Segment\+Voltage} (byte cell, byte segment, double value) const 
 \item 
-void \hyperlink{class_bms_adf5e55c4858fb8f2b1ecd468f67abed7}{send\+Pack\+Voltage\+Of\+Bms\+Device} (byte n)
+void \hyperlink{class_bms_ade1ae5d12af033485a2c7884f293e13b}{send\+Pack\+Voltage\+Of\+Bms\+Device} (byte n) const 
 \item 
-void \hyperlink{class_bms_a2d3dd5589bbb2db1667510f0b3117e0e}{send\+Segment\+Temperature} (byte cell, byte segment, double value)
+void \hyperlink{class_bms_a3aae77be4cf19a05b8bec3fa8d1344f8}{send\+Segment\+Temperature} (byte cell, byte segment, double value) const 
 \item 
-void \hyperlink{class_bms_a49cc5412e466fa94f2e6eb585efb88f7}{send\+Pack\+Temperature\+Of\+Bms\+Device} (byte n)
+void \hyperlink{class_bms_a648ee6207c22128369a36391910514b0}{send\+Pack\+Temperature\+Of\+Bms\+Device} (byte n) const 
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -82,11 +82,11 @@ Raw String read from serial
 \end{DoxyReturn}
 \index{Bms@{Bms}!send\+Pack\+Temperature\+Of\+Bms\+Device@{send\+Pack\+Temperature\+Of\+Bms\+Device}}
 \index{send\+Pack\+Temperature\+Of\+Bms\+Device@{send\+Pack\+Temperature\+Of\+Bms\+Device}!Bms@{Bms}}
-\subsubsection[{\texorpdfstring{send\+Pack\+Temperature\+Of\+Bms\+Device(byte n)}{sendPackTemperatureOfBmsDevice(byte n)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Pack\+Temperature\+Of\+Bms\+Device (
+\subsubsection[{\texorpdfstring{send\+Pack\+Temperature\+Of\+Bms\+Device(byte n) const }{sendPackTemperatureOfBmsDevice(byte n) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Pack\+Temperature\+Of\+Bms\+Device (
 \begin{DoxyParamCaption}
 \item[{byte}]{n}
 \end{DoxyParamCaption}
-)}\hypertarget{class_bms_a49cc5412e466fa94f2e6eb585efb88f7}{}\label{class_bms_a49cc5412e466fa94f2e6eb585efb88f7}
+) const}\hypertarget{class_bms_a648ee6207c22128369a36391910514b0}{}\label{class_bms_a648ee6207c22128369a36391910514b0}
 Send temperature data on the pack of bms\+Device device 
 \begin{DoxyParams}{Parameters}
 {\em n} & bms\+Device device \\
@@ -94,11 +94,11 @@ Send temperature data on the pack of bms\+Device device
 \end{DoxyParams}
 \index{Bms@{Bms}!send\+Pack\+Voltage\+Of\+Bms\+Device@{send\+Pack\+Voltage\+Of\+Bms\+Device}}
 \index{send\+Pack\+Voltage\+Of\+Bms\+Device@{send\+Pack\+Voltage\+Of\+Bms\+Device}!Bms@{Bms}}
-\subsubsection[{\texorpdfstring{send\+Pack\+Voltage\+Of\+Bms\+Device(byte n)}{sendPackVoltageOfBmsDevice(byte n)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Pack\+Voltage\+Of\+Bms\+Device (
+\subsubsection[{\texorpdfstring{send\+Pack\+Voltage\+Of\+Bms\+Device(byte n) const }{sendPackVoltageOfBmsDevice(byte n) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Pack\+Voltage\+Of\+Bms\+Device (
 \begin{DoxyParamCaption}
 \item[{byte}]{n}
 \end{DoxyParamCaption}
-)}\hypertarget{class_bms_adf5e55c4858fb8f2b1ecd468f67abed7}{}\label{class_bms_adf5e55c4858fb8f2b1ecd468f67abed7}
+) const}\hypertarget{class_bms_ade1ae5d12af033485a2c7884f293e13b}{}\label{class_bms_ade1ae5d12af033485a2c7884f293e13b}
 Send voltage data on the pack of bms\+Device device 
 \begin{DoxyParams}{Parameters}
 {\em n} & bms\+Device device \\
@@ -127,13 +127,13 @@ Send segment data
 \end{DoxyParams}
 \index{Bms@{Bms}!send\+Segment\+Temperature@{send\+Segment\+Temperature}}
 \index{send\+Segment\+Temperature@{send\+Segment\+Temperature}!Bms@{Bms}}
-\subsubsection[{\texorpdfstring{send\+Segment\+Temperature(byte cell, byte segment, double value)}{sendSegmentTemperature(byte cell, byte segment, double value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Segment\+Temperature (
+\subsubsection[{\texorpdfstring{send\+Segment\+Temperature(byte cell, byte segment, double value) const }{sendSegmentTemperature(byte cell, byte segment, double value) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Segment\+Temperature (
 \begin{DoxyParamCaption}
 \item[{byte}]{cell, }
 \item[{byte}]{segment, }
 \item[{double}]{value}
 \end{DoxyParamCaption}
-)}\hypertarget{class_bms_a2d3dd5589bbb2db1667510f0b3117e0e}{}\label{class_bms_a2d3dd5589bbb2db1667510f0b3117e0e}
+) const}\hypertarget{class_bms_a3aae77be4cf19a05b8bec3fa8d1344f8}{}\label{class_bms_a3aae77be4cf19a05b8bec3fa8d1344f8}
 Send temperature data on the segment 
 \begin{DoxyParams}{Parameters}
 {\em sender} & Sender \\
@@ -149,13 +149,13 @@ Send temperature data on the segment
 \end{DoxyParams}
 \index{Bms@{Bms}!send\+Segment\+Voltage@{send\+Segment\+Voltage}}
 \index{send\+Segment\+Voltage@{send\+Segment\+Voltage}!Bms@{Bms}}
-\subsubsection[{\texorpdfstring{send\+Segment\+Voltage(byte cell, byte segment, double value)}{sendSegmentVoltage(byte cell, byte segment, double value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Segment\+Voltage (
+\subsubsection[{\texorpdfstring{send\+Segment\+Voltage(byte cell, byte segment, double value) const }{sendSegmentVoltage(byte cell, byte segment, double value) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Bms\+::send\+Segment\+Voltage (
 \begin{DoxyParamCaption}
 \item[{byte}]{cell, }
 \item[{byte}]{segment, }
 \item[{double}]{value}
 \end{DoxyParamCaption}
-)}\hypertarget{class_bms_a1ee6832e0d5662961f15bcb2e9021a44}{}\label{class_bms_a1ee6832e0d5662961f15bcb2e9021a44}
+) const}\hypertarget{class_bms_accf66c78b3c4bda702f84ceaa0bc802a}{}\label{class_bms_accf66c78b3c4bda702f84ceaa0bc802a}
 Send segment voltage data 
 \begin{DoxyParams}{Parameters}
 {\em sender} & Sender \\

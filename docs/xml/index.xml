@@ -5,10 +5,10 @@
     <member refid="class_bms_1acb40c808d8fa45d5cf27dabe80c6e508" kind="function"><name>sendSegmentStatus</name></member>
     <member refid="class_bms_1acac85da825d6567cc0b1752c95a48e56" kind="function"><name>sendUpdate</name></member>
     <member refid="class_bms_1ac2df5edf6db5cffe6c59967d36f4ab37" kind="function"><name>sendStatus</name></member>
-    <member refid="class_bms_1a1ee6832e0d5662961f15bcb2e9021a44" kind="function"><name>sendSegmentVoltage</name></member>
-    <member refid="class_bms_1adf5e55c4858fb8f2b1ecd468f67abed7" kind="function"><name>sendPackVoltageOfBmsDevice</name></member>
-    <member refid="class_bms_1a2d3dd5589bbb2db1667510f0b3117e0e" kind="function"><name>sendSegmentTemperature</name></member>
-    <member refid="class_bms_1a49cc5412e466fa94f2e6eb585efb88f7" kind="function"><name>sendPackTemperatureOfBmsDevice</name></member>
+    <member refid="class_bms_1accf66c78b3c4bda702f84ceaa0bc802a" kind="function"><name>sendSegmentVoltage</name></member>
+    <member refid="class_bms_1ade1ae5d12af033485a2c7884f293e13b" kind="function"><name>sendPackVoltageOfBmsDevice</name></member>
+    <member refid="class_bms_1a3aae77be4cf19a05b8bec3fa8d1344f8" kind="function"><name>sendSegmentTemperature</name></member>
+    <member refid="class_bms_1a648ee6207c22128369a36391910514b0" kind="function"><name>sendPackTemperatureOfBmsDevice</name></member>
     <member refid="class_bms_1ab068da9c10b0bd7e865cba83fabaaaef" kind="function"><name>getSerialUpdate</name></member>
     <member refid="class_bms_1aae88d468c07ca6c7cfdc58de46019b7e" kind="function"><name>commandToString</name></member>
   </compound>
@@ -18,7 +18,7 @@
     <member refid="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" kind="variable"><name>RB_THERMISTOR</name></member>
     <member refid="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" kind="variable"><name>RT_THERMISTOR</name></member>
     <member refid="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" kind="variable"><name>R0_THERMISTOR</name></member>
-    <member refid="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" kind="function"><name>BmsDevice</name></member>
+    <member refid="class_bms_device_1aba102aa7de2c504017d67bc6c24dae39" kind="function"><name>BmsDevice</name></member>
     <member refid="class_bms_device_1ac61154d9b8cc11061dcc7d0243ed955f" kind="function"><name>getTemperature</name></member>
     <member refid="class_bms_device_1a8b11a6a96bc0634e14bb7847b448bab6" kind="function"><name>getGpaiVbatt</name></member>
     <member refid="class_bms_device_1a0bdebab046f8337914ba88fdd20da1bd" kind="function"><name>getCellVoltage</name></member>
@@ -26,7 +26,7 @@
     <member refid="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" kind="function"><name>setStatus</name></member>
     <member refid="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" kind="function"><name>clearAlerts</name></member>
     <member refid="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" kind="function"><name>clearFaults</name></member>
-    <member refid="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" kind="function"><name>readRegister</name></member>
+    <member refid="class_bms_device_1ae21dd2360edf7b3f21e2086315ddecfb" kind="function"><name>readRegister</name></member>
     <member refid="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" kind="function"><name>writeRegister</name></member>
     <member refid="class_bms_device_1acec676309f368784cae00d2d64dbe40d" kind="function"><name>pec</name></member>
   </compound>
@@ -55,9 +55,6 @@
     <member refid="_bms__data_8h_1abcd396367233a5ebc58b6bcfed102be7" kind="define"><name>SLAVE_SELECT_PIN</name></member>
     <member refid="_bms__data_8h_1a9fea424f5555dcbb0ba5c1e4871e855f" kind="define"><name>ENABLE_CHARGER</name></member>
     <member refid="_bms__data_8h_1a200ddac7c384333093ec3654cab5fe01" kind="define"><name>CHARGER_PIN</name></member>
-    <member refid="_bms__data_8h_1aa4e56cf6eb32e77dab7ca3ef9a382369" kind="define"><name>SERIAL_COMMUNICATION_FREQUENCY</name></member>
-    <member refid="_bms__data_8h_1a1787bde3a008e50d966e1a2fe82051b0" kind="define"><name>NUMBER_OF_BMS_DEVICES</name></member>
-    <member refid="_bms__data_8h_1aa52aebd98f15e09cd15368848edf6671" kind="define"><name>BATTERY_PACK_NUMBER</name></member>
     <member refid="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name>@0</name></member>
     <member refid="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55ba30a4e8503ad87a4bcf14eedaf5612a6e" kind="enumvalue"><name>kAcknowledge</name></member>
     <member refid="_bms__data_8h_1a06fc87d81c62e9abb8790b6e5713c55baacb2c04376333850bff6fb1065c0c171" kind="enumvalue"><name>kError</name></member>
@@ -87,7 +84,6 @@
     <member refid="_bms__data_8h_1a17876455fb41d6e90eb5bc172f936096" kind="variable"><name>CONFIG_COVT</name></member>
     <member refid="_bms__data_8h_1af5849ffc31b5e3ef805678925cf9a2d8" kind="variable"><name>CONFIG_CUV</name></member>
     <member refid="_bms__data_8h_1a3f7d1c6937d1e0fc2423e89288f9215e" kind="variable"><name>CONFIG_CUVT</name></member>
-    <member refid="_bms__data_8h_1acf18b121e0e9ad88a0cd2b9aa6656e07" kind="variable"><name>MAX_CELL_VOLTAGE</name></member>
     <member refid="_bms__data_8h_1a712357da97de4ab7cf748aed75e019d6" kind="variable"><name>OV_THRESHOLD</name></member>
     <member refid="_bms__data_8h_1a811fc720740f12d16a81c79410af4776" kind="variable"><name>UV_THRESHOLD</name></member>
     <member refid="_bms__data_8h_1a6ec71f2273f04fe29021459bc1081f08" kind="variable"><name>OV_TIMER</name></member>

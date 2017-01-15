@@ -35,6 +35,12 @@ BmsDevice \-
 .ti -1c
 .RI "void \fBclearFaults\fP () const "
 .br
+.ti -1c
+.RI "byte * \fBreadRegister\fP (byte regAddress, byte length) const "
+.br
+.ti -1c
+.RI "void \fBwriteRegister\fP (byte regAddress, byte regData) const "
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -47,7 +53,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied\&. See the License for the specific language governing permissions and limitations under the License\&. Manages a BMS device 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "void BmsDevice::BmsDevice (byte device_address)"
+.SS "BmsDevice::BmsDevice (byte device_address)"
 New bms device 
 .PP
 \fBParameters:\fP
@@ -118,12 +124,39 @@ temperature of device
 .RE
 .PP
 
+.SS "byte * BmsDevice::readRegister (byte regAddress, byte length) const"
+Read data read from registers 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIregAddress\fP registry address 
+.br
+\fIlength\fP length to read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+data read from registers 
+.RE
+.PP
+
 .SS "void BmsDevice::setStatus (byte value) const"
 Write status 
 .PP
 \fBParameters:\fP
 .RS 4
 \fIvalue\fP value to write 
+.RE
+.PP
+
+.SS "void BmsDevice::writeRegister (byte regAddress, byte regData) const"
+Write a bmsDevice device property 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIregAddress\fP registry address 
+.br
+\fIregData\fP registry data 
 .RE
 .PP
 

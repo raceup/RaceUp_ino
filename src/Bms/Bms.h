@@ -97,13 +97,13 @@ public:
      * @param segmentVoltage Voltage of segment in cell number
      * @param value value to send
      */
-    void sendSegmentVoltage(byte cell, byte segment, double value);
+    void sendSegmentVoltage(byte cell, byte segment, double value) const;
 
     /**
      * Send voltage data on the pack of bmsDevice device
      * @param n bmsDevice device
      */
-    void sendPackVoltageOfBmsDevice(byte n);
+    void sendPackVoltageOfBmsDevice(byte n) const;
 
     /**
      * Send temperature data on the segment
@@ -113,13 +113,13 @@ public:
      * @param segmentVoltage Temperature of segment in cell number
      * @param value value to send
      */
-    void sendSegmentTemperature(byte cell, byte segment, double value);
+    void sendSegmentTemperature(byte cell, byte segment, double value) const;
 
     /**
      * Send temperature data on the pack of bmsDevice device
      * @param n bmsDevice device
      */
-    void sendPackTemperatureOfBmsDevice(byte n);
+    void sendPackTemperatureOfBmsDevice(byte n) const;
 
     /**
      * Reads serial data and checks if there is an update coming from the client

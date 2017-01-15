@@ -24,16 +24,16 @@ Bms \-
 .RI "template<class T > void \fBsendStatus\fP (T value) const "
 .br
 .ti -1c
-.RI "void \fBsendSegmentVoltage\fP (byte cell, byte segment, double value)"
+.RI "void \fBsendSegmentVoltage\fP (byte cell, byte segment, double value) const "
 .br
 .ti -1c
-.RI "void \fBsendPackVoltageOfBmsDevice\fP (byte n)"
+.RI "void \fBsendPackVoltageOfBmsDevice\fP (byte n) const "
 .br
 .ti -1c
-.RI "void \fBsendSegmentTemperature\fP (byte cell, byte segment, double value)"
+.RI "void \fBsendSegmentTemperature\fP (byte cell, byte segment, double value) const "
 .br
 .ti -1c
-.RI "void \fBsendPackTemperatureOfBmsDevice\fP (byte n)"
+.RI "void \fBsendPackTemperatureOfBmsDevice\fP (byte n) const "
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -91,7 +91,7 @@ Raw String read from serial
 .RE
 .PP
 
-.SS "void Bms::sendPackTemperatureOfBmsDevice (byte n)"
+.SS "void Bms::sendPackTemperatureOfBmsDevice (byte n) const"
 Send temperature data on the pack of bmsDevice device 
 .PP
 \fBParameters:\fP
@@ -100,7 +100,7 @@ Send temperature data on the pack of bmsDevice device
 .RE
 .PP
 
-.SS "void Bms::sendPackVoltageOfBmsDevice (byte n)"
+.SS "void Bms::sendPackVoltageOfBmsDevice (byte n) const"
 Send voltage data on the pack of bmsDevice device 
 .PP
 \fBParameters:\fP
@@ -124,7 +124,7 @@ Send segment data
 .RE
 .PP
 
-.SS "void Bms::sendSegmentTemperature (byte cell, byte segment, double value)"
+.SS "void Bms::sendSegmentTemperature (byte cell, byte segment, double value) const"
 Send temperature data on the segment 
 .PP
 \fBParameters:\fP
@@ -141,7 +141,7 @@ Send temperature data on the segment
 .RE
 .PP
 
-.SS "void Bms::sendSegmentVoltage (byte cell, byte segment, double value)"
+.SS "void Bms::sendSegmentVoltage (byte cell, byte segment, double value) const"
 Send segment voltage data 
 .PP
 \fBParameters:\fP

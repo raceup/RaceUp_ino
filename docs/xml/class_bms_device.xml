@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="90" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="90" bodyend="-1"/>
+        <location file="src/Bms/BmsDevice.h" line="107" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
@@ -31,7 +31,7 @@
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="93" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="93" bodyend="-1"/>
+        <location file="src/Bms/BmsDevice.h" line="110" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" prot="private" static="yes" mutable="no">
         <type>const double</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="94" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="94" bodyend="-1"/>
+        <location file="src/Bms/BmsDevice.h" line="111" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" prot="private" static="yes" mutable="no">
         <type>const double</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="95" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="95" bodyend="-1"/>
+        <location file="src/Bms/BmsDevice.h" line="112" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" prot="private" static="yes" mutable="no">
         <type>const double</type>
@@ -73,13 +73,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="96" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="96" bodyend="-1"/>
+        <location file="src/Bms/BmsDevice.h" line="113" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_device_1aba102aa7de2c504017d67bc6c24dae39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>void BmsDevice::BmsDevice</definition>
+        <definition>BmsDevice::BmsDevice</definition>
         <argsstring>(byte device_address)</argsstring>
         <name>BmsDevice</name>
         <param>
@@ -246,11 +246,9 @@
         </inbodydescription>
         <location file="src/Bms/BmsDevice.h" line="87" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="131" bodyend="141"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_device_1ae21dd2360edf7b3f21e2086315ddecfb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>byte *</type>
-        <definition>void byte * BmsDevice::readRegister</definition>
+        <definition>byte * BmsDevice::readRegister</definition>
         <argsstring>(byte regAddress, byte length) const </argsstring>
         <name>readRegister</name>
         <param>
@@ -283,9 +281,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="104" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="27" bodyend="85"/>
+        <location file="src/Bms/BmsDevice.h" line="97" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="27" bodyend="85"/>
       </memberdef>
-      <memberdef kind="function" id="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void BmsDevice::writeRegister</definition>
         <argsstring>(byte regAddress, byte regData) const </argsstring>
@@ -319,7 +317,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="111" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="143" bodyend="187"/>
+        <location file="src/Bms/BmsDevice.h" line="104" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="143" bodyend="187"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -348,17 +346,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Bms/BmsDevice.h" line="118" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="193" bodyend="201"/>
+        <location file="src/Bms/BmsDevice.h" line="120" column="1" bodyfile="src/Bms/BmsDevice.cpp" bodystart="193" bodyend="201"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Copyright 2016 - 2017 RaceUp Team Unipd</para><para>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</para><para><ulink url="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</ulink></para><para>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Manages a BMS device </para>    </detaileddescription>
-    <location file="src/Bms/BmsDevice.h" line="32" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="32" bodyend="119"/>
+    <location file="src/Bms/BmsDevice.h" line="32" column="1" bodyfile="src/Bms/BmsDevice.h" bodystart="32" bodyend="121"/>
     <listofallmembers>
       <member refid="class_bms_device_1ac66316eac6626bb71a74cd1d55b4d2c4" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>BETA_THERMISTOR</name></member>
-      <member refid="class_bms_device_1a4035559c9370045a409d33cb8941a9f3" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>BmsDevice</name></member>
+      <member refid="class_bms_device_1aba102aa7de2c504017d67bc6c24dae39" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>BmsDevice</name></member>
       <member refid="class_bms_device_1a99aeb3676c9732e8a22d8561b5dde254" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearAlerts</name></member>
       <member refid="class_bms_device_1a20e255789e1b0d8d16059c8ab1ac32dd" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>clearFaults</name></member>
       <member refid="class_bms_device_1acace1572b82980bf20d697730ef3d0c4" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>device_address</name></member>
@@ -369,10 +367,10 @@
       <member refid="class_bms_device_1acec676309f368784cae00d2d64dbe40d" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>pec</name></member>
       <member refid="class_bms_device_1a51f510e0dbb0c95dc1afdb541692882d" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>R0_THERMISTOR</name></member>
       <member refid="class_bms_device_1a9c8d669bb784d88f4f347573ad1d4a92" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>RB_THERMISTOR</name></member>
-      <member refid="class_bms_device_1a2e39d0a67b14a12341293f31a30f221b" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>readRegister</name></member>
+      <member refid="class_bms_device_1ae21dd2360edf7b3f21e2086315ddecfb" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>readRegister</name></member>
       <member refid="class_bms_device_1a58ab346f84e3b7fc00611a23220ad5a9" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>RT_THERMISTOR</name></member>
       <member refid="class_bms_device_1af711c0fbff46642d525c63a668cb7a2d" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>setStatus</name></member>
-      <member refid="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="private" virt="non-virtual"><scope>BmsDevice</scope><name>writeRegister</name></member>
+      <member refid="class_bms_device_1a7c37cd79623465ddee0f1b4d6be0e86c" prot="public" virt="non-virtual"><scope>BmsDevice</scope><name>writeRegister</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

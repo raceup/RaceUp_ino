@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writestatusofbmsdevice',['writeStatusOfBmsDevice',['../class_bms_device_writer.html#a43507694298062698dd72e1ff7599bea',1,'BmsDeviceWriter']]]
+  ['writeregister',['writeRegister',['../class_bms_device.html#a7c37cd79623465ddee0f1b4d6be0e86c',1,'BmsDevice']]]
 ];

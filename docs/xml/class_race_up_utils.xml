@@ -33,8 +33,8 @@
         <location file="src/RaceUpUtils.h" line="60" column="1" bodyfile="src/RaceUpUtils.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_race_up_utils_1ac40afe767e8d781d06effb03e9de8971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double RaceUpUtils::fromKelvinToCelsius</definition>
         <argsstring>(double kelvinValue)</argsstring>
@@ -60,7 +60,7 @@
         </inbodydescription>
         <location file="src/RaceUpUtils.h" line="32" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="27" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_race_up_utils_1ad57a448fb6131a2a38b0c3a8c967ee58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double RaceUpUtils::convertCellVoltage</definition>
         <argsstring>(double cellVoltageInt)</argsstring>
@@ -86,7 +86,7 @@
         </inbodydescription>
         <location file="src/RaceUpUtils.h" line="39" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="23" bodyend="25"/>
       </memberdef>
-      <memberdef kind="function" id="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_race_up_utils_1a0cc09fd89b708aed73b075b34b646e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool RaceUpUtils::isArduinoUnoBoard</definition>
         <argsstring>()</argsstring>
@@ -100,7 +100,7 @@
         </inbodydescription>
         <location file="src/RaceUpUtils.h" line="45" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="36" bodyend="38"/>
       </memberdef>
-      <memberdef kind="function" id="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_race_up_utils_1a2625dadfdc9f45584c71a8872a7058d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool RaceUpUtils::isArduinoDueBoard</definition>
         <argsstring>()</argsstring>
@@ -114,7 +114,7 @@
         </inbodydescription>
         <location file="src/RaceUpUtils.h" line="51" column="1" bodyfile="src/RaceUpUtils.cpp" bodystart="40" bodyend="42"/>
       </memberdef>
-      <memberdef kind="function" id="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_race_up_utils_1a331fe79dbe61bd7cd84a61b9a05c72e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>String</type>
         <definition>String RaceUpUtils::getArduinoBoardModelName</definition>
         <argsstring>()</argsstring>
